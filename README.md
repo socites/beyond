@@ -1,3 +1,0 @@
-# beyondJS
-
-coming Soon...

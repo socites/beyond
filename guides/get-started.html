@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang=en> <head><!-- Page title --><title>BeyondJS - A framework for building scalable, modular, single page web applications.</title><!-- Page description --><meta name=description content="BeyondJS - A framework for building scalable, modular, single page web applications."><!-- Meta --><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content=IE=edge><meta name=viewport content="width=device-width, initial-scale=1"><!-- Favicon  --><link rel=icon type=image/png href=/img/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/img/favicons/favicon-96x96.png sizes=96x96><link rel=icon type=image/png href=/img/favicons/favicon-32x32.png sizes=32x32><link rel=apple-touch-icon sizes=57x57 href=/img/favicons/apple-touch-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/img/favicons/apple-touch-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/img/favicons/apple-touch-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/img/favicons/apple-touch-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/img/favicons/apple-touch-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/img/favicons/apple-touch-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/img/favicons/apple-touch-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/img/favicons/apple-touch-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/img/favicons/apple-touch-icon-180x180.png><!-- Include StyleSheets --><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/css/custom.min.css><!-- facebook & twitter metadata--><meta property=og:locale content=en_US><meta property=og:type content=website><meta property=og:title content=BeyondJS><meta property=og:description content="A framework for building scalable, modular, single page web applications."><meta property=og:url content=https://socites.github.io/beyond><meta property=og:site_name content=BeyondJS><meta property=fb:app_id content=1934324226793638><!--facebook id here--><meta property=og:image content=https://socites.github.io/beyond/img/assets/facebook.jpg><!--image here--><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="A framework for building scalable, modular, single page web applications."><meta name=twitter:title content=BeyondJS><meta name=twitter:site content=@socitesOS><!--twitter id here--><meta name=twitter:domain content=BeyondJS><meta name=twitter:image content=https://socites.github.io/beyond/img/assets/twitter.jpg><!--image here--><!-- end facebook & twitter metadata--><script src=/js/modernizr.min.js></script></head> <body> <!--[if lt IE 8]>
+	    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]--> <div class=page> <div class="header header-over large"> <div class=container> <div class=row> <div class="col-md-3 col-sm-6 col-xs-6"> <!-- Logo Image --> <a href=/ class="logo-image logo-animated"> <img src=../img/logos/logo.png alt=logo> </a> <!-- End of Logo Image --> </div> <div class="col-md-9 col-sm-6 col-xs-6"> <!-- Menu --> <nav class="right helper"> <ul class="menu sf-menu js-menu menu-light"> <li> <a href=/guides/>Guides</a> </li> <li> <a href=/docs/>Docs</a> </li> <!-- Menu Separator --> <i class="helper ml60"></i> <!-- End of Menu Separator --> <li> <a href=https://github.com/socites/beyond>GitHub</a> </li> </ul> </nav> <!-- End of Menu --> </div> </div> </div> </div> <!-- Page Info --> <div class="page-info page-info-background background-2 page-info-small"> <div class=page-info-container> <div class="container "> <div class=row> <div class=col-md-12> <h1 class="page-title color white">Get Started with BeyondJS Tutorial</h1> <h2 class="page-description color white">In this tutorial we'll create our variation of the Hello World typical application with <span class="color beyond">Beyond</span><span class="color title beyond">JS</span>.</h2> </div> </div> </div> </div> </div> <!-- End Page Info --> <div id=content> <div class=container> <div class=row> <div class=col-md-12> <!-- Category Info --> <div class="category-info "> <h3 class="category-title color title beyond"><span class="color beyond">Beyond</span>JS Says...</h3> </div> <p>A full version of this example code you could find on <a class="color beyond" href=https://github.com/beyondjs/hello-world target=_blank>here</a>.</p> <p>This is at least a curious application that will show randomly a saying. That is why we have called this simple application, <span class="mark bold italic color title beyond"><span class="color beyond">Beyond</span>JS Says ...</span></p> <p>Let's start ...</p> <div class=separator></div> <!-- End of Caregory Info --> <!-- Steps --> <ul class=steps> <li class=step> <span class="step-number color beyond">1</span> <h4 class=step-title><a id=package></a> Install</h4> <div class=step-content> To install beyond.js will simply go to a terminal and use the command npm for this. </div> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code1>copy</span> <pre id=code1 class=language-bash><code class=language-bash data-lang=bash><span class=c># Once released in the npm</span>
+<span class=nv>$ </span>npm install beyond --save</code></pre> </div> <div class=step-content> An alternative is to specify the dependency in the package.json file. </div> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code2>copy</span> <pre id=code2 class=language-javascript><code class=language-javascript>{
+  "name": "hello-world",
+  "version": "0.0.1",
+  "description": "BeyondJS says ...",
+  "main": "server.js",
+  "license": "MIT",
+  "repository": "github:beyondjs/hello-world",
+  "dependencies": {
+    "beyond": "github:socites/beyond"
+  },
+  "engines": {
+    "node": ">= 0.12.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}</code></pre> </div> <div class="helper justify step-content"> <p>The basic structure of this project is as shown below. First the file package.json, and server.js file, which we detail below. Then we have the code directory, where will all the application code. For this particular example, it is just the index.html file and a module named hello with their respective files.</p> </div> <!-- File Tree --> <div class="helper mt20 file-tree"> <div class=file-tree-title> Project folder structure <ul class=file-tree-buttons> <li class=js-expand> <i class="fa fa-plus"></i> Expand all</li> <li class=js-collapse> <i class="fa fa-minus"></i> Collapse all</li> </ul> </div> <ul class="file-tree-list js-file-tree" data-expanded> <li class=is-folder>code - <span class=file-tree-description>directory with the application code.</span> <ul> <li class=is-folder>hello - <span class=file-tree-description>Directory with the module's files.</span> <ul> <li class=is-file><a class="color black" href=#code>click.html</a> - <span class=file-tree-description>Fragment of code HTML code.</span> </li> <li class=is-file><a class="color black" href=#code>hello.js</a> - <span class=file-tree-description>Module logic.</span> </li> <li class=is-file><a class="color black" href=#code>module.json</a> - <span class=file-tree-description>Module configuration.</span> </li> </ul> </li> <li class=is-file><a class="color black" href=#code>index.html</a> - <span class=file-tree-description>Application entrypoint.</span> </li> </ul> </li> <li class=is-file><a class="color black" href=#package>package.json</a> - <span class=file-tree-description>Project's configuration.</span> </li> <li class=is-file><a class="color black" href=#server>server.js</a> - <span class=file-tree-description>BeyondJS's server setup.</span> </li> </ul> </div> <!-- End of FIle Tree --> </li> <li class=step> <span class="step-number color beyond">2</span> <h4 class=step-title><a id=server></a> Setup the Server</h4> <div class=" helper justify step-content"> <p>In server.js file is where the importation of <span class="color beyond">Beyond</span><span class="color title beyond">JS</span> is made and a variable called beyond which type is Beyond is created passing an object, where the following elements are defined. As can be see, in the object that it's passed to Beyond is defined application called, also, application, which is in its version 0.1 and define an static file called index.html. Then, run the server with it's start method.</p> </div> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code3>copy</span> <pre id=code3 class=language-javascript><code class=language-javascript>(function (Beyond) {
+    "use strict";
+
+    let beyond = new Beyond({
+        'applications': {
+            'application': {
+                "version": "0.1",
+                "static": ["index.html"]
+            }
+        }
+    });
+
+    beyond.start();
+
+})(require('beyond'));</code></pre> </div> </li> <li class=step> <span class="step-number color beyond">3</span> <h4 class=step-title>Setup the Application</h4> <div class="helper justify step-content"> <p>The basic structure of the application module consist on a configuration file for the module in JSON format and a javascript file where it's defined the controller for the module. Also its can see a click.html file with a fragment of code for a button.</p> <p>But let start from the beginning, the index.html file, how integrate <span class="color beyond">Beyond</span><span class="color title beyond">JS</span> in this.</p> </div> <!-- Steps Interactive --> <a id=code></a><div class="steps-interactive js-steps-interactive"> <h4 class=step-interactive-title> HTML integration.</h4> <div class=step-interactive-content> <p>Inside of the code directory is the index.html and in this must put in a comment the call to <span class="color beyond">Beyond</span><span class="color title beyond">JS</span> as seen in the code below on the line 8.</p> <!-- HTML Highlight --> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code4>copy</span> <pre id=code4><code class=language-markup>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Beyond.js says...&lt;/title&gt;
+    &lt;!--bootstrap--&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;
+    &lt;!-- #beyond.head --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="click" style="padding-top:30px;"&gt;&lt;/div&gt;
+&lt;div id="response" style="padding-top:50px;font-size:5em;"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> </div> <!-- End of HTML Highlight --> <p>besides this, just a couple of div with the ids click and response respectively</p> </div> <h4 class=step-interactive-title>Module Configuration.</h4> <div class=step-interactive-content> <p>In the module.json file, it's defined two things, the files that the module uses and the route to which responds. Note how files are organized by type, either html, js or css.</p> <!-- HTML Highlight --> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code5>copy</span> <pre id=code5><code class=language-javascript>{
+  "code": {
+    "html": {
+      "files": [
+        "click.html"
+      ]
+    },
+    "js": {
+      "files": [
+        "hello.js"
+      ]
+    }
+  },
+  "route": "/hello-world"
+}
+</code></pre></div> <!-- End of HTML Highlight --> <p><p>In the files array of each file type, is the route relative, like in this case the files are in the same directory that module.json, just put the name of the file itself.</p></p> </div> <h4 class=step-interactive-title>Module logic.</h4> <div class="helper justify step-interactive-content"> <p>hello.js contains the logic for the controller, this has a show method that runs when is requested the route "/hello-world", so, is in this method where we put the code, for this example it's created an string array with some proverbs. Then, render method it's used for assign to a variable called html the content of the click.html file and later put this in the div with the click id. Finally we give a behavior to the click of the button, for make it show a random proverb each time it's clicked.</p> <!-- HTML Highlight --> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code6>copy</span> <pre id=code6><code class=language-javascript>define(function () {
+    "use strict";
+
+    return {
+        'Controller': function () {
+            this.show = function (done) {
+                //array whith different responses
+                var responses = ['<div class="lead text-center">"Two wrongs don\'t make a right."</div>',
+                                '<div class="lead text-center">"The pen is mightier than the sword."</div>',
+                                '<div class="lead text-center">"When the going gets tough, the tough get going."</div>',
+                                '<div class="lead text-center">"No man is an island."</div>',
+                                '<div class="lead text-center">"Fortune favors the bold."</div>',
+                                '<div class="lead text-center">"People who live in glass houses should not throw stones"</div>',
+                                '<div class="lead text-center">"Hope for the best, but prepare for the worst."</div>',
+                                '<div class="lead text-center">"Better late than never."</div>',
+                                '<div class="lead text-center">"Keep your friends close and your enemies closer."</div>',
+                                '<div class="lead text-center">"A picture is worth a thousand words."</div>',
+                                '<div class="lead text-center">"There\'s no such thing as a free lunch."</div>',
+                                '<div class="lead text-center">"There\'s no place like home."</div>',
+                                '<div class="lead text-center">"The early bird catches the worm."</div>',
+                                '<div class="lead text-center">"You can\'t make an omelet without breaking a few eggs."</div>',
+                                '<div class="lead text-center">"Never look a gift horse in the mouth."</div>',
+                                '<div class="lead text-center">"You can\'t always get what you want."</div>',
+                                '<div class="lead text-center">"Actions speak louder than words."</div>',
+                                '<div class="lead text-center">"If it ain\'t broke, don\'t fix it."</div>',
+                                '<div class="lead text-center">"Practice makes perfect."</div>',
+                                '<div class="lead text-center">"Easy come, easy go."</div>',
+                                '<div class="lead text-center">"Don\'t bite the hand that feeds you."</div>',
+                                '<div class="lead text-center">"All good things must come to an end."</div>',
+                                '<div class="lead text-center">"If you can\'t beat \'em, join \'em."</div>',
+                                '<div class="lead text-center">"There\'s no time like the present."</div>',
+                                '<div class="lead text-center">"You can\'t judge a book by its cover."</div>'];
+
+                var html = module.render('click');
+                var $click = $(html);
+                $('#click').html($click);
+
+                $click.click(function () {
+                    //random value between 0 and 24
+                    var index = Math.floor((Math.random() * 24));
+
+                    var $response = $(responses[index]);
+                    $('#response').html('');
+                    $('#response').html($response);
+
+                    $response.click(function() {
+                        $('#response').html('');
+                    });
+                });
+                done();
+            };
+        }
+    };
+});
+</code></pre></div> <!-- End of HTML Highlight --> </div> <h4 class=step-interactive-title>Template for the button.</h4> <div class=step-interactive-content> <p>Above the click.html file is not much to tell, it's just a button which been applied some bootstrap CSS classes.</p> <!-- HTML Highlight --> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code7>copy</span> <pre id=code7><code class=language-markup>&lt;button type="button" class="btn btn-primary btn-lg center-block"&gt;Click Me!!&lt;/button&gt;
+</code></pre></div> <!-- End of HTML Highlight --> </div> </div> <!-- End of Steps Interactive --> </li> <li class=step> <span class="step-number color beyond">4</span> <h4 class=step-title>Run the Applicaction</h4> <div class=step-content> <p>At this point, we have a small functional web application. For run the server go to a terminal and execute the command node server.js. Some consideration about the URL.</p> <p class="helper center">http://localhost:<span class="color red">{port}</span>/<span class="color green">{name of application}</span>/<span class="color blue">{language}</span>/<span class="color grey">{route}</span></p> <p>Where <span class="color red">{port}</span> is defined in the object passed to Beyond.JS, if it not, by default is 3010. The <span class="color green">{name of application}</span> as well is defined in the object, in this case the <span class="color green">{name of application}</span> is application. .Since <span class="color beyond">Beyond</span><span class="color title beyond">JS</span> is a framework oriented to multi-language applications, by default it expect that <span class="color blue">{language}</span> been passed through the URL. If not defined by default is english code, <span class="mark bold">en</span>. And the last, <span class="color grey">{route}</span>, that was defined in the module.json file, in this case the route is /hello-world. Recap, the URL for this example must be.</p> <p class="helper center">http://localhost:<span class="color red">3010</span>/<span class="color green">application</span>/<span class="color blue">en</span>/<span class="color grey">hello-world</span></p> </div> <div class=code-highlight> <span class="js-copy-to-clipboard copy-code" data-clipboard-target=#code8>copy</span> <pre id=code8 class=language-bash><code class=language-bash data-lang=bash><span class=c># start server execution</span>
+<span class=nv>$ </span>node server.js
+<span class="color green">http server listening on port:</span> 3010
+<span class="color green">ws server listening on port:</span> 3011
+
+
+listening applications
+	listening application application
+
+
+listening libraries
+	listening library beyond.js
+
+
+starting libraries</code></pre> </div> </li> </ul> <!-- End of Steps --> <!-- Category Info --> <div class=separator></div> <div class="category-info "> <h3 class=category-title>Final Result</h3> <h4 class=category-description></h4> </div> <!-- End of Caregory Info --> <!-- Gif Player --> <div class="helper center"> <div class=gif-player> <img src=../img/assets/get-started-beyondjs-final.gif class alt="gif animation"> </div> </div> <!-- End of Grid view --> </div> </div> </div> </div> <!-- Footer --> <footer class=footer> <div class=container> <div class=row> <div class="col-md-3 col-sm-3 col-xs-12"> <div class=footer-logo-wrapper> <!-- Logo Image --> <a href=/ class="logo-image "> <img src=/img/logos/logo-light.png alt=logo> </a> <!-- End of Logo Image --> <!-- Slogan --> <p class=slogan> Building <br>scalable, <br>modular SPA.</p> <!-- End of Slogan --> </div> </div> <div class="col-md-9 col-sm-9 col-xs-12"> <div class=footer-wrapper> <!-- Scroll top --> <span class="scroll-top js-scroll-top"> <i class="fa fa-angle-up"></i> </span> <!-- End of Scroll top --> <!-- Footer Menu --> <ul class="footer-menu helper right"> <li> <a href=/guides/> Guides </a> </li> <li> <a href=/docs/> Docs </a> </li> <li> <a href=https://github.com/socites/beyond> GitHub </a> </li> </ul> <!-- End of Footer Menu --> <!-- Copyright --> <p class="copyright helper right"> <a href=https://socites.github.io/>Socites</a>, all rights reserved. 2015 &copy; </p> <!-- End of Copyright --> </div> </div> </div> </div> </footer> <!-- End of Footer --> </div> <script src=../js/clipboard.min.js></script> <script src=../js/all.js></script> <script src=../js/custom.min.js></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> <!-- 
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+     --> </body> </html>
