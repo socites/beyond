@@ -1,5 +1,10 @@
 ![](https://socites.github.io/beyond/img/logos/logo-light.png)
-# BeyondJS [![Build Status](https://img.shields.io/travis/socites/beyond/master.svg)](https://travis-ci.org/socites/beyond) [![npm version](https://img.shields.io/npm/v/beyond.svg)](https://www.npmjs.com/package/beyond) [![Dependency Status](https://img.shields.io/david/socites/beyond.svg)](https://david-dm.org/socites/beyond) [![Dev-Dependency Status](https://img.shields.io/david/dev/socites/beyond.svg)](https://david-dm.org/socites/beyond#info=devDependencies)
+# BeyondJS
+[![Build Status](https://img.shields.io/travis/socites/beyond/master.svg)](https://travis-ci.org/socites/beyond)
+[![npm version](https://img.shields.io/npm/v/beyond.svg)](https://www.npmjs.com/package/beyond)
+[![bitHound Score](https://www.bithound.io/github/socites/beyond/badges/score.svg)](https://www.bithound.io/github/socites/beyond)
+[![Dependency Status](https://img.shields.io/david/socites/beyond.svg)](https://david-dm.org/socites/beyond)
+[![Dev-Dependency Status](https://img.shields.io/david/dev/socites/beyond.svg)](https://david-dm.org/socites/beyond#info=devDependencies)
 > `BeyondJS` is a framework for building scalable, modular, single page web applications.
 
 
