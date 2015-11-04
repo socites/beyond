@@ -1,0 +1,21 @@
+{
+  "language": "es",
+  "params": {},
+  "path": "./",
+  "static": [],
+  "version": "0.1",
+  "imports": {
+    "libraries": [
+      "common/0.1"
+    ],
+    "excludes": [],
+    "includes": []
+  },
+  "build": {
+    "path": "example",
+    "hosts": {
+      "production": "http://example.com",
+      "development": "http://dev.example.com"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+#header {
+    position: absolute;
+    top: 0;
+    left: 56px;
+    right: 0;
+    height: 45px;
+    z-index: 1;
+    overflow: hidden;
+
+    background: white;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #333;
+    text-transform: uppercase;
+
+    display: none;
+}
+
+#header > div:not(.search) {
+    display: none;
+}
+
+#header .title {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 10px;
+
+    background: white;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Smartphones landscape */
+@media only screen and (max-width: 640px) {
+
+    #header {
+        height: 40px;
+        font-size: 11px;
+        padding: 0;
+    }
+
+    #header .title {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #header .go {
+        height: 40px;
+        line-height: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    #viewport.portrait #header {
+        top: 39px;
+        left: 0;
+    }
+
+    #viewport.landscape #header {
+        top: 0;
+        left: 55px;
+    }
+
+}

@@ -1,0 +1,18 @@
+{
+  "extends": {
+    "dashboard": {
+      "css": {
+        "path": "css",
+        "files": [
+          "*"
+        ]
+      },
+      "js": {
+        "path": "js",
+        "files": [
+          "plugin.js"
+        ]
+      }
+    }
+  }
+}

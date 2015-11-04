@@ -1,0 +1,77 @@
+#header .plus {
+    float: left;
+    position: relative;
+    line-height: 45px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#header .plus:after {
+    position: absolute;
+    top: 6px;
+    right: -11px;
+    height: 30px;
+    width: 1px;
+    content: '';
+
+    background: #777;
+}
+
+#header .plus .icon {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+
+    transition: transform .2s linear;
+    -moz-transition: transform .2s linear;
+    -webkit-transition: transform .2s linear;
+    -ms-transition: transform .2s linear;
+    -o-transition: transform .2s linear;
+
+    font-family: awesome;
+    font-size: 18px;
+    color: #333;
+}
+
+#header .plus.selected .icon {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+#header .plus:not(.selected):hover .icon,
+#header .plus.selected .icon {
+    color: #00b085;
+}
+
+#header .plus.selected:hover .icon {
+    color: #333;
+}
+
+#header .plus .text {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 5px;
+}
+
+/* Smartphones */
+@media only screen and (max-width: 640px) {
+
+    #header .plus,
+    #header .plus .icon,
+    #header .plus .text {
+        height: 40px;
+        line-height: 40px;
+    }
+
+}

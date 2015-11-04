@@ -1,0 +1,60 @@
+{
+  "start": {
+    "css": {
+      "path": "client/css",
+      "files": [
+        "*"
+      ]
+    },
+    "html": {
+      "path": "client/html",
+      "files": [
+        "*"
+      ]
+    },
+    "txt": {
+      "files": [
+        "client/texts.json"
+      ]
+    },
+    "js": {
+      "path": "client/js",
+      "files": [
+        "layout/list/items/properties.js",
+        "layout/list/items/item.js",
+        "layout/list/items/items.js",
+        "layout/list/list.js",
+        "layout/sidebar/menubar/menubar.js",
+        "layout/sidebar/menubar/main.js",
+        "layout/sidebar/menubar/submenus.js",
+        "layout/sidebar/sidebar.js",
+        "layout/toolbar/toolbar.js",
+        "layout/messages/messages.js",
+        "layout/state/loading.js",
+        "layout/state/synch.js",
+        "layout/state/offline.js",
+        "layout/state/downloading.js",
+        "layout/error/error.js",
+        "layout/render.js",
+        "layout/resize.js",
+        "layout/header/buttons/button.js",
+        "layout/header/buttons/buttons.js",
+        "layout/header/actions/action.js",
+        "layout/header/actions/actions.js",
+        "layout/header/plus.js",
+        "layout/header/title/go.js",
+        "layout/header/title/title.js",
+        "layout/header/header.js",
+        "layout/layout.js",
+        "layout/sidebar/toolbar.js",
+        "router/router.js"
+      ]
+    }
+  },
+  "static": [
+    "vendor",
+    "logo.png",
+    "icon.png",
+    "loading.gif"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "code": {
+    "css": {
+      "processor": "css",
+      "path": "css",
+      "files": [
+        "*"
+      ]
+    },
+    "html": {
+      "processor": "html",
+      "path": "html",
+      "files": [
+        "*"
+      ]
+    },
+    "js": {
+      "processor": "js",
+      "files": [
+        "test.js.test"
+      ]
+    }
+  },
+  "static": [
+    "static"
+  ]
+}

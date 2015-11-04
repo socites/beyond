@@ -1,0 +1,122 @@
+#state {
+    position: absolute;
+    top: 0;
+    right: 55px;
+    height: 44px;
+    z-index: 11;
+    overflow: hidden;
+
+    transition: right .3s ease-in-out;
+    -moz-transition: right .3s ease-in-out;
+    -webkit-transition: right .3s ease-in-out;
+    -ms-transition: right .3s ease-in-out;
+    -o-transition: right .3s ease-in-out;
+
+    background: white;
+}
+
+#viewport.show-search #state {
+    right: 150px;
+}
+
+#state .downloading,
+#state .offline,
+#state .loading,
+#state .synch {
+    float: left;
+    line-height: 24px;
+    padding: 10px 20px;
+    font-size: 12px;
+
+    margin: 1px;
+    color: white;
+    display: none;
+}
+
+#state .downloading {
+    background: green;
+}
+
+#state .offline {
+    background: darkred;
+}
+
+#state .loading {
+    background: #333;
+}
+
+#state .downloading.show,
+#state .offline.show,
+#state .loading.show,
+#state .synch.show {
+    display: block;
+}
+
+#state .downloading .text,
+#state .offline .text,
+#state .loading .text {
+    float: left;
+    text-transform: uppercase;
+}
+
+#state .loading .text {
+    margin-right: 10px;
+}
+
+#state .downloading .icon,
+#state .offline .icon,
+#state .loading .icon {
+    float: left;
+    width: 16px;
+    height: 24px;
+}
+
+#state .downloading .icon:before {
+    font-family: awesome;
+    content: '\\f019'
+}
+
+#state .offline .icon:before {
+    font-family: awesome;
+    content: '\\f0e7'
+}
+
+#state .loading .icon {
+    background: url(#host.layout#/static/loading.gif) no-repeat center center;
+}
+
+/* Smartphones */
+@media only screen and (max-width: 640px) {
+
+    #state {
+        height: 38px;
+        background: none;
+        color: white;
+    }
+
+    #state .downloading,
+    #state .offline,
+    #state .loading,
+    #state .synch {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        padding: 0;
+    }
+
+    #state .downloading .text,
+    #state .offline .text,
+    #state .loading .text {
+        display: none;
+    }
+
+    #state .downloading .icon,
+    #state .offline .icon,
+    #state .loading .icon {
+        width: 100%;
+        height: 36px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+}

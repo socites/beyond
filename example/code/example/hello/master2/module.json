@@ -1,0 +1,15 @@
+{
+  "code": {
+    "css": {
+      "files": [
+        "master2.css"
+      ]
+    },
+    "js": {
+      "files": [
+        "master2.js"
+      ]
+    }
+  },
+  "route": "/master2"
+}

@@ -1,0 +1,115 @@
+#sidebar {
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 56px;
+    bottom: 0;
+    z-index: 4;
+
+    overflow: hidden;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+#sidebar .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+
+    background: value(menubar-gradient-to);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(value(menubar-gradient-percent), value(menubar-gradient-from)), color-stop(100%, value(menubar-gradient-to)));
+    background: -webkit-linear-gradient(top, value(menubar-gradient-from) value(menubar-gradient-percent), value(menubar-gradient-to) 100%);
+    background: -o-linear-gradient(top, value(menubar-gradient-from) value(menubar-gradient-percent), value(menubar-gradient-to) 100%);
+    background: -ms-linear-gradient(top, value(menubar-gradient-from) value(menubar-gradient-percent), value(menubar-gradient-to) 100%);
+    background: linear-gradient(to bottom, value(menubar-gradient-from) value(menubar-gradient-percent), value(menubar-gradient-to) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='value(menubar-gradient-from)', endColorstr='value(menubar-gradient-to)', GradientType=0);
+
+    opacity: 0;
+    box-shadow: 0 2px 2px #777;
+    border-right: 1px solid #333;
+
+    transform: translateX(-200px);
+}
+
+#menubar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#sidebar .wrapper .submenus {
+    position: absolute;
+    left: 200px;
+    width: 200px;
+    top: 0;
+    bottom: 0;
+}
+
+#sidebar .wrapper .submenus .submenu {
+    overflow-y: auto;
+    height: 100%;
+}
+
+#sidebar .translate {
+    height: 100%;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+#sidebar.show-submenu .translate {
+    height: 100%;
+    transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+}
+
+#sidebar.show {
+    width: 205px;
+}
+
+#sidebar.show .wrapper {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 640px) {
+
+    #viewport.portrait #sidebar {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        opacity: 1;
+    }
+
+    #viewport.landscape #sidebar {
+        position: absolute;
+        top: 0;
+        left: 55px;
+        opacity: 1;
+    }
+
+}

@@ -1,0 +1,27 @@
+{
+  "version": "0.1",
+  "language": "es",
+  "params": {},
+  "path": "./",
+  "static": [
+    "./static"
+  ],
+  "imports": {
+    "imports": [],
+    "excludes": [],
+    "includes": []
+  },
+  "build": {
+    "path": "example",
+    "hosts": {
+      "production": {
+        "js": "",
+        "rpc": ""
+      },
+      "development": {
+        "js": "",
+        "rpc": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "lib1": "./lib1/library.json",
+  "lib2": "./lib2/library.json"
+}

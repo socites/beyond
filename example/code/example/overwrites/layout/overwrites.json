@@ -1,0 +1,10 @@
+{
+  "start": {
+    "css": [
+      "styles.css"
+    ]
+  },
+  "static": {
+    "logo.png": "logo.png"
+  }
+}

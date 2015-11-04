@@ -1,0 +1,180 @@
+#sidebar .submenus,
+#menubar {
+    width: 200px;
+    float: left;
+}
+
+#sidebar .submenus .submenu .back {
+    float: left;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+
+    padding: 10px;
+    font-family: awesome;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#menubar .logo {
+    width: calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -webkit-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    float: left;
+    height: value(menubar-logo-height);
+    background: url(#host.layout#/static/logo.png) no-repeat center center;
+    margin: 5px;
+}
+
+#menubar ul.items,
+#sidebar .submenu ul.items {
+    width: 100%;
+    float: left;
+    min-height: calc(100% - value(menubar-logo-height) - 141px);
+    min-height: -moz-calc(100% - value(menubar-logo-height) - 141px);
+    min-height: -webkit-calc(100% - value(menubar-logo-height) - 141px);
+    min-height: -ms-calc(100% - value(menubar-logo-height) - 141px);
+    min-height: -o-calc(100% - value(menubar-logo-height) - 141px);
+}
+
+#menubar li,
+#sidebar .submenu li {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding: 7px 0;
+    text-align: center
+}
+
+#menubar li:last-child,
+#sidebar .submenu li:last-child {
+    margin-bottom: 25px;
+}
+
+#menubar li:before,
+#sidebar .submenu li:before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: #f7f7f7;
+    content: '';
+}
+
+#menubar li:last-child:after,
+#sidebar .submenu li:last-child:after {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: #f7f7f7;
+    content: '';
+}
+
+#menubar li .loading,
+#sidebar .submenu li .loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-position: center center;
+    display: none;
+}
+
+#menubar li .item,
+#sidebar .submenu li .item {
+    width: calc(100% - 12px);
+    width: -moz-calc(100% - 12px);
+    width: -webkit-calc(100% - 12px);
+    width: -ms-calc(100% - 12px);
+    width: -o-calc(100% - 12px);
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#menubar li.selected .item,
+#menubar li .item:hover,
+#sidebar .submenu li.selected .item,
+#sidebar .submenu li .item:hover {
+    color: #625a4a;
+    background: #97b71b;
+    text-shadow: none;
+}
+
+#menubar li .item span.icon {
+    margin-left: 10px;
+    font-family: awesome;
+}
+
+#menubar .contact,
+#menubar .footer {
+    float: left;
+    width: calc(100% - 20px);
+    width: -moz-calc(100% - 20px);
+    width: -webkit-calc(100% - 20px);
+    width: -ms-calc(100% - 20px);
+    width: -o-calc(100% - 20px);
+    overflow: hidden;
+    line-height: 18px;
+    padding: 10px;
+
+    font-size: 11px;
+    font-weight: normal;
+    background-color: rgba(50, 50, 50, .5);
+    color: white;
+}
+
+#menubar .contact.about {
+    cursor: pointer;
+}
+
+#menubar .contact.about:hover .title {
+    text-decoration: underline;
+}
+
+#menubar .contact > div {
+    float: left;
+    color: #ccc;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#menubar .contact > div.title {
+    color: white;
+}
+
+#menubar .footer {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+#menubar .footer div {
+    float: left;
+    cursor: pointer;
+}
+
+#menubar .footer div:hover {
+    text-decoration: underline;
+}
+
+#menubar .footer div:not(:last-child):after {
+    content: '|';
+    margin: 0 5px;
+}

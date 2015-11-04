@@ -1,0 +1,5 @@
+{
+  "applications": {
+    "example": "./application.json"
+  }
+}

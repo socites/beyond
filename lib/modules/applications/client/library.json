@@ -1,0 +1,13 @@
+{
+  "standalone": true,
+  "versions": {
+    "0.1": {
+      "build": {
+        "hosts": {
+          "js": "http://common.com/js",
+          "ws": "http://common.com/ws"
+        }
+      }
+    }
+  }
+}

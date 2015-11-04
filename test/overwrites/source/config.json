@@ -1,0 +1,27 @@
+{
+  "applications": {
+    "testapp": {
+      "path": "./app",
+      "version": "0.1",
+      "imports": {
+        "libraries": [
+          "library/0.0.1"
+        ]
+      },
+      "css": {
+        "values": {
+          "colors": {
+            "main": {
+              "hex": "#fff",
+              "rgb": "white"
+            }
+          }
+        }
+      },
+      "overwrites": "./overwrites/overwrites.json"
+    }
+  },
+  "libraries": {
+    "library": "./library/library.json"
+  }
+}

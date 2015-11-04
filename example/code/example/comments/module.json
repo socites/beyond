@@ -1,0 +1,10 @@
+{
+  "code": {
+    "js": {
+      "files": [
+        "comments.js"
+      ]
+    }
+  },
+  "route": "/comments"
+}

@@ -1,0 +1,12 @@
+{
+  "version": "0.1",
+  "imports": {
+    "libraries": [
+      "lib1/0.01",
+      "lib2/0.01"
+    ],
+    "excludes": [
+      "libraries/lib1/moon"
+    ]
+  }
+}

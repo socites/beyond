@@ -1,0 +1,14 @@
+{
+  "applications": {
+    "testapp": "./applications/testapp.json"
+  },
+  "libraries": "./libraries/libraries.json",
+  "presets": {
+    "default": {
+      "libraries": [
+        "lib1/0.01",
+        "lib2/0.01"
+      ]
+    }
+  }
+}

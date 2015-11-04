@@ -1,0 +1,22 @@
+{
+  "module": {
+    "css": [
+      "module.css"
+    ],
+    "txt": [
+      "module.json"
+    ]
+  },
+  "start": {
+    "css": [
+      "start.css"
+    ],
+    "txt": [
+      "start.json"
+    ]
+  },
+  "static": {
+    "image.png": "./static/overwrited.png"
+  },
+  "extensions": "./extensions/overwrites.json"
+}

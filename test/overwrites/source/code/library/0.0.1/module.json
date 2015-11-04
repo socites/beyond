@@ -1,0 +1,17 @@
+{
+  "custom": {
+    "css": {
+      "files": [
+        "styles.css"
+      ]
+    },
+    "txt": {
+      "files": [
+        "texts.json"
+      ]
+    }
+  },
+  "static": [
+    "static"
+  ]
+}

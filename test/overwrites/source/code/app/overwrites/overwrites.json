@@ -1,0 +1,3 @@
+{
+  "library1/.": "./library1/main/overwrites.json"
+}

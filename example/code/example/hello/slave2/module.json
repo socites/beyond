@@ -1,0 +1,15 @@
+{
+  "code": {
+    "css": {
+      "files": [
+        "slave2.css"
+      ]
+    },
+    "js": {
+      "files": [
+        "slave2.js"
+      ]
+    }
+  },
+  "route": "/slave2"
+}

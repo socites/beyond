@@ -1,0 +1,10 @@
+{
+  "start": {
+    "js": {
+      "processor": "js",
+      "files": [
+        "hello.js.test"
+      ]
+    }
+  }
+}

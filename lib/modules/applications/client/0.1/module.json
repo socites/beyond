@@ -1,0 +1,47 @@
+{
+  "code": {
+    "js": {
+      "path": "js",
+      "files": [
+        "system/events.js",
+        "system/delegate.js",
+        "system/browser.js",
+        "system/time.js",
+        "system/coordinate.js",
+        "channels/channel.js",
+        "channels/channels.js",
+        "libraries/libraries.js",
+        "libraries/library.js",
+        "modules/module/styles/resources.js",
+        "modules/module/styles/values.js",
+        "modules/module/styles/styles.js",
+        "modules/module/templates/templates.js",
+        "modules/module/rpc/request.js",
+        "modules/module/rpc/cache.js",
+        "modules/module/rpc/holder.js",
+        "modules/module/rpc/dispatcher.js",
+        "modules/module/plugins.js",
+        "modules/module/texts/texts.js",
+        "modules/module/module.js",
+        "modules/modules.js",
+        "routes.js",
+        "navigation/controls/control/control.js",
+        "navigation/controls/control/error.js",
+        "navigation/controls/control/master.js",
+        "navigation/controls/control/slave.js",
+        "navigation/controls/collection.js",
+        "navigation/controls/masters.js",
+        "navigation/controls/controls.js",
+        "navigation/pathname.js",
+        "navigation/update.js",
+        "navigation/navigation.js",
+        "loader/error.js",
+        "loader/loader.js",
+        "beyond.js"
+      ]
+    }
+  },
+  "static": [
+    "./vendor"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "code": {
+    "js": {
+      "files": [
+        "execute.js"
+      ]
+    }
+  },
+  "server": {
+    "actions": "./server/actions",
+    "backend": "./server/backend",
+    "config": "./server/config.json"
+  },
+  "route": "/execute"
+}

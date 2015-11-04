@@ -1,0 +1,29 @@
+#about {
+    position: absolute;
+    top: 46px;
+    left: 56px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+}
+
+@media only screen and (max-width: 640px) {
+
+    #viewport.portrait #about {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #viewport.landscape #about {
+        position: absolute;
+        top: 41px;
+        left: 56px;
+        right: 0;
+        bottom: 0;
+    }
+
+}

@@ -1,0 +1,78 @@
+#header .actions {
+    float: left;
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+}
+
+#header .actions:empty {
+    display: none;
+}
+
+#header .actions .action {
+    float: left;
+    position: relative;
+    text-transform: uppercase;
+    color: #777;
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#header .actions .action:not(.disabled):hover {
+    background: #333;
+    color: white;
+}
+
+#header .actions:before {
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    height: 30px;
+    width: 1px;
+    content: '';
+
+    background: #e7e7e7;
+}
+
+#header .actions .action:after {
+    position: absolute;
+    top: 6px;
+    right: -5px;
+    height: 30px;
+    width: 1px;
+    content: '';
+
+    background: #e7e7e7;
+}
+
+#header .actions .action .text {
+    float: left;
+}
+
+#header .actions .action .icon {
+    float: left;
+    font-family: awesome;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+#header .actions .action.disabled {
+    cursor: default;
+}
+
+#header .actions .action.disabled .icon {
+    opacity: .5;
+}
+
+#header .actions .action.disabled .text {
+    opacity: .5;
+}
+
+/* Smartphones */
+@media only screen and (max-width: 640px) {
+    #header .action {
+        height: 40px;
+        line-height: 40px;
+    }
+}

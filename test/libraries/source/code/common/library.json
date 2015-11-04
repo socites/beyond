@@ -1,0 +1,11 @@
+{
+  "versions": {
+    "0.0.1": {
+      "path": "./$version",
+      "hosts": {
+        "js": "http://common.com/js/$version",
+        "ws": "http://common.com/ws/$version"
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<div id="viewport">
+
+    <div id="state">
+        <div class="offline">
+            <div class="icon"></div>
+            <div class="text">offline</div>
+        </div>
+        <div class="loading">
+            <div class="text">loading</div>
+            <div class="icon"></div>
+        </div>
+        <div class="downloading">
+            <div class="icon"></div>
+            <div class="text">downloading</div>
+        </div>
+    </div>
+
+    <div id="messages">
+
+        <div class="close">&#xf00d;</div>
+        <div class="icon"></div>
+        <div class="title"></div>
+        <div class="body"></div>
+
+        <div class="bottom">
+            <div class="dismiss">dismiss</div>
+            <div class="previous">&#xf137;</div>
+            <div class="next">&#xf138;</div>
+        </div>
+
+    </div>
+
+    <div id="sidebar">
+        <div class="wrapper">
+            <div class="translate">
+
+                <div id="menubar">
+
+                    <div class="logo"></div>
+                    <ul class="items"></ul>
+                    <div class="plugins"></div>
+
+                    {{#menubar}}
+                    {{#contact}}
+                    <div class="contact">
+                        <div class="title">{{title}}</div>
+                        <div class="organization">{{organization}}</div>
+                        <div class="address">{{address1}}</div>
+                        <div class="address">{{address2}}</div>
+                        <div class="address">{{address3}}</div>
+                        <div class="phone">{{phone}}</div>
+                        <div class="email">{{email}}</div>
+                    </div>
+                    {{/contact}}
+
+                    {{#footer}}
+                    <div class="footer">
+                        <div class="terms">{{terms.title}}</div>
+                        <div class="privacy">{{privacy.title}}</div>
+                    </div>
+                    {{/footer}}
+                    {{/menubar}}
+
+                </div>
+
+                <div class="submenus"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="toolbar">
+
+        <div class="logo"></div>
+        <ul class="items"></ul>
+
+    </div>
+
+    <div id="header"></div>
+
+    <div id="pages-back">
+        <div class="background"></div>
+    </div>
+
+    <div id="about"></div>
+    <div id="terms"></div>
+    <div id="privacy"></div>
+    <div id="content-viewer"></div>
+    <div id="modal"></div>
+
+    <!-- ex: auth on dashboard -->
+    <div id="pages-full"></div>
+
+    <div id="error">
+        <div class="icon"></div>
+        <div class="code"></div>
+        <div class="message"></div>
+
+        <div class="continue">continue navigating, ...</div>
+    </div>
+
+</div>

@@ -1,0 +1,58 @@
+#header .title {
+    position: relative;
+    float: left;
+
+    height: 45px;
+    line-height: 45px;
+    margin: 0 10px;
+
+    color: #333;
+}
+
+#header .title:after {
+    position: absolute;
+    top: 6px;
+    right: -11px;
+    height: 30px;
+    width: 1px;
+    content: '';
+
+    background: #777;
+}
+
+#header .title .text {
+    float: left;
+    text-transform: uppercase;
+}
+
+#header .title .go {
+    float: left;
+    cursor: pointer;
+    display: none;
+}
+
+#header .title .go:hover {
+    color: #00b085;
+}
+
+#header .title .go .icon {
+    float: left;
+    font-family: awesome;
+    margin-left: 10px;
+}
+
+#header .title .go .text {
+    float: left;
+    margin-left: 5px;
+    font-size: 11px;
+}
+
+/* Smartphones */
+@media only screen and (max-width: 640px) {
+
+    #header .title {
+        height: 40px;
+        line-height: 40px;
+    }
+
+}

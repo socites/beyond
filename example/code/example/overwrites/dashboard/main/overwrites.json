@@ -1,0 +1,6 @@
+{
+  "custom": {
+    "css": "styles.css"
+  },
+  "extensions": "./extensions/overwrites.json"
+}

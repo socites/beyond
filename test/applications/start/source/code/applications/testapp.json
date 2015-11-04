@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "path": "./testapp",
+  "imports": {
+    "libraries": [
+      "lib1/0.01",
+      "lib2/0.01"
+    ],
+    "excludes": [
+      "libraries/lib1/moon"
+    ]
+  },
+  "start": [
+    "libraries/lib1"
+  ],
+  "extensions": {
+    "start": {
+      "libraries/lib1": []
+    },
+    "scripts": {
+      "libraries/lib1": []
+    }
+  }
+}

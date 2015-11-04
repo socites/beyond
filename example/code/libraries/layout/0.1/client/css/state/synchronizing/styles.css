@@ -1,0 +1,33 @@
+#state .synch {
+    font-family: awesome;
+    color: #333;
+    font-size: 22px;
+
+    cursor: pointer;
+    opacity: .3;
+    text-align: center;
+}
+
+#state .synch:hover {
+    opacity: 1;
+}
+
+#state .synch.synchronizing {
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    opacity: 1;
+    cursor: default;
+}
+
+#state .synch:before {
+    content: '\\f021';
+}
+
+@media only screen and (max-width: 640px) {
+
+    #viewport.portrait #state .synch {
+        color: white;
+        font-size: 16px;
+    }
+
+}

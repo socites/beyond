@@ -1,0 +1,31 @@
+#privacy {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 300;
+    display: none;
+    padding: 10px;
+
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 3px 3px 3px #333;
+    color: #333;
+
+    overflow: auto;
+    transition: .3s linear;
+    -moz-transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+
+    opacity: 0;
+    transform: scale3d(.9, .9, .9);
+}
+
+#privacy.show {
+    opacity: 1;
+    transform: none;
+}

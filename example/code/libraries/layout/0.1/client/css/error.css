@@ -1,0 +1,38 @@
+#error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: white;
+    z-index: 1000;
+    color: #333;
+
+    display: none;
+}
+
+#error .icon {
+    margin: 10px;
+    font-family: awesome;
+}
+
+#error .code {
+    margin: 10px 10px 30px 10px;
+    font-size: 16px;
+}
+
+#error .message {
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+#error .continue {
+    margin: 50px 10px 0 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+#error .continue:hover {
+    color: #00b085;
+}

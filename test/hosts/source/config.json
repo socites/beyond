@@ -1,0 +1,42 @@
+{
+  "ports": {
+    "http": 3010,
+    "rpc": 3011
+  },
+  "paths": {
+    "code": "./code",
+    "build": "./build"
+  },
+  "libraries": {
+    "common": {
+      "path": "./common",
+      "versions": {
+        "0.1": {
+          "path": "./",
+          "build": {
+            "path": "common",
+            "hosts": {
+              "production": {
+                "js": "http://common.com/js/$version",
+                "ws": "http://common.com/ws"
+              },
+              "development": {
+                "js": "http://dev.common.com/js/$version",
+                "ws": "http://dev.common.com/ws"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "presets": {
+    "community": {
+      "imports": [],
+      "excludes": []
+    }
+  },
+  "applications": {
+    "example": "./application.json"
+  }
+}

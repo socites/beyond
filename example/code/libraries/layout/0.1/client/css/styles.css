@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+body {
+    background: white;
+    color: #fff;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+
+strong {
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    background: #fff;
+    color: #000;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    opacity: 0;
+
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+#viewport.show {
+    opacity: 1;
+}

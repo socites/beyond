@@ -1,0 +1,18 @@
+{
+  "applications": {
+    "test_preset": "./applications/test_preset.json",
+    "test_imports": "./applications/test_imports.json"
+  },
+  "libraries": "./libraries/libraries.json",
+  "presets": {
+    "default": {
+      "libraries": [
+        "lib1/0.01",
+        "lib2/0.01"
+      ],
+      "excludes": [
+        "libraries/lib2/bye"
+      ]
+    }
+  }
+}

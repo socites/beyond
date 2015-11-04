@@ -1,0 +1,25 @@
+#content-viewer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+
+    background: rgba(255, 255, 255, .8);
+    display: none;
+
+    transition: .3s opacity linear;
+    -moz-transition: .3s opacity linear;
+    -webkit-transition: .3s opacity linear;
+    -ms-transition: .3s opacity linear;
+    -o-transition: .3s opacity linear;
+
+    opacity: 0;
+}
+
+#content-viewer.show {
+    opacity: 1;
+    display: block;
+}

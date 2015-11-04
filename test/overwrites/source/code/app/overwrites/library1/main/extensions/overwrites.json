@@ -1,0 +1,10 @@
+{
+  "library2": {
+    "css": [
+      "library2.css"
+    ],
+    "txt": [
+      "library2.json"
+    ]
+  }
+}

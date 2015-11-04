@@ -1,0 +1,9 @@
+{
+  "start": {
+    "js": {
+      "files": [
+        "start.js"
+      ]
+    }
+  }
+}

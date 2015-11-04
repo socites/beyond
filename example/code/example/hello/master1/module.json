@@ -1,0 +1,28 @@
+{
+  "code": {
+    "css": {
+      "path": "css",
+      "files": [
+        "*"
+      ]
+    },
+    "html": {
+      "path": "html",
+      "files": [
+        "*"
+      ]
+    },
+    "txt": {
+      "files": [
+        "texts.json"
+      ]
+    },
+    "js": {
+      "files": [
+        "master1.js"
+      ]
+    }
+  },
+  "route": "/master1",
+  "localized": true
+}
