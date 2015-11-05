@@ -1,7 +1,14 @@
 language: node_js
 node_js:
- - "4.1"
- - "4.0"
+- '4.1'
+- '4.0'
 branches:
- only:
+  only:
   - master
+deploy:
+  provider: npm
+  email: ebox@jarawi.com
+  api_key:
+    secure: Zb4qSET89fLb8BMeupQKL3f07d3GJsK0MOfkyji7wBqINDKnytPzjyM6kOXZpF8k8lpMYKcQmdwjorZ0FfvdC4qgTCoL6Hc+Q3s0dR8IT3J29JG/aUIyEZ4FUwBjY41hQxM8R8YrfHr5YLKvrKex1Ji3EnwSjTEMT1G5+ScKcJP03vcZg5TshCY3kFDqKgo7Ek2pkH0AHBKGsFbiPNhOlzEBHgrKNDn8ptwgKJ4NLmV6ocoyioz4oeOxTVvTwS3nK6Pn7Ifhmo263Do5l86sTDwwz516JMaOHvcf9/wY+X+oP1DUl5SivkQ1tYvOGMmpskf+jNCcYT+u9ltxuOovjh9Z4FO65l0lUTlypdWJzCw40QI7qkT84ViBmDwKv1aLBnECSBNsRxcTKKsKIcqanFVCmMjotlHcohH9Y5zOy5uFvOzZf1tOQIzTPOlMTV2jnbJvJi4S0hYAAfZfF46OAv1In+rna9lTAdwpP6aCtnQvTDMcMnYPJOVJpC6bdebd5DeW5wrMQeWHofYUgs4tQAp6bocaM9NdtRVgHMVmYuRxRW0EFChfeza1v37NYUq1TaKW3fvgGmy45+JC9K/hcfauXf1ODJa17HkTQw4MB4LG6FO79+qY+vU6Ab1u+8P2972+eDyhDRnqfbNyMUtz3EbJpft9Y9jqPm5cwNLlWYo=
+  on:
+    repo: socites/beyond

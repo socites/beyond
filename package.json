@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.90",
+  "version": "0.0.91",
   "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
   "main": "./lib",
   "author": "socites",
@@ -19,7 +19,7 @@
     "test/"
   ],
   "scripts": {
-    "test": "mocha test/**"
+    "test": "mocha test/*"
   },
   "dependencies": {
     "main.lib": "https://github.com/socites/main.lib.git",
