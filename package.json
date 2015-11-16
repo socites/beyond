@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.95",
+  "version": "0.0.97",
   "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
   "main": "./lib",
   "author": "socites",
@@ -10,6 +10,7 @@
     "real time",
     "MVC"
   ],
+  "license": "MIT",
   "homepage": "http://www.beyondjs.com",
   "bugs": {
     "url": "https://github.com/socites/beyond/issues"
