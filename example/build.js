@@ -1,6 +1,6 @@
 (function (beyond) {
     "use strict";
 
-    beyond.build();
+    beyond.build({'libraries': 'none', 'applications': true});
 
 })(new (require('..'))('./config.json'));

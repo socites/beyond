@@ -1,5 +1,13 @@
 {
   "versions": {
-    "0.1": {}
-  }
+    "0.1": {
+      "build": {
+        "hosts": {
+          "js": "http://beyond.js/layout/js",
+          "ws": "http://beyond.js/layout/js"
+        }
+      }
+    }
+  },
+  "connect": false
 }
