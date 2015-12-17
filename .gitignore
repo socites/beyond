@@ -24,3 +24,4 @@ node_modules
 .idea
 trash
 .DS_Store
+typings/
