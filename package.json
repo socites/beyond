@@ -37,7 +37,7 @@
     "url-join": "^0.0.1"
   },
   "devDependencies": {
-    "should": "^7.1.1",
+    "should": "^8.0.1",
     "mocha": "^2.3.4"
   },
   "engines": {
