@@ -5,6 +5,9 @@
     "application": {
       "ID": "hello",
       "key": "world"
+    },
+    "routes": {
+      "default": "master1"
     }
   },
   "path": "./",

@@ -1,4 +1,19 @@
-toolbar.show();
+(function() {
+	"use strict";
+	beyond.navigation.bind('default', function () {        
+    
+        var pathname;
+        
+        if (typeof beyond.params.routes !== 'object') return;
+        var routes = beyond.params.routes.default;
+    
+        if (typeof routes === 'string') pathname = routes;       
+    
+        return pathname;
+    
+    });
+    
+    toolbar.show();
 
 menubar.items.push({
     'ID': 'slave1',
@@ -43,3 +58,5 @@ menubar.items.push({
 menubar.update();
 
 $('#content-viewer').addClass('show').css('left', '70px').css('top', '10px').css('z-index', 1);
+
+})();
