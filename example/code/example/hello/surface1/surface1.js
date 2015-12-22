@@ -1,4 +1,4 @@
-var Page = function (control) {
+var Controller = function (control) {
     "use strict";
 
     if (control.orphan) control.screen = {'pathname': '/screen1', 'state': {'hi': 'hello world'}};
@@ -43,5 +43,5 @@ var Page = function (control) {
 define(function () {
     "use strict";
 
-    return {'Controller': Page};
+    return {'Controller': Controller};
 });

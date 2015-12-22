@@ -1,4 +1,4 @@
-var Page = function () {
+var Controller = function () {
     "use strict";
 
     var $container;
@@ -33,5 +33,5 @@ var Page = function () {
 define(function () {
     "use strict";
 
-    return {'Controller': Page};
+    return {'Controller': Controller};
 });
