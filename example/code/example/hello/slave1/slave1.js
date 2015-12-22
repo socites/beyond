@@ -1,7 +1,7 @@
 var Page = function (control) {
     "use strict";
 
-    if (control.orphan) control.master = {'pathname': '/master1', 'state': {'hi': 'hello world'}};
+    if (control.orphan) control.screen = {'pathname': '/master1', 'state': {'hi': 'hello world'}};
 
     var $container;
     var header = new layout.Header();
@@ -25,7 +25,7 @@ var Page = function (control) {
         $container.hide();
     };
 
-    this.show = function (state, done, close) {
+    this.show = function (state, done) {
 
         render();
 
@@ -43,5 +43,5 @@ var Page = function (control) {
 define(function () {
     "use strict";
 
-    return {'Controller': Page, 'type': 'slave'};
+    return {'Controller': Page};
 });

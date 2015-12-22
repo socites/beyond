@@ -11,5 +11,8 @@
       ]
     }
   },
-  "route": "/slave2"
+  "route": {
+    "pathname": "/slave2",
+    "type": "surface"
+  }
 }
