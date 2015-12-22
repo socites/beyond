@@ -1,6 +1,6 @@
 {
     "name": "beyond",
-    "version": "0.0.108",
+    "version": "0.0.109",
     "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
     "main": "./lib",
     "author": "socites",
