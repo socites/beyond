@@ -1,42 +1,42 @@
 toolbar.show();
 
 menubar.items.push({
-    'ID': 'slave1',
+    'ID': 'surface1',
     'priority': 1,
-    'text': 'slave1',
+    'text': 'surface1',
     'click': function () {
         "use strict";
-        beyond.navigate('/slave1');
+        beyond.navigate('/surface1');
     }
 });
 
 menubar.items.push({
-    'ID': 'master1',
+    'ID': 'screen1',
     'priority': 1,
-    'text': 'master1',
+    'text': 'screen1',
     'click': function () {
         "use strict";
-        beyond.navigate('/master1');
+        beyond.navigate('/screen1');
     }
 });
 
 menubar.items.push({
-    'ID': 'slave2',
+    'ID': 'surface2',
     'priority': 1,
-    'text': 'slave2',
+    'text': 'surface2',
     'click': function () {
         "use strict";
-        beyond.navigate('/slave2');
+        beyond.navigate('/surface2');
     }
 });
 
 menubar.items.push({
-    'ID': 'master2',
+    'ID': 'screen2',
     'priority': 1,
-    'text': 'master2',
+    'text': 'screen2',
     'click': function () {
         "use strict";
-        beyond.navigate('/master2');
+        beyond.navigate('/screen2');
     }
 });
 

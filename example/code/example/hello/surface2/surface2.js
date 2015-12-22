@@ -9,13 +9,13 @@ var Page = function (control) {
 
         if ($container) return;
 
-        $container = $('<div class="slave2 control" />').html('slave2');
+        $container = $('<div class="surface2 control" />').html('surface2');
         $('#content-viewer').append($container);
 
     };
 
     var hide = function () {
-        console.log('hiding slave2');
+        console.log('hiding surface2');
         $container.hide();
     };
 
@@ -28,7 +28,7 @@ var Page = function (control) {
             close();
         });
 
-        console.log('showing slave2');
+        console.log('showing surface2');
         $container.show();
 
         done();
