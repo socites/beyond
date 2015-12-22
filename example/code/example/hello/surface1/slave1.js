@@ -1,7 +1,7 @@
 var Page = function (control) {
     "use strict";
 
-    if (control.orphan) control.screen = {'pathname': '/master1', 'state': {'hi': 'hello world'}};
+    if (control.orphan) control.screen = {'pathname': '/screen1', 'state': {'hi': 'hello world'}};
 
     var $container;
     var header = new layout.Header();

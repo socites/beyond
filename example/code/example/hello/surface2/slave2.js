@@ -1,7 +1,7 @@
 var Page = function (control) {
     "use strict";
 
-    if (control.orphan) control.screen = {'pathname': '/master2', 'state': {'hi': 'hello world'}};
+    if (control.orphan) control.screen = {'pathname': '/screen2', 'state': {'hi': 'hello world'}};
 
     var $container;
 
