@@ -2,12 +2,12 @@
   "code": {
     "css": {
       "files": [
-        "master2.css"
+        "screen2.css"
       ]
     },
     "js": {
       "files": [
-        "master2.js"
+        "screen2.js"
       ]
     }
   },

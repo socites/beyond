@@ -2,12 +2,12 @@
   "code": {
     "css": {
       "files": [
-        "slave1.css"
+        "surface1.css"
       ]
     },
     "js": {
       "files": [
-        "slave1.js"
+        "surface1.js"
       ]
     }
   },

@@ -7,14 +7,14 @@ var Page = function () {
 
         if ($container) return;
 
-        $container = $('<div class="master2 control" />').html('master2');
+        $container = $('<div class="screen2 control" />').html('screen2');
         $('#content-viewer').append($container);
 
     };
 
     this.show = function (state, done) {
 
-        console.log('showing master2');
+        console.log('showing screen2');
         render();
         $container.show();
 
@@ -23,7 +23,7 @@ var Page = function () {
     };
 
     this.hide = function () {
-        console.log('hiding master2');
+        console.log('hiding screen2');
         $container.hide();
     };
 

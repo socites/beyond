@@ -8,14 +8,14 @@ var Page = function () {
         if ($container) return;
 
         var html = module.render('index', module.texts);
-        $container = $('<div class="master1 control" />').html(html);
+        $container = $('<div class="screen1 control" />').html(html);
         $('#content-viewer').append($container);
 
     };
 
     this.show = function (state, done) {
 
-        console.log('showing master1');
+        console.log('showing screen1');
         render();
         $container.show();
 
@@ -24,7 +24,7 @@ var Page = function () {
     };
 
     this.hide = function () {
-        console.log('hiding master1');
+        console.log('hiding screen1');
         $container.hide();
     };
 
