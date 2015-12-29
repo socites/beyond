@@ -1,7 +1,8 @@
 var Controller = function (control) {
     "use strict";
 
-    if (control.orphan) control.screen = {'pathname': '/screen2', 'state': {'hi': 'hello world'}};
+    if (control.orphan)
+        control.screen.set({'pathname': '/screen2'}, {'hi': 'hello world'});
 
     var $container;
 
@@ -42,5 +43,5 @@ var Controller = function (control) {
 define(function () {
     "use strict";
 
-    return {'Controller': Controller};
+    return {'Control': Controller};
 });

@@ -11,7 +11,7 @@
       ]
     }
   },
-  "route": {
+  "control": {
     "pathname": "/surface1",
     "type": "surface"
   }

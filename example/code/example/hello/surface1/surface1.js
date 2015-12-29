@@ -1,7 +1,8 @@
 var Controller = function (control) {
     "use strict";
 
-    if (control.orphan) control.screen = {'pathname': '/screen1', 'state': {'hi': 'hello world'}};
+    if (control.orphan)
+        control.screen.set({'pathname': '/screen1'}, {'hi': 'hello world'});
 
     var $container;
     var header = new layout.Header();
@@ -15,7 +16,6 @@ var Controller = function (control) {
 
         $container.click(function () {
             hide();
-            close();
         });
 
     };
@@ -43,5 +43,5 @@ var Controller = function (control) {
 define(function () {
     "use strict";
 
-    return {'Controller': Controller};
+    return {'Control': Controller};
 });

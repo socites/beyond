@@ -23,6 +23,6 @@
       ]
     }
   },
-  "route": "/screen1",
+  "control": "/screen1",
   "localized": true
 }

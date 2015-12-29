@@ -33,5 +33,5 @@ var Controller = function () {
 define(function () {
     "use strict";
 
-    return {'Controller': Controller};
+    return {'Control': Controller};
 });

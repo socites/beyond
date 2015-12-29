@@ -11,5 +11,7 @@
       ]
     }
   },
-  "route": "/screen2"
+  "control": {
+    "pathname": "/screen2"
+  }
 }
