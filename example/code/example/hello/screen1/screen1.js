@@ -24,7 +24,6 @@ var Controller = function () {
     };
 
     this.hide = function () {
-        console.log('hiding screen1');
         $container.hide();
     };
 
