@@ -34,8 +34,8 @@
         "navigation/pathname.js",
         "navigation/update.js",
         "navigation/navigation.js",
-        "loader/error.js",
-        "loader/loader.js",
+        "require.config/error.js",
+        "require.config/config.js",
         "beyond.js"
       ]
     }
