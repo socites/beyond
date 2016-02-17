@@ -26,15 +26,14 @@
   },
   "imports": {
     "libraries": [
-      "layout/0.1",
-      "comments/0.0.1",
-      "graphs/0.0.1",
-      "dashboard/0.1",
-      "members/0.1"
+      "vendor/0.0.1",
+      "layout/0.1"
     ]
   },
   "start": [
-    "libraries/layout"
+    "beyond.js",
+    "vendor",
+    "layout"
   ],
   "overwrites": "./overwrites/overwrites.json",
   "css": {

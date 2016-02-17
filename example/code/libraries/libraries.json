@@ -1,7 +1,4 @@
 {
-  "layout": "./layout/library.json",
-  "comments": "./model/comments/library.json",
-  "graphs": "./model/graphs/library.json",
-  "dashboard": "./dashboard/library.json",
-  "members": "./members/library.json"
+  "vendor": "./vendor/library.json",
+  "layout": "./layout/library.json"
 }

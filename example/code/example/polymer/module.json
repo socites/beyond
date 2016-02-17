@@ -1,19 +1,19 @@
 {
-  "start": {
+  "polymer": {
+    "id": "my-polymer-element",
     "css": {
       "files": [
         "styles.css"
-      ],
-      "is": "custom-style"
+      ]
     },
     "html": {
       "files": [
-        "index.html"
+        "control.html"
       ]
     },
     "js": {
       "files": [
-        "start.js"
+        "main.js"
       ]
     }
   }
