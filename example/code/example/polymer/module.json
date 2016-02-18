@@ -1,6 +1,7 @@
 {
   "polymer": {
     "id": "my-polymer-element",
+    "is": "dom-bind",
     "css": {
       "files": [
         "styles.css"
