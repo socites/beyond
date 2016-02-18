@@ -39,8 +39,5 @@
         "beyond.js"
       ]
     }
-  },
-  "static": [
-    "./vendor"
-  ]
+  }
 }
