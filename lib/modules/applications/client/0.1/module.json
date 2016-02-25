@@ -22,6 +22,7 @@
         "modules/module/rpc/dispatcher.js",
         "modules/module/plugins.js",
         "modules/module/texts/texts.js",
+        "modules/module/react.js",
         "modules/module/module.js",
         "modules/modules.js",
         "controls/modules.js",
