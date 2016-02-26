@@ -2,7 +2,8 @@
   "code": {
     "jsx": {
       "files": [
-        "test.jsx"
+        "test.jsx",
+        "test2.jsx"
       ]
     }
   }
