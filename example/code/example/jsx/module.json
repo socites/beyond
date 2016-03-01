@@ -1,4 +1,16 @@
 {
+  "widget": {
+    "name": "SampleWidget",
+    "dependencies": {
+      "polymer": [
+        "paper-toolbar",
+        "paper-input"
+      ],
+      "require": {
+        "medicine/main": "medicine"
+      }
+    }
+  },
   "code": {
     "jsx": {
       "files": [

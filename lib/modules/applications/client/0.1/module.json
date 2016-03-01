@@ -37,6 +37,9 @@
         "navigation/navigation.js",
         "require.config/error.js",
         "require.config/config.js",
+        "widgets/loader.js",
+        "widgets/widgets.js",
+        "widgets/wrapper.js",
         "ready.js",
         "beyond.js"
       ]
