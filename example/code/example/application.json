@@ -13,15 +13,7 @@
   ],
   "build": {
     "path": "example",
-    "libraries": {
-      "path": "www"
-    },
-    "modules": {
-      "path": "www"
-    },
-    "custom": {
-      "path": "www"
-    },
+    "internalPath": "www",
     "hosts": {
       "production": {
         "js": "http://",
