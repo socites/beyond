@@ -13,17 +13,7 @@
   ],
   "build": {
     "path": "example",
-    "internalPath": "www",
-    "hosts": {
-      "production": {
-        "js": "http://",
-        "ws": "http://"
-      },
-      "development": {
-        "js": "",
-        "ws": ""
-      }
-    }
+    "internalPath": "www"
   },
   "imports": {
     "libraries": [
