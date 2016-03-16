@@ -9,7 +9,8 @@
   },
   "path": "./",
   "static": [
-    "index.html"
+    "index.html",
+    "config.xml"
   ],
   "build": {
     "path": "example",
