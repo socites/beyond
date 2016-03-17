@@ -4,8 +4,7 @@
     "0.1": {
       "build": {
         "hosts": {
-          "js": "http://common.com/js",
-          "ws": "http://common.com/ws"
+          "js": "http://api.dev.socites.com/js/beyond/0.1"
         }
       }
     }
