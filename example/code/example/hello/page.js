@@ -7,8 +7,3 @@ function Page() {
     };
 
 }
-
-define(function () {
-    "use strict";
-    return Page;
-})
