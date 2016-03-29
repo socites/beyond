@@ -2,7 +2,7 @@ function Page() {
     "use strict";
 
     this.show = function (state, done) {
-        console.log('hello page');
+        $('body').html('hello world!');
         done();
     };
 
