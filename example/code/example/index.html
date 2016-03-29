@@ -10,17 +10,23 @@
 
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"/>
 
-    <!-- jquery -->
-    <script defer src="#beyond.libraries.vendor#/static/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- hogan -->
-    <script defer
-            src="#beyond.libraries.vendor#/static/bower_components/hogan.js/web/builds/3.0.2/hogan-3.0.2.min.js"></script>
-
     <!-- polymer dependencies -->
     <script defer src="#beyond.libraries.vendor#/static/bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <link defer rel="import" href="#beyond.libraries.vendor#/static/bower_components/polymer/polymer.html"/>
+    <link rel="import" href="#beyond.libraries.vendor#/static/bower_components/polymer/polymer.html"/>
 
-    <!-- application start -->
+    <!-- required libraries: jquery, require.js, hogan -->
+    <script defer src="#beyond.libraries.vendor#/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script defer src="#beyond.libraries.vendor#/static/require.js/requirejs.min.js"></script>
+    <script defer src="#beyond.libraries.vendor#/static/bower_components/hogan.js/web/builds/3.0.2/hogan-3.0.2.min.js">
+    </script>
+
+    <!-- application config must be before beyond -->
+    <script defer src="#beyond.application#/config.js"></script>
+
+    <!-- beyond.js -->
+    <script defer src="#beyond.libraries.beyond#/main.js"></script>
+
+    <!-- application start requires beyond, so it must be after beyond -->
     <script defer src="#beyond.application#/start.js"></script>
 </head>
 

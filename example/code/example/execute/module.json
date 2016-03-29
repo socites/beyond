@@ -1,4 +1,5 @@
 {
+  "page": "/execute",
   "code": {
     "js": {
       "files": [
@@ -10,6 +11,5 @@
     "actions": "./server/actions",
     "backend": "./server/backend",
     "config": "./server/config.json"
-  },
-  "route": "/execute"
+  }
 }

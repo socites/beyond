@@ -19,8 +19,7 @@
   },
   "imports": {
     "libraries": [
-      "vendor/0.0.1",
-      "layout/0.1"
+      "vendor/0.0.1"
     ]
   },
   "start": [

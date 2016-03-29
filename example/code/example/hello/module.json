@@ -1,8 +1,9 @@
 {
-  "start-": {
+  "page": "/hello",
+  "code": {
     "js": {
       "files": [
-        "start.js"
+        "page.js"
       ]
     }
   }
