@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.292",
+  "version": "0.0.294",
   "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
   "main": "./lib",
   "bin": {
@@ -13,6 +13,7 @@
     "real time",
     "MVC"
   ],
+  "repository": "https://github.com/socites/beyond.git",
   "license": "MIT",
   "homepage": "http://www.beyondjs.com",
   "bugs": {
@@ -41,8 +42,7 @@
     "less": "^2.6.0",
     "main.lib": "https://github.com/socites/main.lib.git",
     "socket.io": "^1.3.7",
-    "url-join": "^0.0.1",
-    "bower": "^1.7.7"
+    "url-join": "^0.0.1"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
