@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-var beyond = require('beyond');
-
 // check if server.json file exists
 var fs = require('fs'),
     path = require('path'),
@@ -38,6 +36,7 @@ else {
 
         config.applications = {
             'default': {
+                "version": "0.1",
                 "static": [
                     'index.html'
                 ]
@@ -46,6 +45,10 @@ else {
 
     }
 
-    beyond.start(config);
+    // start beyond server
+    var Beyond = require('beyond');
+    var beyond = new Beyond(config);
+
+    beyond.start();
 
 }
