@@ -1,0 +1,12 @@
+{
+  "versions": {
+    "0.0.1": {
+      "build": {
+        "hosts": {
+          "js": "http://api.dev.socites.com/js/beyond/0.0.1"
+        }
+      }
+    }
+  },
+  "connect": false
+}
