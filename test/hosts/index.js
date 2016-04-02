@@ -15,9 +15,9 @@ describe('Configuration hosts', function () {
 
                 let Config = require('path').join(require('main.lib'), 'config');
                 Config = require(Config);
-
                 config = new (Config)(path, {'local': false});
                 yield config.initialise();
+
                 done();
 
             }
@@ -33,7 +33,7 @@ describe('Configuration hosts', function () {
 
         let application = config.modules.applications.items.example;
         assert.equal(application.build.hosts.js, 'http://example.com');
-        assert.equal(application.build.hosts.ws, 'http://example.com');
+        assert.equal(application.build.hosts.ws, 'http://example.com/example');
 
         let library = config.modules.libraries.items.common;
         let version = library.versions.items['0.1'];
@@ -63,9 +63,9 @@ describe('Configuration hosts', function () {
                     application = applications.items.example;
                     hosts = application.hosts('en');
                     assert.equal(hosts.application.js, 'http://example.com');
-                    assert.equal(hosts.application.ws, 'http://example.com');
+                    assert.equal(hosts.application.ws, 'ws://example.com/example');
                     assert.equal(hosts.libraries.common.js, 'http://common.com/js/0.1');
-                    assert.equal(hosts.libraries.common.ws, 'http://common.com/ws');
+                    assert.equal(hosts.libraries.common.ws, 'ws://common.com/libraries/common');
 
                     modules = new Modules(config);
                     yield modules.initialise();
@@ -73,7 +73,7 @@ describe('Configuration hosts', function () {
                     applications = modules.applications;
                     application = applications.items.example;
                     hosts = application.hosts('en');
-                    assert.equal(hosts.application.js, '/example/en');
+                    assert.equal(hosts.application.js, '/applications/example/languages/en');
                     assert.equal(hosts.libraries.common.js, '/libraries/common/0.1');
                     assert.equal(hosts.libraries.common.ws, '/libraries/common');
 

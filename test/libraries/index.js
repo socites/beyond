@@ -33,7 +33,7 @@ describe('Libraries collection', function () {
     it('should have two libraries', function () {
 
         // one of the libraries is beyond.js
-        assert.equal(2, libraries.length);
+        assert.equal(3, libraries.length);
 
     });
 
@@ -44,7 +44,7 @@ describe('Libraries collection', function () {
 
             try {
 
-                let library = libraries.items['beyond.js'];
+                let library = libraries.items['beyond'];
                 assert.equal(library.valid, true);
 
                 done();

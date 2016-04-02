@@ -40,17 +40,21 @@ describe('Application Imports', function () {
 
             try {
 
-                assert.equal(application.libraries.length, 3);
+                assert.equal(application.libraries.length, 4);
 
                 for (let key of application.libraries.keys) {
 
                     let library = application.libraries.items[key];
+
                     let modules = library.modules;
 
                     yield modules.process();
 
                     switch (library.name) {
-                        case 'beyond.js':
+                        case 'vendor':
+                            assert.equal(1, modules.length);
+                            break;
+                        case 'beyond':
                             assert.equal(1, modules.length);
                             break;
                         case 'lib1':

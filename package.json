@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.294",
+  "version": "0.0.296",
   "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
   "main": "./lib",
   "bin": {
@@ -11,7 +11,13 @@
     "framework",
     "sigle page",
     "real time",
-    "MVC"
+    "MVC",
+    "hogan",
+    "react",
+    "require js",
+    "socket.io",
+    "polymer",
+    "web components"
   ],
   "repository": "https://github.com/socites/beyond.git",
   "license": "MIT",

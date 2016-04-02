@@ -18,7 +18,7 @@ describe('Beyond.js library', function () {
                     let beyond = new Beyond();
                     yield beyond.initialise();
 
-                    beyond = beyond.libraries.items['beyond.js'].versions.items['0.1'];
+                    beyond = beyond.libraries.items['beyond'].versions.items['0.1'];
                     assert(typeof beyond, 'object');
 
                     let module = yield beyond.modules.module('.');

@@ -36,7 +36,7 @@ describe('Application Imports using presets', function () {
 
             try {
 
-                assert.equal(3, application.libraries.length);
+                assert.equal(4, application.libraries.length);
 
                 for (let key of application.libraries.keys) {
 
@@ -46,7 +46,10 @@ describe('Application Imports using presets', function () {
                     yield modules.process();
 
                     switch (library.name) {
-                        case 'beyond.js':
+                        case 'vendor':
+                            assert.equal(1, modules.length);
+                            break;
+                        case 'beyond':
                             assert.equal(1, modules.length);
                             break;
                         case 'lib1':
