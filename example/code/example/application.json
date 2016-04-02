@@ -5,7 +5,8 @@
     "application": {
       "ID": "hello",
       "key": "world"
-    }
+    },
+    "defaultRoute": "hello"
   },
   "path": "./",
   "static": [
