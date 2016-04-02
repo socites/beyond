@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.290",
+  "version": "0.0.291",
   "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
   "main": "./lib",
   "bin": {
@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "test": "mocha test/*",
-    "postinstall": "bower cache clean && bower install lib/modules/applications/client/vendor/0.0.1/bower.json"
+    "postinstall": "cd lib/modules/applications/client/vendor/0.0.1 && bower install"
   },
   "dependencies": {
     "async": "https://github.com/socites/async.git",
@@ -41,10 +41,10 @@
     "less": "^2.6.0",
     "main.lib": "https://github.com/socites/main.lib.git",
     "socket.io": "^1.3.7",
-    "url-join": "^0.0.1"
+    "url-join": "^0.0.1",
+    "bower": "^1.7.7"
   },
   "devDependencies": {
-    "bower": "^1.7.7",
     "mocha": "^2.3.4",
     "should": "^7.1.1"
   },
