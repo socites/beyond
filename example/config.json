@@ -6,5 +6,9 @@
   "applications": {
     "example": "./example/application.json"
   },
-  "libraries": "./libraries/libraries.json"
+  "libraries": "./libraries/libraries.json",
+  "defaults": {
+    "application": "example",
+    "language": "en"
+  }
 }

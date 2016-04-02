@@ -3,7 +3,7 @@ function Page() {
 
     this.show = function (state, done) {
         $('body').html('hello world!');
-        done();
+        if (done) done();
     };
 
 }
