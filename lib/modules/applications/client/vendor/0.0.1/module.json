@@ -57,6 +57,8 @@
     "bower_components/paper-spinner/paper-spinner-behavior.html",
     "bower_components/paper-spinner/paper-spinner-lite.html",
     "bower_components/paper-spinner/paper-spinner-styles.html",
+    "bower_components/paper-menu-button/paper-menu-button.html",
+    "bower_components/paper-menu-button/paper-menu-button-animations.html",
     "bower_components/iron-flex-layout/iron-flex-layout.html",
     "bower_components/iron-ajax/iron-ajax.html",
     "bower_components/iron-ajax/iron-request.html",
