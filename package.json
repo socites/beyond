@@ -32,7 +32,7 @@
   ],
   "scripts": {
     "test": "mocha test/*",
-    "postinstall": "cd lib/modules/applications/client/vendor/0.0.1 && bower cache clean && bower install"
+    "postinstall": "postinstall"
   },
   "dependencies": {
     "async": "https://github.com/socites/async.git",
