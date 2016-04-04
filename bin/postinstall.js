@@ -1,4 +1,4 @@
-module.execute = function () {
+module.exports = function () {
     "use strict";
 
     // cd lib/modules/applications/client/vendor/0.0.1 && bower cache clean && bower install
