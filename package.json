@@ -1,11 +1,10 @@
 {
   "name": "beyond",
-  "version": "0.0.300",
+  "version": "0.0.301",
   "description": "BeyondJS, a framework for building scalable, modular, single page web applications.",
   "main": "./lib",
   "bin": {
-    "beyond": "bin/beyond.js",
-    "postinstall": "bin/postinstall.js"
+    "beyond": "bin/beyond.js"
   },
   "author": "socites",
   "keywords": [
@@ -33,7 +32,7 @@
   ],
   "scripts": {
     "test": "mocha test/*",
-    "postinstall": "postinstall"
+    "postinstall": "beyond postinstall"
   },
   "dependencies": {
     "async": "https://github.com/socites/async.git",

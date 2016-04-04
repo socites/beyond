@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+var args = process.argv;
+console.log(args);
+if (args[0] === 'postinstall') {
+    require('./postinstall.js')();
+    return;
+}
+
 // check if server.json file exists
 var fs = require('fs'),
     path = require('path'),
