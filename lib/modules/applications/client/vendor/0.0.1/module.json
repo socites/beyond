@@ -100,7 +100,6 @@
     "bower_components/gold-cc-input/images/mastercard.png",
     "bower_components/gold-cc-input/images/visa.png",
     "bower_components/gold-cc-input/cc-validator.js",
-    "bower_components/gold-cc-cvc-input/gold-cc-cvc-input.html",
     "bower_components/paper-toast/paper-toast.html",
     "bower_components/iron-a11y-announcer/iron-a11y-announcer.html",
     "bower_components/iron-overlay-behavior/iron-overlay-behavior.html",
