@@ -6,7 +6,7 @@ module.exports = function () {
 
     // cd lib/modules/applications/client/vendor/0.0.1 && bower cache clean && bower install
     console.log('cd ' + cwd);
-    childProcess.execSync('bower install', {
+    childProcess.execSync('bower install --allow-root', {
         'cwd': cwd,
         'stdio': [0, 1, 2]
     });
