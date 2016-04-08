@@ -19,9 +19,7 @@
     "internalPath": "www"
   },
   "imports": {
-    "libraries": [
-      "vendor/0.0.1"
-    ]
+    "libraries": []
   },
   "start": [
     "beyond",
