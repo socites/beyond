@@ -10,24 +10,7 @@
 
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"/>
 
-    <!-- polymer dependencies -->
-    <script defer src="#beyond.libraries.vendor#/static/bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <link rel="import" href="#beyond.libraries.vendor#/static/bower_components/polymer/polymer.html"/>
-
-    <!-- required libraries: jquery, require.js, hogan -->
-    <script defer src="#beyond.libraries.vendor#/static/bower_components/jquery/dist/jquery.min.js"></script>
-    <script defer src="#beyond.libraries.vendor#/static/require.js/requirejs.min.js"></script>
-    <script defer src="#beyond.libraries.vendor#/static/bower_components/hogan.js/web/builds/3.0.2/hogan-3.0.2.min.js">
-    </script>
-
-    <!-- application config must be before beyond -->
-    <script defer src="#beyond.application#/config.js"></script>
-
-    <!-- beyond.js -->
-    <script defer src="#beyond.libraries.beyond#/main.js"></script>
-
-    <!-- application start requires beyond, so it must be after beyond -->
-    <script defer src="#beyond.application#/start.js"></script>
+    <!-- #beyond.head -->
 </head>
 
 <body>
