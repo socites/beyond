@@ -8,7 +8,7 @@ module.exports = function () {
     console.log('cd ' + cwd);
 
     let cmd = 'if [[ "$(id -u)" != "0" ]]; ' +
-        'then sudo chown $USER:$USER -R ~/.config/configstore && ' +
+        'then sudo chown $USER -R ~/.config/configstore && ' +
         'bower install; else bower install --allow-root; fi';
 
     childProcess.execSync(
