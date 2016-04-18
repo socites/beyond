@@ -1,18 +1,19 @@
 ![](https://socites.github.io/beyond/img/logos/logo-light.png)
 # BeyondJS
+> Easy development of integrated state-of-the-art technologies, with boosted performance.
+
 [![Build Status](https://img.shields.io/travis/socites/beyond/master.svg)](https://travis-ci.org/socites/beyond)
 [![npm version](https://img.shields.io/npm/v/beyond.svg)](https://www.npmjs.com/package/beyond)
 [![bitHound Score](https://www.bithound.io/github/socites/beyond/badges/score.svg)](https://www.bithound.io/github/socites/beyond)
 [![Dependency Status](https://img.shields.io/david/socites/beyond.svg)](https://david-dm.org/socites/beyond)
 [![Dev-Dependency Status](https://img.shields.io/david/dev/socites/beyond.svg)](https://david-dm.org/socites/beyond#info=devDependencies)
-> Easy development of integrated state-of-the-art technologies, with boosted performance.
 
 # One Framework - Multiple technologies
 `BeyondJS` **is not** a framework that does everything, **it is** a framework that integrates powerful existing technologies to create powerful applications.
 `BeyondJS` integrates out-of-the-box, `react`, `mustache`, `require.js`, `polymer`, `less`, `socket.io`.
 
 # BeyondJS is evolving fast
-`BeyondJS` is evolving fast and is actually open for evaluation. If after evaluating `BeyondJS` you think that it can help you to build faster and better software, you can contact us, as we strongly believe that with our support you can take advantage now on BeyondJS.
+`BeyondJS` is evolving fast and is actually open for evaluation. If after evaluating `BeyondJS` you think that it can help you to build faster and better software, you can contact us, as we strongly believe that with our support you can **take advantage now** on `BeyondJS`.
 Otherwise, please stay tuned on the progress of the development of `BeyondJS` or contribute with us with the development and feedback.
 
 ## Mobile and Desktop
@@ -43,6 +44,7 @@ You can build modules with plain code or render pages and components. Both pages
 ### Structuring your Applications in Modules
 
 #### A Basic Module
+
 **module.json**
 ```javascript
 {
@@ -51,14 +53,10 @@ You can build modules with plain code or render pages and components. Both pages
       "files": ["welcome.html"]
     },
     "txt": {
-     "files": [
-       "texts.json"
-     ]
+     "files": ["texts.json"]
     }
     "js": {
-      "files": [
-        "my-module.js"
-      ]
+      "files": ["my-module.js"]
     }
   }
 }
