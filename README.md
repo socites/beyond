@@ -17,7 +17,7 @@ Easy development of integrated state-of-the-art technologies, with boosted perfo
 Otherwise, please stay tuned on the progress of the development of `BeyondJS` or contribute with us with the development and feedback.
 
 ## Mobile and Desktop
-`BeyondJS` is a JavaScript framework for building scalable and modular, single web application that can be easily packaged and deployed on web and mobile.
+`BeyondJS` is a JavaScript framework for building scalable and modular, single page web application that can be easily packaged and deployed on web and mobile.
 
 `BeyondJS` solves:
 * **Module bundler** in a modular development environment. Modules encapsulate mixed resources (html, plain css, less, texts, js, react components, static resources as images and server-side code).
