@@ -106,8 +106,8 @@ This module uses three polymer components, "paper-toolbar", "paper-icon-button" 
 #### model and timestamp
 These two modules where built to work together.
 The model has the responsibility to interact with the backend and represents a basic model.
-This module executes server side code.
 
+This module executes server side code.
 ```javascript
 As you can see below, the module exposes a Model object who has a getTimeStamp method.
 The getTimeStamp method is asynchronous and receives a callback as its only parameter.
@@ -143,7 +143,6 @@ define(function () {
 
 **The module.json file of the _model_ module**
 You can find the specification of the folder where the actions resides. As you can see, the client code and the server code resides in the folder of the module, very closely.
-
 ```javascript
 {
   "code": {
@@ -159,7 +158,6 @@ You can find the specification of the folder where the actions resides. As you c
 
 **The server code**
 This action is asynchronous also. Beyond uses the **socites/async** package to make easier the development of asynchronous actions.
-
 ```javascript
 var async = require('async');
 
@@ -256,7 +254,6 @@ Lets see the module specification in **the module.json file**.
 
 As you can see, code specification has a jsx entry, with the file hello.jsx.
 Hello.jsx is a react / jsx component. `BeyondJS` automatically compiles the jsx resources to be used by the module as can be seen bellow.
-
 ```javascript
     function render() {
 

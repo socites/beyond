@@ -25,13 +25,13 @@ Otherwise, please stay tuned on the progress of the development of `BeyondJS` or
 * **Realtime ready**. `BeyondJS` is based on websockets thanks to socket.io.
 * **Server**. With `BeyondJS` you do not require a server to develop, BeyondJS is a server. In development, BeyondJS compiles your modules on the fly.
 * **Builder**. `BeyondJS` compiles and prepares your modules to deploy your applications in your production environment. Modular programming means, among other things to be able to develop your client code and your server code together. Not as two different things. But, once we want to deploy to production, we want our static resources separated from the server side code, in a way that we can distribute our client side resources in flat servers, even better on a CDN infrastructure, and the server code in a datacenter with servers prepared to support the required processing load.
-* **Offline ready**. HTML5 Offline capabilities are great! And `BeyondJS` takes advantage on that. `BeyondJS` automatically creates the offline manifest.
-* **Multilanguage** support. Applications and libraries can be configured to support multiple languages.
+* **Offline ready**. HTML5 Offline capabilities are great! And `BeyondJS` takes advantage on that. `BeyondJS` automatically creates the offline manifest. When your application is navigated on the web, it will load its resources on demand, but in parallel, the entire application will be downloaded in background. Once the application is downloaded, all its resources will be loaded locally.
+* **Multilanguage** support. Applications and libraries can be configured to support multiple languages. Applications and libraries will automatically be compiled in different deliverables, one per configured language.
 * **Client side rendering**. `BeyondJS` supports out-of-the-box, `mustache templating`, `react` and `polymer` to help you build incredible user interfaces very quickly with manteinable code.
-* **Polymer and React together**: These two incredible technologies can work together and are ready to be used very easily with no extra setup, and ready to be compiled to production environments without to think on grunt, or webpack.
+* **Polymer and React working together**: These two incredible technologies can work together and are ready to be used very easily with no extra setup, and ready to be compiled to production environments without to think on grunt, or webpack.
 * **Create incredible Apps** thanks to Polymer. Polymer has a set of beautiful web components that will help you create cool interfaces very fast.
 * **Phonegap ready**: `BeyondJS` was designed to develop applications to be compiled both on phonegap, and for the web.
-* **Libraries & Plugins supported**: `BeyondJS` can serve multiple applications that use multiples libraries. Applications can import the libraries that they use.
+* **Libraries & Plugins supported**: `BeyondJS` can serve multiple applications and multiples libraries. Applications can import the libraries that they use.
 
 ## Install BeyondJS
 The way to get started is by installing `BeyondJS` with `node` and `npm`.
@@ -51,7 +51,7 @@ You can build modules with plain code or render pages and components. Both pages
 Modules in `BeyondJS` are located in directories. Modules are referenced by their paths relative to the root of your application.
 
 The following module will be navigated in the url **/welcome** and will append a simple div with the text "Welcome to my first module".
-While developing with `BeyondJS`, you do not have to worry about packing your resources, `BeyondJS` will dynamically load your welcome module when the /welcome url is navigated, `BeyondJS` will pack your module on demand and will render in the browser.
+While developing with `BeyondJS`, you do not have to worry about packing your resources, `BeyondJS` will dynamically load your welcome module when the /welcome url is navigated, `BeyondJS` will pack your module on demand.
 
 **module.json**
 ```javascript
@@ -79,6 +79,7 @@ While developing with `BeyondJS`, you do not have to worry about packing your re
 ```
 
 **texts.json**
+As you can see below, the texts on this module are specified in english. You can add other languages very easily.
 ```javascript
 {
   "en": {
@@ -115,7 +116,6 @@ function Page() {
 
 ## Running BeyondJS
 Just run beyond in a terminal console.
-
 ```sh
 beyond
 ```
@@ -134,7 +134,6 @@ The process to test `BeyondJS` is built entirely on top of `node.js`, and librar
 
 #### Test
 Once you have the repository cloned, testing a copy of `BeyondJS` is really easy.
-
 ```sh
 # mocha is needed for the test; you might have this installed already
 npm install -g mocha
