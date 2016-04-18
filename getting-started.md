@@ -53,7 +53,7 @@ The index.html is the entry point of your application and you can find it in the
     <meta charset="UTF-8">
     <title>My First Beyond Application</title>
 
-    **<!-- #beyond.head -->**
+    <!-- #beyond.head -->
 </head>
 
 <body>
@@ -85,9 +85,9 @@ This module uses three polymer components, "paper-toolbar", "paper-icon-button" 
     "route": "/polymer",
     "dependencies": {
       "polymer": [
-        "**paper-toolbar**",
-        "**paper-icon-button**",
-        "**iron-icons**"
+        "paper-toolbar",
+        "paper-icon-button",
+        "iron-icons"
       ]
     }
   },
@@ -186,7 +186,7 @@ In the **module.json** of the **timestamp** module is defined the dependency to 
     "route": "/timestamp",
     "dependencies": {
       "require": {
-        **"application/model": "model"**
+        "application/model": "model"
       }
     }
   },
@@ -266,7 +266,7 @@ Hello.jsx is a react / jsx component. `BeyondJS` automatically compiles the jsx 
         $('body').append($container);
         container = $('body').find('#react-hello-container').get(0);
 
-        **var HelloReactComponent = react.hello;**
+        var HelloReactComponent = react.hello;
         ReactDOM.render(
             React.createElement(HelloReactComponent, model),
             container);
