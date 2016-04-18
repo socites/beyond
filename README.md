@@ -31,6 +31,7 @@ Otherwise, please stay tuned on the progress of the development of `BeyondJS` or
 * **Polymer and React together**: These two incredible technologies can work together and are ready to be used very easily with no extra setup, and ready to be compiled to production environments without to think on grunt, or webpack.
 * **Create incredible Apps** thanks to Polymer. Polymer has a set of beautiful web components that will help you create cool interfaces very fast.
 * **Phonegap ready**: `BeyondJS` was designed to develop applications to be compiled both on phonegap, and for the web.
+* **Libraries & Plugins supported**: `BeyondJS` can serve multiple applications that use multiples libraries. Applications can import the libraries that they use.
 
 ## Install BeyondJS
 The way to get started is by installing `BeyondJS` with `node` and `npm`.
@@ -47,9 +48,15 @@ You can build modules with plain code or render pages and components. Both pages
 
 #### A Basic Module
 
+Modules in `BeyondJS` are located in directories. Modules are referenced by their paths relative to the root of your application.
+
+The following module will be navigated in the url **/welcome** and will append a simple div with the text "Welcome to my first module".
+While developing with `BeyondJS`, you do not have to worry about packing your resources, `BeyondJS` will dynamically load your welcome module when the /welcome url is navigated, `BeyondJS` will pack your module on demand and will render in the browser.
+
 **module.json**
 ```javascript
 {
+  "page": "/welcome",
   "code": {
     "html": {
       "files": ["welcome.html"]
@@ -82,16 +89,26 @@ You can build modules with plain code or render pages and components. Both pages
 
 **my-module.js**
 ```javascript
-function MyModule() {
+function Page() {
+    "use strict";
 
-   this.render = function () {
+    var $container;
 
-       var html = module.render('welcome', module.texts);
-       var $welcome = $(html);
+    this.show = function (state, done) {
 
-       $('body').append($welcome);
+        if (!$container) {
+            var html = module.render('welcome', module.texts.message);
+            $container = $('<div />').html(html);
+            $('body').html($container);
+        }
 
-   };
+        if (done) done();
+
+    };
+
+    this.hide = function () {
+        $container.hide();
+    };
 
 }
 ```
@@ -106,7 +123,7 @@ beyond
 
 ## How to Get Started
 You can download and explore our [Get Started repository](https://github.com/beyondjs/getstarted.git).
-Stay tuned to find more detailed documentation soon.
+[More detailed information here](getting-started.md).
 
 ## Contribute
 The main purpose of this repository is to continue evolving the `BeyondJS` core, making it faster and easier to use. If you're interested in helping with that, then keep reading. If you're not interested in helping right now that's ok too. :) Any feedback you have about using `BeyondJS` would be greatly appreciated.
