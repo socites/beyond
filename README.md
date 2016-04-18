@@ -5,74 +5,112 @@
 [![bitHound Score](https://www.bithound.io/github/socites/beyond/badges/score.svg)](https://www.bithound.io/github/socites/beyond)
 [![Dependency Status](https://img.shields.io/david/socites/beyond.svg)](https://david-dm.org/socites/beyond)
 [![Dev-Dependency Status](https://img.shields.io/david/dev/socites/beyond.svg)](https://david-dm.org/socites/beyond#info=devDependencies)
-> `BeyondJS` is a framework for building scalable, modular, single page web applications.
+> Easy development of integrated state-of-the-art technologies, with boosted performance.
 
+# One Framework - Multiple technologies
+`BeyondJS` **is not** a framework that does everything, **it is** a framework that integrates powerful existing technologies to create powerful applications.
+`BeyondJS` integrates out-of-the-box, `react`, `mustache`, `require.js`, `polymer`, `less`, `socket.io`.
 
-`BeyondJS` is a JavaScript framework for building web application that can be easily packaged and deployed on web and mobile. To achieve this goal, BeyondJS solves:
-* module bundler, package your modules.
-* Load on demand of packages.
-* Packages can embed html, css and javascript.
-* Realtime ready.
-* Single page.
-* Offline ready.
-* Multilanguage apps.
-* Browser-side html templating.
+# BeyondJS is evolving fast
+`BeyondJS` is evolving fast and is actually open for evaluation. If after evaluating `BeyondJS` you think that it can help you to build faster and better software, you can contact us, as we strongly believe that with our support you can take advantage now on BeyondJS.
+Otherwise, please stay tuned on the progress of the development of `BeyondJS` or contribute with us with the development and feedback.
 
-`BeyondJS` integrates `socket.io`, `mustache` templating, `require.js` for load on demand of resources and of course, `jquery`.
+## Mobile and Desktop
+`BeyondJS` is a JavaScript framework for building scalable and modular, single web application that can be easily packaged and deployed on web and mobile.
 
-[Learn how to use Beyond in your own project](https://socites.github.io/beyond/guides/get-started)
+`BeyondJS` solves:
+* **Module bundler** in a modular development environment. Modules encapsulate mixed resources (html, plain css, less, texts, js, react components, static resources as images and server-side code).
+* **Single Page** and **load on demand** ready and easy thanks to `requireJS` AMD technology. Create modules, pages, controls and libraries that are loaded only when required, optimizing the performance and response times. Polymer elements and react components are also loaded on demand.
+* **Realtime ready**. `BeyondJS` is based on websockets thanks to socket.io.
+* **Server and Builder**. With `BeyondJS` you do not require a server to develop, BeyondJS is a server. In development, BeyondJS compiles your modules on the fly.
+* **Builder**. `BeyondJS` compiles and prepares your modules to deploy your applications in your production environment. Modular programming means, among other things to be able to develop your client code and your server code together. Not as two different things. But, once we want to deploy to production, we want our static resources separated from the server side code, in a way that we can distribute our client side resources in flat servers, even better on a CDN infrastructure, and the server code in a datacenter with servers prepared to support the required processing load.
+* **Offline ready**. HTML5 Offline capabilities are great! And `BeyondJS` takes advantage on that. `BeyondJS` automatically creates the offline manifest.
+* **Multilanguage** support. Applications and libraries can be configured to support multiple languages.
+* **Client side rendering**. `BeyondJS` supports out-of-the-box, `mustache templating`, `react` and `polymer` to help you build incredible user interfaces very quickly with manteinable code.
+* **Polymer and React together**: These two incredible technologies can work together and are ready to be used very easily with no extra setup, and ready to be compiled to production environments without to think on grunt, or webpack.
 
-## Installation
-
-The way to get started is install with `npm`:
+## Install BeyondJS
+The way to get started is by installing `BeyondJS` with `node` and `npm`.
+Install [node and npm](https://nodejs.org/en/download/) if not already on your machine.
 ```sh
-npm install beyond --save
+npm install -g beyond
 ```
 
-#### Prerequisites
+## The Concept
+In BeyondJS you develop your code by defining modules. Modules are encapsulated code of mixed resources and are loaded on demand.
+You can build modules with plain code or render pages and components. Both pages and components can render polymer and/or react components.
 
-The only prerequisite is [Node.js](https://nodejs.org/en/) version 4.0 at least, Even so, it may can work with version 0.12.7
+### Structuring your Applications in Modules
 
-## Example Usage
-We have a entire example on the [website](https://socites.github.io/beyond/). Here is the first one step to get you started:
-
+#### A Basic Module
+**module.json**
 ```javascript
-(function (beyond) {
-   beyond.start();
-})(new (require('beyond'))(specs, config));
+{
+  "code": {
+    "html": {
+      "files": ["welcome.html"]
+    },
+    "txt": {
+     "files": [
+       "texts.json"
+     ]
+    }
+    "js": {
+      "files": [
+        "my-module.js"
+      ]
+    }
+  }
+}
 ```
 
-### Scaffolding a BeyondJS App
+**welcome.html**
+```html
+<div class="welcome">
+   <div class="message">{{message}}</div>
+</div>
+```
 
-May be interested in use a Yeoman generator, if it is the case, you can find information [here](https://github.com/rhaynel-parra/generator-beyond/)
+**texts.json**
+```javascript
+{
+  "en": {
+    "message": "Welcome to my first module"
+  }
+}
+```
 
+**my-module.js**
+```javascript
+function MyModule() {
+
+   this.render = function () {
+
+       var html = module.render('welcome', module.texts);
+       var $welcome = $(html);
+
+       $('body').append($welcome);
+
+   };
+
+}
+```
+
+## Running BeyondJS
+Just run beyond in a terminal console.
 
 ```sh
-# Install required tools yo, grunt-cli, bower and generator-beyond
-npm install -g yo grunt-cli bower generator-beyond
-# Make a new directory, and cd into it:
-mkdir my-new-project && cd $_
-# Run yo generator-beyond:
-yo beyond
+beyond
 ```
-Finally run `grunt serve` for preview.
+
 
 ## Contribute
-
-The main purpose of this repository is to continue to evolve `BeyondJS` core, making it faster and easier to use. If you're interested in helping with that, then keep reading. If you're not interested in helping right now that's ok too. :) Any feedback you have about using `BeyondJS` would be greatly appreciated.
+The main purpose of this repository is to continue evolving the `BeyondJS` core, making it faster and easier to use. If you're interested in helping with that, then keep reading. If you're not interested in helping right now that's ok too. :) Any feedback you have about using `BeyondJS` would be greatly appreciated.
 
 ### Testing Your Copy of BeyondJS
-
-The process to test `BeyondJS` is built entirely on top of `node.js`, using many libraries you may already be familiar with.
-
-#### Prerequisites
-
-* You have `node` installed at v4.0.0+ and `npm` at v2.0.0+.
-* You are familiar with `npm` and know whether or not you need to use `sudo` when installing packages globally.
-* You are familiar with `git`.
+The process to test `BeyondJS` is built entirely on top of `node.js`, and libraries that you are probably already familiar with.
 
 #### Test
-
 Once you have the repository cloned, testing a copy of `BeyondJS` is really easy.
 
 ```sh
@@ -82,5 +120,4 @@ mocha test/**
 ```
 
 ## License
-
 [BeyondJS](https://socites.github.io/beyond/) [MIT](https://opensource.org/licenses/MIT) © [Socites](http://socites.com/).
