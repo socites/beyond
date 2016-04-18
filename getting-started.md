@@ -1,26 +1,28 @@
-# Install BeyondJS
+# Getting Started with `BeyondJS`
+
+## Install `BeyondJS`
 The way to get started is by installing `BeyondJS` with `node` and `npm`.
 Install [node and npm](https://nodejs.org/en/download/) if not already on your machine.
 ```sh
 npm install -g beyond
 ```
 
-# Start learning `BeyondJS` 
+## Start learning `BeyondJS` 
 
-## Clone the Getting Started Repository
+### Clone the Getting Started Repository
 Create a folder on your prefered location where to host the Get Started code, and clone the following git repository.
 ```sh
 git clone https://github.com/beyondjs/getstarted.git
 ```
 
-### Install the dependencies of the Getting Started Code
+#### Install the dependencies of the Getting Started Code
 The Getting Started code has npm dependencies specified in the package.json of the project.
 Type npm install in the folder where the code of the Getting Started code resides.
 ```sh
 npm install
 ```
 
-## Run the Getting Started Application by Running `BeyondJS`
+### Run the Getting Started Application by Running `BeyondJS`
 Type and execute beyond in the folder where the Getting Started code resides.
 ```sh
 beyond
@@ -40,7 +42,7 @@ The **getting started** code has five modules. Four of them are modules defined 
 Remember that **BeyondJS** applications are Single Page Applications that load the modules and their dependencies on demand.
 To try it, you can open the dev tools console and type beyond.navigate('/_page_'), where _page_ is the url defined in the module ('/hello', '/polymer', '/react', '/timestamp');
 
-## Understanding the Structure of the Application
+### Understanding the Structure of the Application
 BeyondJS requires the index.html file being at the root of your application folder.
 The index.html is the entry point of your application and you can find it in the root of the Getting Started project.
 
@@ -69,11 +71,11 @@ Once you have your index.html file, you can start creating modules.
 
 In the **Getting Started** project you can navigate the code of the following modules.
 
-### hello
+#### hello
 The hello module is a very simple module that renders a Hello World message in a div container.
 This module has only javascript code.
 
-### polymer
+#### polymer
 This module uses three polymer components, "paper-toolbar", "paper-icon-button" and "iron-icons", that will be loaded on demand when the url /polymer is navigated.
 
 **The module.json file**
@@ -101,7 +103,7 @@ This module uses three polymer components, "paper-toolbar", "paper-icon-button" 
 </paper-toolbar>
 ```
 
-### model and timestamp
+#### model and timestamp
 These two modules where built to work together.
 The model has the responsibility to interact with the backend and represents a basic model.
 This module executes server side code.
@@ -221,7 +223,7 @@ Below you can see how the model object is consumed by the view.
 ```
 
 
-### react
+#### react
 The react module shows how to use react in your modules.
 
 Lets see the module specification in **the module.json file**.

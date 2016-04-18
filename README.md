@@ -123,6 +123,7 @@ beyond
 
 ## How to Get Started
 You can download and explore our [Get Started repository](https://github.com/beyondjs/getstarted.git).
+
 [More detailed information here](getting-started.md).
 
 ## Contribute
