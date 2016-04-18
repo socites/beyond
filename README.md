@@ -9,11 +9,11 @@ Easy development of integrated state-of-the-art technologies, with boosted perfo
 [![Dev-Dependency Status](https://img.shields.io/david/dev/socites/beyond.svg)](https://david-dm.org/socites/beyond#info=devDependencies)
 
 # One Framework - Multiple technologies
-`BeyondJS` **is not** a framework that does everything, **it is** a framework that integrates powerful existing technologies to create powerful applications.
+`BeyondJS` **is not** a framework that does everything by itself, **it is** a framework that integrates powerful existing technologies to create powerful applications.
 `BeyondJS` integrates out-of-the-box, `react`, `mustache`, `require.js`, `polymer`, `less`, `socket.io`.
 
 # BeyondJS is evolving fast
-`BeyondJS` is evolving fast and is actually open for evaluation. If after evaluating `BeyondJS` you think that it can help you to build faster and better software, you can contact us, as we strongly believe that with our support you can **take advantage now** on `BeyondJS`.
+`BeyondJS` is evolving fast and it is actually open for evaluation. If after evaluating `BeyondJS` you think that it can help you to build faster and better software, you can contact us, as we strongly believe that with our support you can **take advantage now** on `BeyondJS`.
 Otherwise, please stay tuned on the progress of the development of `BeyondJS` or contribute with us with the development and feedback.
 
 ## Mobile and Desktop
@@ -23,12 +23,14 @@ Otherwise, please stay tuned on the progress of the development of `BeyondJS` or
 * **Module bundler** in a modular development environment. Modules encapsulate mixed resources (html, plain css, less, texts, js, react components, static resources as images and server-side code).
 * **Single Page** and **load on demand** ready and easy thanks to `requireJS` AMD technology. Create modules, pages, controls and libraries that are loaded only when required, optimizing the performance and response times. Polymer elements and react components are also loaded on demand.
 * **Realtime ready**. `BeyondJS` is based on websockets thanks to socket.io.
-* **Server and Builder**. With `BeyondJS` you do not require a server to develop, BeyondJS is a server. In development, BeyondJS compiles your modules on the fly.
+* **Server**. With `BeyondJS` you do not require a server to develop, BeyondJS is a server. In development, BeyondJS compiles your modules on the fly.
 * **Builder**. `BeyondJS` compiles and prepares your modules to deploy your applications in your production environment. Modular programming means, among other things to be able to develop your client code and your server code together. Not as two different things. But, once we want to deploy to production, we want our static resources separated from the server side code, in a way that we can distribute our client side resources in flat servers, even better on a CDN infrastructure, and the server code in a datacenter with servers prepared to support the required processing load.
 * **Offline ready**. HTML5 Offline capabilities are great! And `BeyondJS` takes advantage on that. `BeyondJS` automatically creates the offline manifest.
 * **Multilanguage** support. Applications and libraries can be configured to support multiple languages.
 * **Client side rendering**. `BeyondJS` supports out-of-the-box, `mustache templating`, `react` and `polymer` to help you build incredible user interfaces very quickly with manteinable code.
 * **Polymer and React together**: These two incredible technologies can work together and are ready to be used very easily with no extra setup, and ready to be compiled to production environments without to think on grunt, or webpack.
+* **Create incredible Apps** thanks to Polymer. Polymer has a set of beautiful web components that will help you create cool interfaces very fast.
+* **Phonegap ready**: `BeyondJS` was designed to develop applications to be compiled both on phonegap, and for the web.
 
 ## Install BeyondJS
 The way to get started is by installing `BeyondJS` with `node` and `npm`.
@@ -101,6 +103,10 @@ Just run beyond in a terminal console.
 beyond
 ```
 
+
+## How to Get Started
+You can download and explore our [Get Started repository](https://github.com/beyondjs/getstarted.git).
+Stay tuned to find more detailed documentation soon.
 
 ## Contribute
 The main purpose of this repository is to continue evolving the `BeyondJS` core, making it faster and easier to use. If you're interested in helping with that, then keep reading. If you're not interested in helping right now that's ok too. :) Any feedback you have about using `BeyondJS` would be greatly appreciated.
