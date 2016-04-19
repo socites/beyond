@@ -11,6 +11,13 @@ module.exports = function () {
         'then sudo chown -R $USER ~/.config/configstore && ' +
         'bower install; else bower install --allow-root; fi';
 
+    /* Try to find out OS*/
+    let isWin = /^win/.test(process.platform);
+
+    if (isWin) {
+        cmd = 'bower install --allow-root';
+    }
+
     childProcess.execSync(
         cmd, {
             'cwd': cwd,
