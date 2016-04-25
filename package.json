@@ -35,6 +35,7 @@
     "postinstall": "beyond postinstall"
   },
   "dependencies": {
+    "archiver": "^1.0.0",
     "async": "https://github.com/socites/async.git",
     "babel-core": "^6.5.2",
     "babel-plugin-transform-react-jsx": "^6.5.2",

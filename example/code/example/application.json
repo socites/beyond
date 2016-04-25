@@ -16,7 +16,8 @@
   "build": {
     "path": "example",
     "libraries": true,
-    "internalPath": "www"
+    "internalPath": "www",
+    "archive": "app.zip"
   },
   "imports": {
     "libraries": []
