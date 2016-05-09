@@ -273,5 +273,5 @@ Hello.jsx is a react / jsx component. `BeyondJS` automatically compiles the jsx 
 ```
 
 # Going deeper
-Don't be shine and start creating your modules! Your feedback is valuable for us.
+Don't be shy and start creating your modules! Your feedback is valuable for us.
 Stay tuned to find more detailed documentation soon.
