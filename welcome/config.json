@@ -1,0 +1,16 @@
+{
+  "ports": {
+    "http": 3030,
+    "rpc": 3031
+  },
+  "paths": {
+    "code": "./"
+  },
+  "applications": {
+    "welcome": "./application.json"
+  },
+  "defaults": {
+    "application": "welcome",
+    "language": "en"
+  }
+}
