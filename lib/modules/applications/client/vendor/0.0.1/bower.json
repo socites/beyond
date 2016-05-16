@@ -42,6 +42,7 @@
     "gold-cc-input": "PolymerElements/gold-cc-input#1.0.7",
     "paper-dialog": "PolymerElements/paper-dialog#1.0.4",
     "paper-header-panel": "PolymerElements/paper-header-panel#1.1.5",
-    "paper-menu-button": "PolymerElements/paper-menu-button#1.0.4"
+    "paper-menu-button": "PolymerElements/paper-menu-button#1.0.4",
+    "font-roboto-local": "PolymerElements/font-roboto-local#1.0.1"
   }
 }
