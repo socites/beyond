@@ -168,6 +168,7 @@
     "bower_components/neon-animation/neon-shared-element-animation-behavior.html",
     "bower_components/neon-animation/web-animations.html",
     "bower_components/web-animations-js/web-animations-next-lite.min.js",
+    "bower_components/web-animations-js/web-animations-next-lite.min.js.map",
     "bower_components/paper-menu-button/paper-menu-button-animations.html",
     "bower_components/web-animations-js/web-animations.html",
     "bower_components/iron-dropdown/iron-dropdown-scroll-manager.html",
