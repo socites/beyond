@@ -25,6 +25,7 @@ module.exports = function () {
         });
 
     cmd = 'rm -r bower_components/font-roboto';
+    console.log(cmd + '\n');
     childProcess.execSync(
         cmd, {
             'cwd': cwd,
@@ -32,6 +33,7 @@ module.exports = function () {
         });
 
     cmd = 'mv bower_components/font-roboto-local bower_components/font-roboto';
+    console.log(cmd + '\n');
     childProcess.execSync(
         cmd, {
             'cwd': cwd,
