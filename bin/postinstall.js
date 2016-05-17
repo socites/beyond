@@ -24,4 +24,18 @@ module.exports = function () {
             'stdio': [0, 1, 2]
         });
 
+    cmd = 'rm -r bower_components/font-roboto';
+    childProcess.execSync(
+        cmd, {
+            'cwd': cwd,
+            'stdio': [0, 1, 2]
+        });
+
+    cmd = 'mv bower_components/font-roboto-local bower_components/font-roboto';
+    childProcess.execSync(
+        cmd, {
+            'cwd': cwd,
+            'stdio': [0, 1, 2]
+        });
+
 };
