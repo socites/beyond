@@ -35,6 +35,7 @@
         "widgets/loader.js",
         "widgets/widgets.js",
         "widgets/wrapper.js",
+        "logs.js",
         "ready.js",
         "beyond.js"
       ]
