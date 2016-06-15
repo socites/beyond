@@ -6,3 +6,4 @@
 beyond.navigate('/', state);
 ```
 
+Parameters cannot be sent to the default page.
