@@ -176,5 +176,6 @@
     "bower_components/paper-dialog-behavior/paper-dialog-behavior.html",
     "bower_components/paper-dialog-behavior/paper-dialog-shared-styles.html",
     "bower_components/paper-dialog-behavior/paper-dialog-common.css"
+    "bower_components/paper-badge/paper-badge.html"
   ]
 }
