@@ -37,7 +37,10 @@
         "widgets/wrapper.js",
         "logs.js",
         "ready.js",
-        "beyond.js"
+        "beyond.js",
+        "phonegap/phonegap.js",
+        "phonegap/analytics.js",
+        "phonegap/badge.js"
       ]
     }
   }
