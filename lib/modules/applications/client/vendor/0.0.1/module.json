@@ -65,6 +65,7 @@
     "bower_components/paper-behaviors/paper-button-behavior.html",
     "bower_components/paper-behaviors/paper-ripple-behavior.html",
     "bower_components/paper-behaviors/paper-inky-focus-behavior.html",
+    "bower_components/paper-behaviors/paper-checked-element-behavior.html",
     "bower_components/paper-ripple/paper-ripple.html",
     "bower_components/paper-icon-button/paper-icon-button.html",
     "bower_components/paper-card/paper-card.html",
@@ -176,6 +177,7 @@
     "bower_components/paper-dialog-behavior/paper-dialog-behavior.html",
     "bower_components/paper-dialog-behavior/paper-dialog-shared-styles.html",
     "bower_components/paper-dialog-behavior/paper-dialog-common.css",
-    "bower_components/paper-badge/paper-badge.html"
+    "bower_components/paper-badge/paper-badge.html",
+    "bower_components/paper-checkbox/paper-checkbox.html"
   ]
 }
