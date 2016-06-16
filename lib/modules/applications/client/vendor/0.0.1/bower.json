@@ -45,6 +45,7 @@
     "paper-menu-button": "PolymerElements/paper-menu-button#1.0.4",
     "font-roboto-local": "PolymerElements/font-roboto-local#1.0.1",
     "paper-badge": "PolymerElements/paper-badge#1.1.2",
-    "paper-checkbox": "PolymerElements/paper-checkbox#1.2.0"
+    "paper-checkbox": "PolymerElements/paper-checkbox#1.2.0",
+    "paper-progress": "PolymerElements/paper-progress#1.0.9"
   }
 }
