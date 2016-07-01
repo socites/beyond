@@ -46,6 +46,7 @@
     "font-roboto-local": "PolymerElements/font-roboto-local#1.0.1",
     "paper-badge": "PolymerElements/paper-badge#1.1.2",
     "paper-checkbox": "PolymerElements/paper-checkbox#1.2.0",
-    "paper-progress": "PolymerElements/paper-progress#1.0.9"
+    "paper-progress": "PolymerElements/paper-progress#1.0.9",
+    "gold-cc-expiration-input": "PolymerElements/gold-cc-expiration-input#1.1.2"
   }
 }
