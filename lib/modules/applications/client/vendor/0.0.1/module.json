@@ -116,6 +116,8 @@
     "bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html",
     "bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html",
     "bower_components/iron-meta/iron-meta.html",
+    "bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html",
+    "bower_components/iron-scroll-threshold/iron-scroll-threshold.html",
     "bower_components/promise-polyfill/promise-polyfill.html",
     "bower_components/promise-polyfill/promise-polyfill-lite.html",
     "bower_components/promise-polyfill/Promise.js",
