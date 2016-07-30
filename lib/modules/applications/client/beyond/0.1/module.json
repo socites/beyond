@@ -8,6 +8,7 @@
         "system/browser.js",
         "system/time.js",
         "system/coordinate.js",
+        "system/camelcase.js",
         "channels/channel.js",
         "channels/channels.js",
         "libraries/libraries.js",
