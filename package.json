@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.413",
+  "version": "0.0.414",
   "description": "Integrated state-of-the-art technologies with boosted performance. BeyondJS is a framework for building scalable, modular, single page web applications. BeyondJS integrates out-of-the-box, react, mustache, require.js, polymer, less, socket.io, and more.",
   "main": "./lib",
   "bin": {
@@ -48,7 +48,7 @@
     "hogan.js": "^3.0.2",
     "less": "^2.6.0",
     "main.lib": "https://github.com/socites/main.lib.git",
-    "socket.io": "1.4.8",
+    "socket.io": "^1.5.0",
     "url-join": "^0.0.1"
   },
   "devDependencies": {
