@@ -7,9 +7,7 @@ module.exports = function () {
     // cd lib/modules/applications/client/vendor/0.0.1 && bower cache clean && bower install
     console.log('cd ' + cwd);
 
-    let cmd = 'if [[ "$(id -u)" != "0" ]]; ' +
-        'then sudo chown -R $USER ~/.config/configstore && ' +
-        'bower install; else bower install --allow-root; fi';
+    let cmd;
 
     /* Try to find out OS */
     let isWin = /^win/.test(process.platform);
@@ -17,14 +15,23 @@ module.exports = function () {
     if (isWin) {
         cmd = 'bower install --allow-root';
     }
-
+    else {
+        cmd = 'if [[ "$(id -u)" != "0" ]]; ' +
+            'then sudo chown -R $USER ~/.config/configstore && ' +
+            'bower install; else bower install --allow-root; fi';
+    }
     childProcess.execSync(
         cmd, {
             'cwd': cwd,
             'stdio': [0, 1, 2]
         });
 
-    cmd = 'rm -r bower_components/font-roboto';
+    if (isWin) {
+        cmd = 'rmdir bower_components/font-roboto /s /q';
+    }
+    else {
+        cmd = 'rm -r bower_components/font-roboto';
+    }
     console.log(cmd + '\n');
     childProcess.execSync(
         cmd, {
@@ -32,7 +39,12 @@ module.exports = function () {
             'stdio': [0, 1, 2]
         });
 
-    cmd = 'mv bower_components/font-roboto-local bower_components/font-roboto';
+    if (isWin) {
+        cmd = 'move bower_components/font-roboto-local bower_components/font-roboto';
+    }
+    else {
+        cmd = 'mv bower_components/font-roboto-local bower_components/font-roboto';
+    }
     console.log(cmd + '\n');
     childProcess.execSync(
         cmd, {
