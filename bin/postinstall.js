@@ -40,7 +40,7 @@ module.exports = function () {
         });
 
     if (isWin) {
-        cmd = 'move bower_components\\font-roboto-local bower_components\\font-roboto';
+        cmd = 'ren bower_components\\font-roboto-local font-roboto';
     }
     else {
         cmd = 'mv bower_components/font-roboto-local bower_components/font-roboto';
