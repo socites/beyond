@@ -27,7 +27,7 @@ module.exports = function () {
         });
 
     if (isWin) {
-        cmd = 'rmdir bower_components/font-roboto /s /q';
+        cmd = 'rmdir bower_components\\font-roboto /s /q';
     }
     else {
         cmd = 'rm -r bower_components/font-roboto';
@@ -40,7 +40,7 @@ module.exports = function () {
         });
 
     if (isWin) {
-        cmd = 'move bower_components/font-roboto-local bower_components/font-roboto';
+        cmd = 'move bower_components\\font-roboto-local bower_components\\font-roboto';
     }
     else {
         cmd = 'mv bower_components/font-roboto-local bower_components/font-roboto';
