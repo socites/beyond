@@ -138,6 +138,7 @@
     "bower_components/iron-overlay-behavior/iron-overlay-behavior.html",
     "bower_components/iron-overlay-behavior/iron-overlay-manager.html",
     "bower_components/iron-overlay-behavior/iron-overlay-backdrop.html",
+    "bower_components/iron-overlay-behavior/iron-focusables-helper.html",
     "bower_components/iron-fit-behavior/iron-fit-behavior.html",
     "bower_components/paper-dropdown-menu/paper-dropdown-menu.html",
     "bower_components/paper-dropdown-menu/paper-dropdown-menu-light.html",
