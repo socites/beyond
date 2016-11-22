@@ -83,6 +83,7 @@
     "bower_components/paper-spinner/paper-spinner-behavior.html",
     "bower_components/paper-spinner/paper-spinner-lite.html",
     "bower_components/paper-spinner/paper-spinner-styles.html",
+    "bower_components/paper-radio-button/paper-radio-button.html",
     "bower_components/paper-menu-button/paper-menu-button.html",
     "bower_components/paper-menu-button/paper-menu-button-animations.html",
     "bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html",
