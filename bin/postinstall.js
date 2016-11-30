@@ -16,7 +16,7 @@ module.exports = function () {
         cmd = 'bower install --allow-root';
     }
     else {
-        cmd = 'if [[ "$(id -u)" != "0" ]]; ' +
+        cmd = 'if [ `id -u` != "0" ]; ' +
             'then sudo chown -R $USER ~/.config/configstore && ' +
             'bower install; else bower install --allow-root; fi';
     }
