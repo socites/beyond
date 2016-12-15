@@ -7,6 +7,7 @@
         "system/delegate.js",
         "system/browser.js",
         "system/time.js",
+        "system/hashCode.js",
         "system/coordinate.js",
         "system/camelcase.js",
         "sockets/sockets.js",
