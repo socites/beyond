@@ -1,0 +1,10 @@
+{
+  "en": {
+    "message": "Connection Error.",
+    "retry": "Retry"
+  },
+  "es": {
+    "message": "Error de conexión.",
+    "retry": "Reintentar"
+  }
+}

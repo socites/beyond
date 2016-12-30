@@ -1,0 +1,32 @@
+{
+  "code": {
+    "txt": {
+      "files": [
+        "txt.json"
+      ]
+    },
+    "html": {
+      "files": [
+        "toast.html"
+      ]
+    },
+    "css": {
+      "files": [
+        "styles.css"
+      ],
+      "is": "custom-style"
+    },
+    "js": {
+      "files": [
+        "toast.js",
+        "define.js"
+      ]
+    },
+    "dependencies": {
+      "polymer": [
+        "paper-button",
+        "paper-toast"
+      ]
+    }
+  }
+}

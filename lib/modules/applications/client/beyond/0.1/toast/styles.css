@@ -1,0 +1,8 @@
+#global-toast {
+    --paper-toast-background-color: #eeff41;
+    --paper-toast-color: #333;
+}
+
+#global-toast paper-button {
+    color: #00adef;
+}
