@@ -2,7 +2,7 @@ module.exports = function () {
     "use strict";
 
     let childProcess = require('child_process');
-    let cwd = require('path').join(process.cwd(), 'lib/modules/applications/client/vendor/0.0.1');
+    let cwd = require('path').join(process.cwd(), 'lib/modules/applications/client/vendor');
 
     // cd lib/modules/applications/client/vendor/0.0.1 && bower cache clean && bower install
     console.log('cd ' + cwd);
