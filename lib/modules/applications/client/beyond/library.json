@@ -1,7 +1,8 @@
 {
   "standalone": true,
   "versions": {
-    "0.1": {
+    "v1": {
+      "path": "./",
       "build": {
         "hosts": {
           "js": "http://api.dev.socites.com/js/beyond/0.1"

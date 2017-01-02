@@ -1,7 +1,6 @@
 {
   "code": {
     "js": {
-      "path": "js",
       "files": [
         "system/events.js",
         "system/delegate.js",

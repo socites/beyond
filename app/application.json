@@ -1,0 +1,8 @@
+{
+  "version": "0.1",
+  "static": [
+    "index.html",
+    "styles.css"
+  ],
+  "connect": false
+}

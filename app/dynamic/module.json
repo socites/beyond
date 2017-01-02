@@ -1,0 +1,43 @@
+{
+  "page": {
+    "route": "/dynamic",
+    "dependencies": {
+      "polymer": [
+        "paper-button"
+      ],
+      "require": {
+        "react": "React",
+        "react-dom": "ReactDOM"
+      }
+    }
+  },
+  "start": {
+    "js": {
+      "files": [
+        "start.js"
+      ]
+    }
+  },
+  "code": {
+    "less": {
+      "path": "css",
+      "files": [
+        "*"
+      ]
+    },
+    "jsx": {
+      "path": "jsx",
+      "files": [
+        "list.jsx",
+        "professional.jsx"
+      ]
+    },
+    "js": {
+      "path": "js",
+      "files": [
+        "sna.js",
+        "page.js"
+      ]
+    }
+  }
+}

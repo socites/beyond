@@ -2,26 +2,26 @@
   "code": {
     "txt": {
       "files": [
-        "txt.json"
+        "toast/txt.json"
       ]
     },
     "html": {
       "files": [
-        "toast.html"
+        "toast/toast.html"
       ]
     },
     "css": {
       "files": [
-        "styles.css"
+        "toast/styles.css"
       ],
       "is": "custom-style"
     },
     "js": {
       "files": [
-        "toast.js",
-        "define.js"
+        "toast/toast.js"
       ]
     },
+    "localized": true,
     "dependencies": {
       "polymer": [
         "paper-button",

@@ -1,0 +1,32 @@
+{
+  "page": {
+    "route": "/static",
+    "dependencies": {
+      "polymer": [
+        "paper-button"
+      ]
+    }
+  },
+  "code": {
+    "less": {
+      "files": [
+        "styles.less"
+      ]
+    },
+    "txt": {
+      "files": [
+        "texts.json"
+      ]
+    },
+    "html": {
+      "files": [
+        "index.html"
+      ]
+    },
+    "js": {
+      "files": [
+        "page.js"
+      ]
+    }
+  }
+}

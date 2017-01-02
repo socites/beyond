@@ -1,5 +1,5 @@
 {
-  "start": {
+  "code": {
     "js": {
       "files": [
         "require.config.js",
