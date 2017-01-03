@@ -6,6 +6,10 @@ function Page($container, parameter, dependencies) {
         $container.attr('id', 'dynamic-page');
         $container.html(module.render('index', module.texts));
 
+        var control = $container.find('beyond-example-control').get(0);
+        console.log(control);
+        window.asd = control;
+
     };
 
 }
