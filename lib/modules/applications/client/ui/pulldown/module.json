@@ -21,6 +21,12 @@
         "*"
       ]
     },
+    "html": {
+      "path": "html",
+      "files": [
+        "*"
+      ]
+    },
     "js": {
       "path": "js",
       "files": [

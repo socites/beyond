@@ -9,9 +9,6 @@ function Page($container, parameter, dependencies) {
         var control = $container.find('beyond-example-control').get(0);
         control.parentScroller = null;
 
-        console.log(control);
-        window.asd = control;
-
     };
 
 }
