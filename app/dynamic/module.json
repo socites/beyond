@@ -20,6 +20,7 @@
     "less": {
       "path": "css",
       "files": [
+        "globals.less",
         "*"
       ]
     },

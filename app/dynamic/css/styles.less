@@ -20,6 +20,17 @@
         }
     }
 
+    beyond-example-control {
+        position: absolute;
+        top: 64px;
+        width: 100%;
+        .calc(height, ~"100% - 64px");
+
+        @media (max-width: 600px) {
+            top: 56px;
+            .calc(height, ~"100% - 56px");
+        }
+    }
 }
 
 #dynamic-page.show {
