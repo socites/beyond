@@ -1,0 +1,15 @@
+{
+  "code": {
+    "less": {
+      "files": [
+        "pulldown.less"
+      ]
+    },
+    "js": {
+      "files": [
+        "pulldown.js",
+        "define.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.pull-down {
+
+    position: absolute;
+    top: -53px;
+    height: 59px;
+    width: 100%;
+    margin-top: 2px;
+    background-color: #eee;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    font-weight: lighter;
+    opacity: 0;
+    overflow: hidden;
+    color: #333;
+
+    .pulling, .pulled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px 15px;
+    }
+
+    .pulling {
+        opacity: 1;
+        transition: opacity 300ms linear;
+    }
+
+    .pulled {
+        opacity: 0;
+        transition: opacity 300ms linear;
+
+        .title {
+            float: left;
+        }
+
+        paper-spinner {
+            float: right;
+            margin-top: -4px;
+        }
+
+    }
+
+}
+
+.pull-down.pulled {
+
+    .pulling {
+        opacity: 0;
+    }
+
+    .pulled {
+        opacity: 1;
+    }
+
+}
+
+.pulldown-host.animated-pull-down {
+    transition: transform 300ms ease, opacity 300ms linear;
+}
