@@ -1,13 +1,31 @@
 {
+  "start": {
+    "js": {
+      "path": "start",
+      "files": [
+        "control.js",
+        "register.js"
+      ]
+    }
+  },
   "code": {
     "less": {
+      "path": "css",
       "files": [
         "pulldown.less"
       ]
     },
+    "txt": {
+      "path": "txt",
+      "files": [
+        "*"
+      ]
+    },
     "js": {
+      "path": "js",
       "files": [
         "pulldown.js",
+        "base.js",
         "define.js"
       ]
     }

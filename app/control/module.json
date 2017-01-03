@@ -1,0 +1,31 @@
+{
+  "polymer": {
+    "id": "beyond-example-control",
+    "dependencies": {
+      "require": {
+        "react": "React",
+        "react-dom": "ReactDOM"
+      }
+    },
+    "less": {
+      "path": "css",
+      "files": [
+        "styles.less"
+      ]
+    },
+    "jsx": {
+      "path": "jsx",
+      "files": [
+        "professional.jsx",
+        "list.jsx"
+      ]
+    },
+    "js": {
+      "path": "js",
+      "files": [
+        "sna.js",
+        "register.js"
+      ]
+    }
+  }
+}
