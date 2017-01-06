@@ -1,0 +1,39 @@
+{
+  "page": {
+    "route": "/control",
+    "dependencies": {
+      "polymer": [
+        "paper-toolbar",
+        "paper-button",
+        "beyond-control"
+      ]
+    }
+  },
+  "code": {
+    "less": {
+      "path": "css",
+      "files": [
+        "globals.less",
+        "*"
+      ]
+    },
+    "txt": {
+      "path": "txt",
+      "files": [
+        "*"
+      ]
+    },
+    "html": {
+      "path": "html",
+      "files": [
+        "*"
+      ]
+    },
+    "js": {
+      "path": "js",
+      "files": [
+        "page.js"
+      ]
+    }
+  }
+}

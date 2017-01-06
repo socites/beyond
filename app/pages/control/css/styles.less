@@ -1,4 +1,4 @@
-#dynamic-page {
+#control-page {
 
     position: absolute;
     top: 0;
@@ -20,11 +20,12 @@
         }
     }
 
-    beyond-example-control {
+    beyond-control {
         position: absolute;
         top: 64px;
-        width: 100%;
-        .calc(height, ~"100% - 64px");
+        margin: 16px;
+        .calc(height, ~"100% - 32px");
+        .calc(height, ~"100% - 96px");
 
         .list {
             padding: 16px;
@@ -32,12 +33,12 @@
         }
         @media (max-width: 600px) {
             top: 56px;
-            .calc(height, ~"100% - 56px");
+            .calc(height, ~"100% - 88px");
         }
     }
 }
 
-#dynamic-page.show {
+#control-page.show {
     opacity: 1.0;
     transform: none;
 }

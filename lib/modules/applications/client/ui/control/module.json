@@ -1,0 +1,10 @@
+{
+  "start": {
+    "js": {
+      "files": [
+        "control.js",
+        "register.js"
+      ]
+    }
+  }
+}

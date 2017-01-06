@@ -1,11 +1,11 @@
 {
   "page": {
-    "route": "/dynamic",
+    "route": "/pulldown",
     "dependencies": {
       "polymer": [
         "paper-toolbar",
         "paper-button",
-        "beyond-example-control"
+        "beyond-pulldown-control"
       ]
     }
   },

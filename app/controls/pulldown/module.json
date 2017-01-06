@@ -1,6 +1,6 @@
 {
   "polymer": {
-    "id": "beyond-example-control",
+    "id": "beyond-pulldown-control",
     "dependencies": {
       "require": {
         "react": "React",

@@ -7,7 +7,7 @@ beyond.bind('routing', function (pathname, done) {
     }
 
     done({
-        'pathname': '/dynamic'
+        'pathname': '/pulldown'
     });
 
 });
