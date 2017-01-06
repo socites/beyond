@@ -1,7 +1,9 @@
 (function () {
     "use strict";
 
-    beyond.ui.PullDown('beyond-pulldown-control', function () {
+    var dependencies = module.dependencies;
+
+    beyond.ui.PullDown('beyond-pulldown-control', dependencies, function () {
 
         var sna = new SNA();
 
