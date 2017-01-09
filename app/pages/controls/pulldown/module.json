@@ -5,7 +5,8 @@
       "polymer": [
         "paper-toolbar",
         "paper-button",
-        "beyond-pulldown-control"
+        "beyond-pulldown-control",
+        "paper-spinner"
       ]
     }
   },
