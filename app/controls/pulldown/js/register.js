@@ -1,9 +1,6 @@
 (function () {
     "use strict";
 
-    var dependencies = module.dependencies;
-    var sna;
-
     function ExampleBehavior() {
 
         var control;
@@ -25,13 +22,16 @@
 
     }
 
-    beyond.ui.PullDown('beyond-pulldown-control', dependencies, function () {
+    module.polymer.define('PullDown', {
+        'create': function () {
 
-        sna = new SNA();
+            var sna = new SNA();
 
-        var List = react.list;
-        return module.React.createElement(List, {'sna': sna});
+            var List = react.list;
+            return module.React.createElement(List, {'sna': sna});
 
-    }, [new ExampleBehavior()]);
+        },
+        'behaviors': [new ExampleBehavior]
+    });
 
 })();

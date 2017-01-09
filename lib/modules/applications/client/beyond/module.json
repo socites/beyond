@@ -29,6 +29,7 @@
         "modules/module/texts/texts.js",
         "modules/module/react.js",
         "modules/module/dependencies.js",
+        "modules/module/polymer.js",
         "modules/module/module.js",
         "modules/modules.js",
         "requireConfig/error.js",
