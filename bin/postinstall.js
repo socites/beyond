@@ -1,9 +1,12 @@
 module.exports = function () {
     "use strict";
 
+    // If a file with name "server" exists in the root of the project,
+    // Then bower install is avoided
     let fs = require('fs');
-    console.log(require('path').join(process.cwd(), 'server'));
-    if (fs.existsSync(require('path').join(process.cwd(), 'server'))) {
+    var serverFile = require('path').resolve(process.cwd(), '../../server');
+    console.log('Checking if server file exists to avoid installing bower', file);
+    if (fs.existsSync(serverFile)) {
         console.log('Bower install is avoided due to server file is present in main directory');
         return;
     }
