@@ -5,7 +5,7 @@ module.exports = function () {
     // Then bower install is avoided
     let fs = require('fs');
     var serverFile = require('path').resolve(process.cwd(), '../../server');
-    console.log('Checking if server file exists to avoid installing bower', file);
+    console.log('Checking if server file exists to avoid installing bower', serverFile);
     if (fs.existsSync(serverFile)) {
         console.log('Bower install is avoided due to server file is present in main directory');
         return;
