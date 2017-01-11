@@ -1,6 +1,13 @@
 module.exports = function () {
     "use strict";
 
+    let fs = require('fs');
+    console.log(require('path').join(process.cwd(), 'server'));
+    if (fs.existsSync(require('path').join(process.cwd(), 'server'))) {
+        console.log('Bower install is avoided due to server file is present in main directory');
+        return;
+    }
+
     let childProcess = require('child_process');
     let cwd = require('path').join(process.cwd(), 'lib/modules/applications/client/vendor');
 
