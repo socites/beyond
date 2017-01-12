@@ -1,0 +1,18 @@
+{
+  "logs": {
+    "calls": "./test/calls.log",
+    "errors": "./test/errors.log"
+  },
+  "hosts": {
+    "socites": {
+      "communiverses": {
+        "development": "http://communiverses.apps.dev.jarawi.com",
+        "production": "http://communiverses.apps.v5.jarawi.com"
+      }
+    },
+    "graphs.js": {
+      "development": "http://data.dev.jarawi.com",
+      "production": "http://data.v5.jarawi.com"
+    }
+  }
+}
