@@ -90,6 +90,7 @@
     "bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html",
     "bower_components/iron-range-behavior/iron-range-behavior.html",
     "bower_components/iron-flex-layout/iron-flex-layout.html",
+    "bower_components/iron-flex-layout/iron-flex-layout-classes.html",
     "bower_components/iron-ajax/iron-ajax.html",
     "bower_components/iron-ajax/iron-request.html",
     "bower_components/iron-form/iron-form.html",
