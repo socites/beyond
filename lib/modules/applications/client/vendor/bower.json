@@ -50,6 +50,7 @@
     "gold-cc-expiration-input": "PolymerElements/gold-cc-expiration-input#1.1.2",
     "iron-scroll-threshold": "PolymerElements/iron-scroll-threshold#1.0.3",
     "paper-radio-button": "PolymerElements/paper-radio-button#1.2.1",
-    "paper-radio-group": "PolymerElements/paper-radio-group#1.2.1"
+    "paper-radio-group": "PolymerElements/paper-radio-group#1.2.1",
+    "iron-image": "PolymerElements/iron-image#1.2.5"
   }
 }
