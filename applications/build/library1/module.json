@@ -1,0 +1,20 @@
+{
+  "control": {
+  },
+  "start": {
+    "js": {
+      "path": "start",
+      "files": [
+        "start.js"
+      ]
+    }
+  },
+  "code": {
+    "js": {
+      "path": "code",
+      "files": [
+        "code.js"
+      ]
+    }
+  }
+}
