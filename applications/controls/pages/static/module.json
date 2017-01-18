@@ -8,6 +8,7 @@
     }
   },
   "code": {
+    "multilanguage": false,
     "less": {
       "files": [
         "styles.less"

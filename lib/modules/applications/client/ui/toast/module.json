@@ -21,7 +21,6 @@
         "toast.js"
       ]
     },
-    "localized": true,
     "dependencies": {
       "polymer": [
         "paper-button",

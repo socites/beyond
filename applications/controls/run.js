@@ -10,10 +10,10 @@
             'code': './'
         },
         'applications': {
-            'beyond': './application.json'
+            'controls': './application.json'
         },
         'defaults': {
-            'application': 'beyond',
+            'application': 'controls',
             'language': 'en'
         }
     };
