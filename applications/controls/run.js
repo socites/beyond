@@ -14,7 +14,7 @@
         },
         'defaults': {
             'application': 'controls',
-            'language': 'en'
+            'language': 'eng'
         }
     };
 

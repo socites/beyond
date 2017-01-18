@@ -1,9 +1,9 @@
 {
-  "es": {
+  "spa": {
     "pulling": "Actualizar",
     "pulled": "Actualizando"
   },
-  "en": {
+  "eng": {
     "pulling": "Update",
     "pulled": "Updating"
   }
