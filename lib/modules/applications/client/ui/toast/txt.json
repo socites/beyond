@@ -1,9 +1,9 @@
 {
-  "en": {
+  "eng": {
     "message": "Connection Error.",
     "retry": "Retry"
   },
-  "es": {
+  "spa": {
     "message": "Error de conexión.",
     "retry": "Reintentar"
   }

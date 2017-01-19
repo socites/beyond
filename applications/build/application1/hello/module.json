@@ -8,9 +8,7 @@
       "require": {
         "libraries/library1/main": "Library1"
       }
-    }
-  },
-  "code": {
+    },
     "multilanguage": false,
     "js": {
       "files": [
