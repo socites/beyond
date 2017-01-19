@@ -1,0 +1,10 @@
+{
+  "polymer": {
+    "id": "cool-control",
+    "html": {
+      "files": [
+        "control.html"
+      ]
+    }
+  }
+}

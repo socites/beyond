@@ -3,7 +3,8 @@
     "route": "/hello",
     "dependencies": {
       "polymer": [
-        "library1-welcome"
+        "library1-welcome",
+        "cool-control"
       ],
       "require": {
         "libraries/library1/main/code": "Library1"
