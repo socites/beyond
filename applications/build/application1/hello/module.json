@@ -6,7 +6,7 @@
         "library1-welcome"
       ],
       "require": {
-        "libraries/library1/main": "Library1"
+        "libraries/library1/main/code": "Library1"
       }
     },
     "multilanguage": false,
