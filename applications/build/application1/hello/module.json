@@ -11,6 +11,7 @@
     }
   },
   "code": {
+    "multilanguage": false,
     "js": {
       "files": [
         "page.js"
