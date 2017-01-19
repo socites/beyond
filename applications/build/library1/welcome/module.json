@@ -1,0 +1,10 @@
+{
+  "control": {
+    "id": "library1-welcome",
+    "html": {
+      "files": [
+        "control.html"
+      ]
+    }
+  }
+}

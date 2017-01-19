@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "static": [
+    "index.html"
+  ],
+  "imports": {
+    "libraries": [
+      "library1/v1"
+    ]
+  },
+  "params": {},
+  "connect": false
+}

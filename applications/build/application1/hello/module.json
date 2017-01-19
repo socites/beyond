@@ -1,0 +1,17 @@
+{
+  "page": {
+    "route": "/hello",
+    "dependencies": {
+      "require": {
+        "libraries/library1/main": "Library1"
+      }
+    }
+  },
+  "code": {
+    "js": {
+      "files": [
+        "page.js"
+      ]
+    }
+  }
+}
