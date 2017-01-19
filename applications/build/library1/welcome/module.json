@@ -1,5 +1,5 @@
 {
-  "control": {
+  "polymer": {
     "id": "library1-welcome",
     "html": {
       "files": [

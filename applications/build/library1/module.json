@@ -1,6 +1,4 @@
 {
-  "control": {
-  },
   "start": {
     "js": {
       "path": "start",

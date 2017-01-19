@@ -2,6 +2,9 @@
   "page": {
     "route": "/hello",
     "dependencies": {
+      "polymer": [
+        "library1-welcome"
+      ],
       "require": {
         "libraries/library1/main": "Library1"
       }
