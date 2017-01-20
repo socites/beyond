@@ -8,16 +8,7 @@
         "beyond-pulldown-control",
         "paper-spinner"
       ]
-    }
-  },
-  "start": {
-    "js": {
-      "files": [
-        "start.js"
-      ]
-    }
-  },
-  "code": {
+    },
     "less": {
       "path": "css",
       "files": [
@@ -41,6 +32,13 @@
       "path": "js",
       "files": [
         "page.js"
+      ]
+    }
+  },
+  "start": {
+    "js": {
+      "files": [
+        "start.js"
       ]
     }
   }

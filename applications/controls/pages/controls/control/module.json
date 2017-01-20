@@ -7,9 +7,7 @@
         "paper-button",
         "beyond-control"
       ]
-    }
-  },
-  "code": {
+    },
     "less": {
       "path": "css",
       "files": [
