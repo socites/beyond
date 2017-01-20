@@ -4,5 +4,9 @@
     "index.html",
     "styles.css"
   ],
+  "less": {
+    "start": "start.less",
+    "globals": "template.less"
+  },
   "connect": false
 }

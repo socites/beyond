@@ -1,9 +1,9 @@
 {
-  "es": {
+  "spa": {
     "title": "Bienvenido!",
     "navigateButton": "Navegar Página Dinámica"
   },
-  "en": {
+  "eng": {
     "title": "Welcome!",
     "navigateButton": "Navigate Dynamic Page"
   }

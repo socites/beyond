@@ -1,14 +1,11 @@
 {
   "page": {
-    "route": "/static",
+    "route": "/mustache",
     "dependencies": {
       "polymer": [
         "paper-button"
       ]
-    }
-  },
-  "code": {
-    "multilanguage": false,
+    },
     "less": {
       "files": [
         "styles.less"
