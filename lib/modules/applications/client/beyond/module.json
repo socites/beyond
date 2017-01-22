@@ -1,6 +1,7 @@
 {
   "code": {
     "multilanguage": false,
+    "standalone": true,
     "js": {
       "files": [
         "system/events.js",

@@ -1,5 +1,4 @@
 {
-  "standalone": true,
   "versions": {
     "v1": {
       "path": "./",
