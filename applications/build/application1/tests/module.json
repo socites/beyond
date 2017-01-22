@@ -1,16 +1,23 @@
 {
   "page": {
-    "route": "/hello",
+    "route": "/tests",
     "dependencies": {
       "polymer": [
         "library1-welcome",
-        "cool-control"
+        "paper-button",
+        "cool-control",
+        "beyond-pulldown-control"
       ],
       "require": {
         "libraries/library1/main/code": "Library1"
       }
     },
     "multilanguage": false,
+    "html": {
+      "files": [
+        "page.html"
+      ]
+    },
     "js": {
       "files": [
         "page.js"
