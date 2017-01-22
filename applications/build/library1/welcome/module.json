@@ -1,10 +1,15 @@
 {
   "polymer": {
+    "multilanguage": false,
     "id": "library1-welcome",
     "html": {
       "files": [
         "control.html"
       ]
     }
-  }
+  },
+  "static": [
+    "file1.txt",
+    "dir1"
+  ]
 }
