@@ -5,8 +5,7 @@
       "polymer": [
         "library1-welcome",
         "paper-button",
-        "cool-control",
-        "beyond-pulldown-control"
+        "cool-control"
       ],
       "require": {
         "libraries/library1/main/code": "Library1"

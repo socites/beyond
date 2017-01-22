@@ -3,11 +3,5 @@
     "source": {
       "eng": "code.js"
     }
-  },
-  "polymer": {
-    "id": "beyond-pulldown-control",
-    "source": {
-      "eng": "control.html"
-    }
   }
 }
