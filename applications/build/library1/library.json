@@ -6,5 +6,9 @@
         "hosts": {}
       }
     }
+  },
+  "npm": {
+    "package": "package.json",
+    "version": "version.json"
   }
 }
