@@ -9,6 +9,7 @@
   },
   "npm": {
     "package": "package.json",
-    "version": "version.json"
+    "version": "version.json",
+    "publish": "publish.js"
   }
 }
