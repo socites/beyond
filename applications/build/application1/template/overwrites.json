@@ -1,0 +1,9 @@
+{
+  "library1/page": {
+    "custom": {
+      "less": "page.less"
+    },
+    "static": {
+    }
+  }
+}
