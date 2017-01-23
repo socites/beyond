@@ -1,0 +1,17 @@
+{
+  "page": {
+    "route": "/page",
+    "dependencies": {
+    },
+    "txt": {
+      "files": [
+        "texts.json"
+      ]
+    },
+    "js": {
+      "files": [
+        "page.js"
+      ]
+    }
+  }
+}
