@@ -5,12 +5,11 @@
       ""
     ]
   },
-  "overwrites": {
+  "custom": {
     "library1/page": {
-      "static": {
-      },
-      "less": [
-      ]
+      "less": "page.less"
     }
+  },
+  "static": {
   }
 }
