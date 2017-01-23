@@ -1,6 +1,6 @@
 ![](https://socites.github.io/beyond/img/logos/logo-light.png)
 # BeyondJS
-Easy development of integrated state-of-the-art technologies, with boosted performance. BeyondJS is a framework for building scalable, modular, single page web applications. BeyondJS integrates out-of-the-box, react, mustache, require.js, polymer, less, socket.io, and more.
+Easy development of integrated state-of-the-art technologies, with boosted performance. `BeyondJS` is a framework for building scalable, modular, single page web applications. BeyondJS integrates out-of-the-box, react, mustache, require.js, polymer, less, socket.io, and more.
 
 [![Build Status](https://img.shields.io/travis/socites/beyond/master.svg)](https://travis-ci.org/socites/beyond)
 [![npm version](https://img.shields.io/npm/v/beyond.svg)](https://www.npmjs.com/package/beyond)
