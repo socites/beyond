@@ -13,5 +13,12 @@
         "page.js"
       ]
     }
+  },
+  "custom": {
+    "less": {
+      "files": [
+        "styles.less"
+      ]
+    }
   }
 }
