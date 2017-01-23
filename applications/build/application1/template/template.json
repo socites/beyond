@@ -1,0 +1,16 @@
+{
+  "less": {
+    "start": "",
+    "functions": [
+      ""
+    ]
+  },
+  "overwrites": {
+    "library1/page": {
+      "static": {
+      },
+      "less": [
+      ]
+    }
+  }
+}
