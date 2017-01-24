@@ -1,9 +1,9 @@
-var async = require('async');
-
 module.exports = function (module, error) {
     "use strict";
 
-    this.process = async(function *(resolve, reject, config, language, template) {
+    let async = require('async');
+
+    this.process = async(function *(resolve, reject, config, language, overwrites) {
 
         if (typeof config !== 'object') {
             reject(error('invalid processor configuration'));
@@ -24,9 +24,6 @@ module.exports = function (module, error) {
 
         let process = require('./files.js');
         styles += (yield process(finder)) + '\n';
-        if (template && template.overwrites) {
-            styles += yield process(template.overwrites);
-        }
 
         if (!styles) {
             resolve();

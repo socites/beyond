@@ -3,16 +3,8 @@
     "route": "/page",
     "dependencies": {
     },
-    "txt": {
-      "files": [
-        "texts.json"
-      ]
-    },
-    "js": {
-      "files": [
-        "page.js"
-      ]
-    }
+    "txt": "texts.json",
+    "js": "page.js"
   },
   "custom": {
     "less": {

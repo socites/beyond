@@ -1,9 +1,9 @@
 {
-  "less": {
-    "start": "",
-    "functions": [
-      ""
-    ]
+  "application": {
+    "less": "bootstrap.less"
+  },
+  "modules": {
+    "less": "template.less"
   },
   "overwrites": "./overwrites.json"
 }

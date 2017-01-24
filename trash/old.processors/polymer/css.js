@@ -10,27 +10,8 @@ module.exports = function (module, error) {
             return;
         }
         if (typeof config.files !== 'object') {
-
-            if (typeof config.include !== 'string') {
-                reject(error('invalid configuration on processor "html", files property must be specified'.red));
-                return;
-            }
-
-            let header = '';
-            header += '/************\n';
-            header += ' CSS INCLUDES\n';
-            header += ' ************/\n\n';
-
-            let is = '';
-            if (typeof config.is === 'string') is = ' is=\"' + config.is + '\"';
-
-            let include = '';
-            if (typeof config.include === 'string') include = ' include=\"' + config.include + '\"';
-
-            let output = header + '<style' + is + include + '></style>\n\n';
-            resolve(output);
+            reject(error('invalid configuration on processor "css", files property must be specified'.red));
             return;
-
         }
 
         let fs = require('co-fs');

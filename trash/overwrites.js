@@ -1,3 +1,7 @@
+/**
+ * Convert the list of files of the overwrites into
+ * a finder object for each processor
+ */
 module.exports = function (moduleID, overwrites) {
     "use strict";
 
@@ -13,40 +17,28 @@ module.exports = function (moduleID, overwrites) {
     let dirname = overwrites.dirname;
     overwrites = overwrites.custom;
 
-    overwrites = {
-        'less': overwrites.less,
-        'css': overwrites.css,
-        'txt': overwrites.txt
-    };
-
     if (overwrites.less instanceof Array && overwrites.less.length) {
-        let finder = new Finder(dirname, {
+        overwrites.less = new Finder(dirname, {
             'list': overwrites.less, 'usekey': 'relative.file'
         });
-
-        overwrites.less = finder;
     }
     else {
         delete overwrites.less;
     }
 
     if (overwrites.css instanceof Array && overwrites.css.length) {
-        let finder = new Finder(dirname, {
+        overwrites.css = new Finder(dirname, {
             'list': overwrites.css, 'usekey': 'relative.file'
         });
-
-        overwrites.css = finder;
     }
     else {
         delete overwrites.css;
     }
 
     if (overwrites.txt instanceof Array && overwrites.txt.length) {
-        let finder = new Finder(dirname, {
+        overwrites.txt = new Finder(dirname, {
             'list': overwrites.txt, 'usekey': 'relative.file'
         });
-
-        overwrites.txt = finder;
     }
     else {
         delete overwrites.txt;
