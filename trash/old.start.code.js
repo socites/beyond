@@ -3,7 +3,7 @@ module.exports = function (module, config) {
 
     let async = require('async');
 
-    return async(function *(resolve, reject, language, overwrites) {
+    return async(function *(resolve, reject, language, template) {
 
         let processors = require('path').join(require('main.lib'), 'types/processors');
         processors = require(processors)(module);
@@ -48,7 +48,7 @@ module.exports = function (module, config) {
             }
 
             // process the block of the script
-            let resource = yield processor.process(process[processorID], language, overwrites);
+            let resource = yield processor.process(process[processorID], language);
 
             if (resource) output += resource;
             if (output.substr(output.length - 1) !== '\n') output += '\n';
