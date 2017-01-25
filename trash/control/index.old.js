@@ -1,12 +1,10 @@
 /**
- * Returns the script of a "page" type
+ * Returns the resource of a "control" type
  */
 module.exports = function (module, config) {
     "use strict";
 
     let async = require('async');
-
-    let error = require('../../error.js')(module, 'control');
 
     let multilanguage = (typeof config.multilanguage === 'undefined') ? true : config.multilanguage;
     config.multilanguage = multilanguage;
@@ -30,9 +28,13 @@ module.exports = function (module, config) {
 
         // add script inside its own function
         let output = '';
-        let id = 'id="' + config.id + '"';
-        let is = (config.is) ? ' is="' + config.is + '"' : '';
-        output += '<dom-module ' + id + is + '>\n\n';
+        output += '<dom-module id="' + config.id + '"';
+
+        if (config.is) {
+            output += ' is="' + config.is + '"';
+        }
+
+        output += '>\n\n';
         output += code;
         output += '</dom-module>';
 
@@ -42,19 +44,26 @@ module.exports = function (module, config) {
 
     this.process = async(function *(resolve, reject, language) {
 
+        let error = require('../../error.js')(module, 'control');
+
         if (!config.id) {
-            reject(error('Control resource requires to define its "id"'));
+            let message = 'Control resource requires to define its "id"';
+            reject(error(message));
             return;
         }
 
         if (config.id.indexOf('-') === -1) {
-            reject(error('Control element id must have the "-" character'));
+            let message = 'Control element id must have the "-" character';
+            reject(error(message));
             return;
         }
 
-        let script = yield require('./processors')(module, config, language);
-        script = scope(script);
-        resolve(script);
+        let resource = yield require('./processors.js')(module, config, language);
+
+        let code = resource.dependencies;
+        if (code) code += '\n';
+        code += scope(resource['dom-module']);
+        resolve(code);
 
     });
 
