@@ -2,7 +2,7 @@
   "page": {
     "route": "/tests",
     "dependencies": {
-      "polymer": [
+      "controls": [
         "library1-welcome",
         "paper-button",
         "cool-control"

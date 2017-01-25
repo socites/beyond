@@ -22,7 +22,7 @@
       ]
     },
     "dependencies": {
-      "polymer": [
+      "controls": [
         "paper-button",
         "paper-toast"
       ]

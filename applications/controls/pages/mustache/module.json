@@ -2,7 +2,7 @@
   "page": {
     "route": "/mustache",
     "dependencies": {
-      "polymer": [
+      "controls": [
         "paper-button"
       ]
     },

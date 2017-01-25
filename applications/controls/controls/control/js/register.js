@@ -1,4 +1,4 @@
-module.polymer.define('Control', {
+module.controls.define('Control', {
     'create': function () {
         "use strict";
         var sna = new SNA();

@@ -2,7 +2,7 @@
   "page": {
     "route": "/control",
     "dependencies": {
-      "polymer": [
+      "controls": [
         "paper-toolbar",
         "paper-button",
         "beyond-control"

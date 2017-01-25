@@ -1,5 +1,5 @@
 {
-  "polymer": {
+  "control": {
     "multilanguage": false,
     "id": "library1-welcome",
     "html": {

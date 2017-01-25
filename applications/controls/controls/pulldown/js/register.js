@@ -22,7 +22,7 @@
 
     }
 
-    module.polymer.define('PullDown', {
+    module.controls.define('PullDown', {
         'create': function () {
 
             var sna = new SNA();

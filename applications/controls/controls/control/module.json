@@ -1,5 +1,5 @@
 {
-  "polymer": {
+  "control": {
     "id": "beyond-control",
     "dependencies": {
       "require": {

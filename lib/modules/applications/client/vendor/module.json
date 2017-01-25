@@ -4,9 +4,9 @@
     "js": {
       "files": [
         "require.config.js",
-        "polymer/control.js",
-        "polymer/controls.js",
-        "polymer/register.js"
+        "controls/control.js",
+        "controls/controls.js",
+        "controls/register.js"
       ]
     }
   },
