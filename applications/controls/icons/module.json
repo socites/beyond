@@ -1,5 +1,6 @@
 {
   "icons": {
+    "id": "icons-test",
     "name": "test",
     "files": "icons.html"
   }
