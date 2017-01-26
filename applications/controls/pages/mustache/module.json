@@ -3,6 +3,11 @@
     "route": "/mustache",
     "dependencies": {
       "controls": [
+        "paper-toolbar",
+        "paper-icon-button",
+        "iron-icons",
+        "device-icons",
+        "icons-test",
         "paper-button"
       ]
     },
