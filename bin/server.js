@@ -1,19 +1,23 @@
 module.exports = function () {
     "use strict";
 
-
     // check if server.json file exists
-    var fs = require('fs'),
+    let fs = require('fs'),
         path = require('path'),
         root = process.cwd();
 
-    var file = path.join(root, 'server.json');
+    let Server = require('beyond').Server;
+
+    let file = path.join(root, 'server.json');
     if (fs.existsSync(file)) {
-        beyond.start('server.json');
+
+        let server = new Server('server.json');
+        server.start();
+
     }
     else {
 
-        var config = {
+        let config = {
             'paths': {
                 'code': './',
                 'build': './build'
@@ -47,11 +51,8 @@ module.exports = function () {
 
         }
 
-        // start beyond server
-        var Beyond = require('beyond');
-        var beyond = new Beyond(config);
-
-        beyond.start();
+        let server = new Server(config);
+        server.start();
 
     }
 
