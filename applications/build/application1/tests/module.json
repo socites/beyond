@@ -12,15 +12,7 @@
       }
     },
     "multilanguage": false,
-    "html": {
-      "files": [
-        "page.html"
-      ]
-    },
-    "js": {
-      "files": [
-        "page.js"
-      ]
-    }
+    "html": "page.html",
+    "js": "page.js"
   }
 }
