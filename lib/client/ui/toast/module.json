@@ -1,5 +1,11 @@
 {
   "code": {
+    "dependencies": {
+      "controls": [
+        "paper-button",
+        "paper-toast"
+      ]
+    },
     "txt": {
       "files": [
         "txt.json"
@@ -19,12 +25,6 @@
     "js": {
       "files": [
         "toast.js"
-      ]
-    },
-    "dependencies": {
-      "controls": [
-        "paper-button",
-        "paper-toast"
       ]
     }
   }
