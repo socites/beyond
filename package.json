@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.0.520",
+  "version": "0.1.0",
   "description": "Integrated state-of-the-art technologies with boosted performance. BeyondJS is a framework for building scalable, modular, single page web applications. BeyondJS integrates out-of-the-box, react, mustache, require.js, polymer, less, socket.io, and more.",
   "main": "./lib",
   "bin": {
@@ -56,6 +56,6 @@
     "should": "^7.1.1"
   },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 6.9.4"
   }
 }
