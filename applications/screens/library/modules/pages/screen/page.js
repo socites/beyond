@@ -4,12 +4,15 @@ function Page($container, parameter, dependencies) {
     var screen = parameter;
     screen = new dependencies.model.Screen(screen);
 
+    var $content;
+
     function update(params) {
 
         var template = params.template;
         var data = params.data;
 
-        $container.html(module.render(template, data));
+        var html = module.render('templates/' + template + '/template', data);
+        $content.html(html);
 
     }
 
@@ -18,6 +21,8 @@ function Page($container, parameter, dependencies) {
         $container
             .attr('id', 'screen-page')
             .html(module.render('page', module.texts));
+
+        $content = $container.find('.page-content');
 
         var spinner = $container.find('paper-toolbar paper-spinner').get(0);
         var $join = $container.find('paper-button');

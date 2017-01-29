@@ -10,19 +10,9 @@ function Screen(screenId) {
         }
     });
 
-    var joined;
     this.join = function () {
 
-        if (joined) {
-            return new Promise(function (resolve) {
-                resolve();
-            });
-        }
-        joined = true;
-
         function onUpdateReceived(params) {
-
-            console.log('received', params);
 
             data = params;
             events.trigger('update', data);
@@ -38,7 +28,7 @@ function Screen(screenId) {
 
         return new Promise(function (resolve, reject) {
 
-            var action = new module.Action('screens/join', {'screen': screenId});
+            var action = new module.Action('screens/join', {'screenId': screenId});
             action.onResponse = function (response) {
                 resolve(response);
             };
@@ -55,7 +45,7 @@ function Screen(screenId) {
 
         return new Promise(function (resolve, reject) {
 
-            var action = new module.Action('screens/get', {'screen': screenId});
+            var action = new module.Action('screens/get', {'screenId': screenId});
             action.onResponse = function (response) {
 
                 data = response;

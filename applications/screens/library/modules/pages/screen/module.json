@@ -11,8 +11,14 @@
         "libraries/screens/model/code": "model"
       }
     },
-    "less": "styles.less",
-    "html": "page.html",
+    "less": [
+      "templates/welcome/template.less",
+      "page.less"
+    ],
+    "html": [
+      "templates/welcome/template.html",
+      "page.html"
+    ],
     "txt": "texts.json",
     "js": "page.js"
   }

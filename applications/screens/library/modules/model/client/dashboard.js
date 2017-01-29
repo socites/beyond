@@ -6,7 +6,7 @@ function Dashboard() {
         return new Promise(function (resolve, reject) {
 
             var params = {
-                'screen': screenId,
+                'screenId': screenId,
                 'template': template,
                 'data': data
             };

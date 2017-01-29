@@ -3,9 +3,16 @@ module.exports = function () {
 
     let async = require('async');
 
+    let socketId;
+
     this.join = async(function *(resolve, reject, params, socket, context) {
 
-        socket.join(params.screen);
+        if (typeof params.screenId !== 'string') {
+            throw new Error('Invalid parameter screenId');
+        }
+
+        console.log('join', params.screenId);
+        socket.join(params.screenId);
         resolve();
 
     });
@@ -16,21 +23,28 @@ module.exports = function () {
 
     this.get = async(function *(resolve, reject, params, socket, context) {
 
-        let screen = params.screen;
+        if (typeof params.screenId !== 'string') {
+            throw new Error('Invalid parameter screenId');
+        }
+
         let screens = context.library.screens;
-        resolve(screens[screen]);
+        resolve(screens[params.screenId]);
 
     });
 
     this.update = async(function *(resolve, reject, params, socket, context) {
 
-        let screen = params.screen;
+        if (typeof params.screenId !== 'string') {
+            throw new Error('Invalid parameter screenId');
+        }
+
         let screens = context.library.screens;
+        screens.update(params.screenId, params);
 
-        screens.update(screen, params);
+        let ns = context.connection.ns;
+        console.log('update sent to', params.screenId);
+        ns.to(params.screenId).emit('update', params);
 
-        let io = context.connection.io;
-        io.in(params.screen).emit('update', params);
         resolve();
 
     });
