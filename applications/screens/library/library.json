@@ -1,0 +1,11 @@
+{
+  "versions": {
+    "v1": {
+      "path": "./modules"
+    }
+  },
+  "service": {
+    "path": "./service",
+    "config": "./service/config.json"
+  }
+}

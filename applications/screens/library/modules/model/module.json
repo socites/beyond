@@ -1,0 +1,14 @@
+{
+  "server": "./server",
+  "code": {
+    "js": {
+      "path": "./client",
+      "files": [
+        "dashboard.js",
+        "screen.js",
+        "model.js",
+        "define.js"
+      ]
+    }
+  }
+}

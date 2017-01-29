@@ -1,0 +1,16 @@
+{
+  "eng": {
+    "title": "Dashboard",
+    "update": {
+      "description": "Update screen",
+      "confirm": "Confirm"
+    }
+  },
+  "spa": {
+    "title": "Dashboard",
+    "update": {
+      "description": "Actualizar pantalla",
+      "confirm": "Confirmar"
+    }
+  }
+}

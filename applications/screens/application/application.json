@@ -1,0 +1,22 @@
+{
+  "version": "0.1",
+  "static": [
+    "index.html",
+    "styles.css"
+  ],
+  "imports": {
+    "libraries": [
+      "screens/v1"
+    ]
+  },
+  "params": {
+    "development": {
+      "application": {
+        "id": "536bca183133302afca7b3dc",
+        "key": "412d932677ccda10b988ce409483e770"
+      },
+      "showLogs": true
+    }
+  },
+  "connect": false
+}

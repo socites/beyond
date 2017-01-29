@@ -1,0 +1,11 @@
+<paper-toolbar>
+    <span class="title">{{title}}</span>
+    <paper-spinner></paper-spinner>
+</paper-toolbar>
+
+<div class="page-content">
+    {{#update}}
+    <h2 class="description">{{description}}</h2>
+    <paper-button raised>{{confirm}}</paper-button>
+    {{/update}}
+</div>
