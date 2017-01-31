@@ -1,13 +1,8 @@
-module.exports = function (runtime, config, context) {
+module.exports = function (runtime, config) {
     "use strict";
 
     let async = require('async');
     let screens = new (require('./screens'));
-
-    this.initialise = async(function *(resolve, reject) {
-        context.screens = screens;
-        resolve();
-    });
 
     this.rpc = function (ions) {
 
@@ -24,11 +19,8 @@ module.exports = function (runtime, config, context) {
 
     };
 
-    this.connection = function (socket, context) {
-
-        // Once the client is connected.
-        // The context is the connection context, not the library context.
-
+    this.connection = function (context) {
+        context.screens = screens;
     };
 
 };

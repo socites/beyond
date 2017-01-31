@@ -14,7 +14,7 @@ function Page($container, parameter, dependencies) {
         $update.bind('click', function () {
 
             spinner.active = true;
-            model.update('screen1', 'welcome', {'message': 'Its\'s Working!'})
+            model.update('screen1', 'welcome', {'message': 'It\'s Working!'})
                 .then(function () {
                     spinner.active = false;
                 });
