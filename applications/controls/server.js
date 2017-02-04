@@ -1,4 +1,4 @@
-(function (Beyond) {
+(function (beyond) {
     "use strict";
 
     let config = {
@@ -18,7 +18,7 @@
         }
     };
 
-    let beyond = new Beyond(config, {'environment': 'development'});
-    beyond.start();
+    let server = new beyond.Server(config, {'environment': 'development'});
+    server.start();
 
 })(require('../..'));

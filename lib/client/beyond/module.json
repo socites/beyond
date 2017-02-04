@@ -15,6 +15,8 @@
         "sockets/exportSocket.js",
         "libraries/libraries.js",
         "libraries/library.js",
+        "navigation/pages/base.js",
+        "navigation/pages/querystring.js",
         "navigation/pages/page.js",
         "navigation/pages/pages.js",
         "navigation/pathname.js",
