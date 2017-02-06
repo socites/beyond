@@ -9,7 +9,7 @@
     --paper-toast-color: #333;
 }
 
-#global-toast.general-error paper-button,
-#global-toast.connection-error paper-button {
+#global-toast paper-button,
+#global-toast paper-button {
     color: #00adef;
 }
