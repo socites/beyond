@@ -1,12 +1,15 @@
-#global-toast {
+#global-toast.general-error,
+#global-toast.connection-error {
+    --paper-toast-background-color: #ffb0ac;
+    --paper-toast-color: #333;
+}
+
+#global-toast.warning {
     --paper-toast-background-color: #eeff41;
     --paper-toast-color: #333;
 }
 
-#global-toast paper-button {
+#global-toast.general-error paper-button,
+#global-toast.connection-error paper-button {
     color: #00adef;
-}
-
-body {
-    font-family: Roboto;
 }

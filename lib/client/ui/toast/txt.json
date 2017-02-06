@@ -1,10 +1,16 @@
 {
   "eng": {
-    "message": "Connection Error.",
-    "retry": "Retry"
+    "errors": {
+      "connection": "Connection Error."
+    },
+    "retry": "Retry",
+    "close": "Close"
   },
   "spa": {
-    "message": "Error de conexión.",
-    "retry": "Reintentar"
+    "errors": {
+      "connection": "Error de conexión."
+    },
+    "retry": "Reintentar",
+    "close": "Cerrar"
   }
 }
