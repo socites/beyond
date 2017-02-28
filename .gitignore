@@ -22,3 +22,5 @@ node_modules
 # others
 .idea
 .DS_Store
+
+applications/build/deploy
