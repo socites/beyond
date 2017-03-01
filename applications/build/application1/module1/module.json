@@ -1,7 +1,8 @@
 {
   "code": {
     "source": {
-      "eng": "code.js"
+      "eng": "code.js",
+      "spa": "code.js"
     }
   }
 }
