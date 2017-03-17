@@ -1,3 +1,7 @@
+#global-toast {
+    z-index: 2000 !important;
+}
+
 #global-toast.general-error,
 #global-toast.connection-error {
     --paper-toast-background-color: #ffb0ac;
