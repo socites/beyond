@@ -17,6 +17,8 @@
     "react/react.min.js",
     "react/react-dom.js",
     "react/react-dom.min.js",
+    "mobile/fastclick.js",
+    "mobile/mobile.js",
     "bower_components/jquery/dist/jquery.js",
     "bower_components/jquery/dist/jquery.min.js",
     "bower_components/hogan.js/web/builds/3.0.2/hogan-3.0.2.min.js",
