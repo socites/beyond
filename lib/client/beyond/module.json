@@ -45,6 +45,7 @@
         "toast/toast.js",
         "beyond.js",
         "phonegap/phonegap.js",
+        "phonegap/push.js",
         "phonegap/analytics.js",
         "phonegap/badge.js"
       ]
