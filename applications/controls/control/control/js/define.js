@@ -3,7 +3,7 @@ module.control.define({
         'title': {
             'type': String,
             'observer': 'setTitle',
-            'value': 'title',
+            'stateValue': 'title',
             'notify': true
         }
     },
