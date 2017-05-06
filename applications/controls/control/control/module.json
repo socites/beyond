@@ -23,7 +23,7 @@
       "path": "js",
       "files": [
         "sna.js",
-        "register.js"
+        "define.js"
       ]
     }
   }

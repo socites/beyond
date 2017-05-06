@@ -1,5 +1,5 @@
 beyond.ui = (beyond.ui) ? beyond.ui : {};
-beyond.ui.Control = function (id, dependencies, createFnc, behaviors) {
+beyond.ui.defineControl = function (id, dependencies, createFnc, behaviors) {
     "use strict";
 
     // Check parameters

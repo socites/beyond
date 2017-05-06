@@ -3,7 +3,7 @@ function SNA() {
 
     var events = new Events({'bind': this});
 
-    var state = {};
+    var state = {'title': ''};
     Object.defineProperty(this, 'state', {
         'get': function () {
             return state;
@@ -16,5 +16,14 @@ function SNA() {
             return actions;
         }
     });
+
+    this.setTitle = function (value) {
+        state.title = value;
+        events.trigger('change');
+    };
+
+    this.refresh = function () {
+        console.log('refresh method executed');
+    };
 
 }

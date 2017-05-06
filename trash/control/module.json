@@ -3,7 +3,7 @@
     "js": {
       "files": [
         "control.js",
-        "register.js"
+        "define.js"
       ]
     }
   }

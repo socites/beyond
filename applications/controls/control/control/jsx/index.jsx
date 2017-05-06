@@ -3,7 +3,7 @@ exports = module.react.createControl({
         "use strict";
 
         return (<div className="beyond-control">
-            Hello World!
+            {state.title}
         </div>);
     }
 });
