@@ -8,16 +8,8 @@ module.control.define({
         }
     },
     'methods': ['refresh'],
-    'SNA': function (dependencies) {
+    'sna': function (dependencies) {
         return new SNA();
     },
     'react': 'index'
 });
-
-/*
- 'create': function () {
- "use strict";
- var sna = new SNA();
- return module.React.createElement(react.index, {'sna': sna});
- }
- */
