@@ -43,7 +43,9 @@
     builder.build({
         'applications': {
             'application1': {
-                'mode': 'phonegap'
+                'client': {
+                    'mode': 'phonegap'
+                }
             }
         }
     });
