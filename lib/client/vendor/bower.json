@@ -45,7 +45,7 @@
     "paper-menu-button": "PolymerElements/paper-menu-button#1.5.2",
     "font-roboto-local": "PolymerElements/font-roboto-local#1.0.1",
     "paper-badge": "PolymerElements/paper-badge#1.1.4",
-    "paper-checkbox": "PolymerElements/paper-checkbox#1.4.1",
+    "paper-checkbox": "PolymerElements/paper-checkbox#2.0.1",
     "paper-progress": "PolymerElements/paper-progress#1.0.11",
     "gold-cc-expiration-input": "PolymerElements/gold-cc-expiration-input#1.1.2",
     "iron-scroll-threshold": "PolymerElements/iron-scroll-threshold#1.0.3",
