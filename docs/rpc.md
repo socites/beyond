@@ -1,4 +1,4 @@
-#RPC call
+# RPC call
 To execute a server action
 ```javascript
 var action = new module.Action(actionPath);
