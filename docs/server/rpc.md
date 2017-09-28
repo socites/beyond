@@ -7,3 +7,8 @@ action.onError = function() {...};
 
 action.execute();
 ```
+
+
+## action.execute();
+Response
+{'promise': Promise, 'cancel': function}
