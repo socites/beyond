@@ -1,0 +1,12 @@
+{
+  "page": {
+    "route": "/tests",
+    "js": {
+      "files": [
+        "tests.js",
+        "page.js"
+      ]
+    }
+  },
+  "server": "./server"
+}

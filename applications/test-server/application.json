@@ -1,0 +1,12 @@
+{
+  "version": "0.1",
+  "static": [
+    "index.html"
+  ],
+  "imports": {
+    "libraries": [
+      "tests/v1"
+    ]
+  },
+  "connect": false
+}
