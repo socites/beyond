@@ -48,7 +48,8 @@
         "phonegap/phonegap.js",
         "phonegap/push.js",
         "phonegap/analytics.js",
-        "phonegap/badge.js"
+        "phonegap/badge.js",
+        "phonegap/links.js"
       ]
     }
   }
