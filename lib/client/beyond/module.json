@@ -35,6 +35,7 @@
         "modules/module/react.js",
         "modules/module/dependencies.js",
         "modules/module/control/sna/properties.js",
+        "modules/module/control/sna/controller.js",
         "modules/module/control/sna/state.js",
         "modules/module/control/sna/sna.js",
         "modules/module/control/behavior.js",
