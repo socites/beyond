@@ -4,7 +4,6 @@ module.exports = require('async')(function *(resolve, reject, module, files, min
 
     let hogan = require('hogan.js');
     let fs = require('co-fs');
-    let error = require('./error.js')(module, 'mustache');
 
     let output = '';
     for (let file of files) {

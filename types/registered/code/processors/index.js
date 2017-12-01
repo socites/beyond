@@ -16,40 +16,47 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
 
         let files;
         let pError = error(module, 'code', processor);
+        let minify = false;
+
+        if (!processors.has(processor)) {
+            // It is a configuration block of the type, but not a processor
+            continue;
+        }
+        let process = processors.get(processor);
 
         switch (processor) {
             case 'less':
-                scripts[processor] = yield (styles(module, processors, processor, config[processor], finder, pError));
+                scripts[processor] = yield (styles(module, processor, process, config[processor], finder, minify, pError));
                 length++;
                 break;
 
             case 'css':
-                scripts[processor] = yield (styles(module, processors, processor, config[processor], finder, pError));
+                scripts[processor] = yield (styles(module, processor, process, config[processor], finder, minify, pError));
                 length++;
                 break;
 
             case 'txt':
                 files = yield (finder(module, 'code', processor, config[processor]));
-                scripts[processor] = yield processors[processor](files, language, pError);
+                scripts[processor] = yield process(module, files, minify, pError, language);
                 length++;
                 break;
 
             case 'html':
             case 'mustache':
                 files = yield (finder(module, 'code', processor, config[processor]));
-                scripts.mustache = yield processors.mustache(files, pError);
+                scripts.mustache = yield process(module, files, minify, pError);
                 length++;
                 break;
 
             case 'jsx':
                 files = yield (finder(module, 'code', processor, config[processor]));
-                scripts[processor] = yield processors[processor](files, pError);
+                scripts[processor] = yield process(module, files, minify, pError);
                 length++;
                 break;
 
             case 'js':
                 files = yield (finder(module, 'code', processor, config[processor]));
-                scripts[processor] = yield processors[processor](files, pError);
+                scripts[processor] = yield process(module, files, minify, pError);
                 length++;
                 break;
         }

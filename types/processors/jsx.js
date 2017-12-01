@@ -9,7 +9,6 @@ module.exports = require('async')(function *(resolve, reject, module, files, min
     }
 
     let fs = require('co-fs');
-    let error = require('./error.js')(module, 'jsx');
 
     let babel = require('babel-core');
     let react = require('path').resolve(require('main.lib'), '../node_modules/babel-preset-react');

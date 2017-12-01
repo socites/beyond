@@ -1,7 +1,6 @@
 module.exports = require('async')(function *(resolve, reject, module, files, minify, error, language) {
 
     let fs = require('co-fs');
-    let error = require('./error.js')(module, 'txt');
 
     function merge(o1, o2) {
         for (let prop in o2) {

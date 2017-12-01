@@ -1,7 +1,6 @@
 module.exports = require('async')(function *(resolve, reject, module, files, minify, error) {
 
     let fs = require('co-fs');
-    let error = require('./error.js')(module, 'html');
 
     let output = '';
     let length = 0;
