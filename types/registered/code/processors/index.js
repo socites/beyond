@@ -1,4 +1,4 @@
-module.exports = require('async')(function *(resolve, reject, module, config, language, error) {
+module.exports = require('async')(function *(resolve, reject, module, config, language, files, error) {
     "use strict";
 
     let async = require('async');

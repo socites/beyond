@@ -1,13 +1,12 @@
 /**
  * Returns the script of a "page" type
  */
-module.exports = function (module, config, error) {
+module.exports = function (module, config, files, error) {
     "use strict";
 
     let async = require('async');
     let processors = require('path').join(require('main.lib'), 'types/processors');
     processors = require(processors)(module);
-    error = error(module, 'control');
 
     Object.defineProperty(this, 'multilanguage', {
         'get': function () {
@@ -58,8 +57,10 @@ module.exports = function (module, config, error) {
 
     this.process = async(function *(resolve, reject) {
 
+        let processError = error(module, 'control');
+
         if (!config.name || !config.id || !config.files) {
-            reject(error('Icons must define an "id", a "name" and a "files" property'));
+            reject(processError('Icons must define an "id", a "name" and a "files" property'));
             return;
         }
 

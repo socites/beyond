@@ -1,12 +1,10 @@
 /**
  * Returns the script of a "page" type
  */
-module.exports = function (module, config, error) {
+module.exports = function (module, config, files, error) {
     "use strict";
 
     let async = require('async');
-
-    error = error(module, 'control');
 
     let multilanguage = (typeof config.multilanguage === 'undefined') ? true : config.multilanguage;
     config.multilanguage = multilanguage;
@@ -80,17 +78,19 @@ module.exports = function (module, config, error) {
 
     this.process = async(function *(resolve, reject, language) {
 
+        let processError = error(module, 'control');
+
         if (!config.id) {
-            reject(error('Control resource requires to define its "id"'));
+            reject(processError('Control resource requires to define its "id"'));
             return;
         }
 
         if (config.id.indexOf('-') === -1) {
-            reject(error('Control element id must have the "-" character'));
+            reject(processError('Control element id must have the "-" character'));
             return;
         }
 
-        let script = yield require('./processors')(module, config, language);
+        let script = yield require('./processors')(module, config, language, files, error);
         let output = scope(script);
         resolve(output);
 
