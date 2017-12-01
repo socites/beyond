@@ -18,10 +18,10 @@ module.exports = function () {
         }
     });
 
-    types.set('code', require('./registered/code'));
-    types.set('page', require('./registered/page'));
-    types.set('control', require('./registered/control'));
-    types.set('icons', require('./registered/icons'));
+    types.set('code', require('./types/code'));
+    types.set('page', require('./types/page'));
+    types.set('control', require('./types/control'));
+    types.set('icons', require('./types/icons'));
 
     processors.set('css', require('./processors/css.js'));
     processors.set('html', require('./processors/html.js'));

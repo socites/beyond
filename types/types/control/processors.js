@@ -13,7 +13,7 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
 
     for (let processor in config) {
 
-        let pError = error(module, 'page', processor);
+        let pError = error(module, 'control', processor);
         let minify = false;
 
         if (supports.indexOf(processor) === -1) {
@@ -26,10 +26,10 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
             continue;
         }
 
-        processor = (processor === 'html') ? processor = 'mustache' : processor;
+        let cfg = config[processor];
 
         let process = processors.get(processor);
-        scripts[processor] = yield process(module, 'page', config[processor], finder, minify, pError);
+        scripts[processor] = yield process(module, 'control', cfg, finder, minify, pError);
         length++;
 
     }
