@@ -1,4 +1,12 @@
-module.exports = require('async')(function *(resolve, reject, config, minify, error) {
+module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error) {
+
+    // Always minify css styles
+    minify = true;
+
+    let files;
+    let template = (module.application) ? module.application.template : undefined;
+    files = (template) ? yield template.getLessModules(module, error) : [];
+    files = files.concat(yield (finder(module, type, 'less', config)));
 
     let fs = require('co-fs');
 
@@ -60,6 +68,20 @@ module.exports = require('async')(function *(resolve, reject, config, minify, er
 
     // replace all ' to "
     output = output.replace(/\'/g, '"');
-    resolve(output);
+
+    let is = (typeof config.is === 'string') ? config.is : '';
+
+    // just insert the styles in the DOM
+    let script = '';
+    script += '/**********\n';
+    script += ' CSS STYLES\n';
+    script += ' **********/\n\n';
+    script += '(function() {\n';
+    script += '\tvar styles = \'' + output + '\';\n';
+    script += '\tvar is = \'' + is + '\';\n';
+    script += '\tmodule.styles.push(styles, is);\n';
+    script += '})();\n\n';
+
+    resolve(script);
 
 });

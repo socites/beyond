@@ -90,7 +90,7 @@ module.exports = function (module, config, finder, error) {
             return;
         }
 
-        let script = yield require('./processors')(module, config, language, finder, error);
+        let script = yield require('./processors.js')(module, config, language, finder, error);
         let output = scope(script);
         resolve(output);
 

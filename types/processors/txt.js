@@ -1,4 +1,6 @@
-module.exports = require('async')(function *(resolve, reject, config, minify, error, language) {
+module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error, language) {
+
+    let files = yield (finder(module, type, 'txt', config));
 
     let fs = require('co-fs');
 

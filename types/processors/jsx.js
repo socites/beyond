@@ -1,4 +1,6 @@
-module.exports = require('async')(function *(resolve, reject, config, minify, error) {
+module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error) {
+
+    let files = yield (finder(module, type, 'jsx', config));
 
     let sep = require('path').sep;
 

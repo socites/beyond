@@ -60,7 +60,7 @@ module.exports = function (module, config, finder, error) {
 
     this.process = async(function *(resolve, reject, language) {
 
-        let script = yield require('./processors')(module, config, language, finder, error);
+        let script = yield require('./processors.js')(module, config, language, finder, error);
         script = scope(script, config.standalone);
         resolve(script);
 

@@ -1,5 +1,8 @@
 module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error) {
 
+    // Always minify css styles
+    minify = true;
+
     let files = yield (finder(module, type, 'css', config));
 
     let fs = require('co-fs');
@@ -50,7 +53,7 @@ module.exports = require('async')(function *(resolve, reject, module, type, conf
 
     let is = (typeof config.is === 'string') ? config.is : '';
 
-    // just insert the styles in the script
+    // just insert the styles in the DOM
     let script = '';
     script += '/**********\n';
     script += ' CSS STYLES\n';
