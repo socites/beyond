@@ -3,8 +3,8 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
 
     let async = require('async');
 
-    let processors = require('path').join(require('main.lib'), 'types/processors');
-    processors = require(processors)(module);
+    let types = require('path').join(require('main.lib'), 'types');
+    let processors = require(types).processors;
 
     let scripts = {};
     let length = 0;

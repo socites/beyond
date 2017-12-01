@@ -1,77 +1,70 @@
-module.exports = function (module) {
-    "use strict";
+module.exports = require('async')(function *(resolve, reject, module, files, minify, error, language) {
 
-    let async = require('async');
+    let fs = require('co-fs');
+    let error = require('./error.js')(module, 'txt');
 
-    return async(function *(resolve, reject, files, language) {
-
-        let fs = require('co-fs');
-        let error = require('./error.js')(module, 'txt');
-
-        function merge(o1, o2) {
-            for (let prop in o2) {
-                if (typeof o1[prop] === 'object' && typeof o2[prop] === 'object') {
-                    merge(o1[prop], o2[prop]);
-                }
-                else {
-                    o1[prop] = o2[prop];
-                }
+    function merge(o1, o2) {
+        for (let prop in o2) {
+            if (typeof o1[prop] === 'object' && typeof o2[prop] === 'object') {
+                merge(o1[prop], o2[prop]);
             }
-            return o1;
+            else {
+                o1[prop] = o2[prop];
+            }
         }
+        return o1;
+    }
 
-        let output = {};
-        for (let file of files) {
+    let output = {};
+    for (let file of files) {
 
-            if (file.extname !== '.json') {
-                reject(error('invalid file extension "' + file.relative.name + '"'));
-                return;
-            }
-
-            let t = yield fs.readFile(file.file, {'encoding': 'utf8'});
-
-            try {
-                t = JSON.parse(t);
-            }
-            catch (exc) {
-                reject(error(exc.message));
-                return;
-            }
-
-            if (typeof t !== 'object') {
-                reject(error('texts file is not an object'));
-                return;
-            }
-
-            merge(output, t);
-
-        }
-
-        if (!output) {
-            resolve();
+        if (file.extname !== '.json') {
+            reject(error('invalid file extension "' + file.relative.name + '"'));
             return;
         }
 
-        if (language) {
-            output = output[language];
+        let t = yield fs.readFile(file.file, {'encoding': 'utf8'});
+
+        try {
+            t = JSON.parse(t);
         }
-        if (!output) {
-            resolve();
+        catch (exc) {
+            reject(error(exc.message));
             return;
         }
 
-        output =
-            '/************\n' +
-            ' Module texts\n' +
-            ' ************/\n\n' +
+        if (typeof t !== 'object') {
+            reject(error('texts file is not an object'));
+            return;
+        }
 
-            'var texts = JSON.parse(\'' + JSON.stringify(output) + '\');\n' +
-            'if(!module.texts) module.texts = {};\n' +
-            '$.extend(module.texts, texts);' +
-            '\n\n';
+        merge(output, t);
 
-        resolve(output);
+    }
 
-    });
+    if (!output) {
+        resolve();
+        return;
+    }
 
-};
+    if (language) {
+        output = output[language];
+    }
+    if (!output) {
+        resolve();
+        return;
+    }
+
+    output =
+        '/************\n' +
+        ' Module texts\n' +
+        ' ************/\n\n' +
+
+        'var texts = JSON.parse(\'' + JSON.stringify(output) + '\');\n' +
+        'if(!module.texts) module.texts = {};\n' +
+        '$.extend(module.texts, texts);' +
+        '\n\n';
+
+    resolve(output);
+
+});
