@@ -1,7 +1,7 @@
 /**
  * Returns the script of a "page" type
  */
-module.exports = function (module, config, files, error) {
+module.exports = function (module, config, finder, error) {
     "use strict";
 
     let async = require('async');
@@ -64,7 +64,7 @@ module.exports = function (module, config, files, error) {
             return;
         }
 
-        let files = yield (require('../files.js')(module, 'icons', config));
+        let files = yield (finder(module, 'icons', undefined, config));
         let code = yield processors.html(files);
         code = scope(code);
 

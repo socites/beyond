@@ -1,4 +1,4 @@
-module.exports = require('async')(function *(resolve, reject, module, config, language) {
+module.exports = require('async')(function *(resolve, reject, module, config, language, finder, error) {
     "use strict";
 
     let async = require('async');
@@ -15,38 +15,40 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
     for (let processor in config) {
 
         let files;
+        let pError = error(module, 'code', processor);
+
         switch (processor) {
             case 'less':
-                scripts[processor] = yield (styles(module, processors, 'less', config[processor]));
+                scripts[processor] = yield (styles(module, processors, 'less', config[processor], finder, pError));
                 length++;
                 break;
 
             case 'css':
-                scripts[processor] = yield (styles(module, processors, 'css', config[processor]));
+                scripts[processor] = yield (styles(module, processors, 'css', config[processor], finder, pError));
                 length++;
                 break;
 
             case 'txt':
-                files = yield (require('../../files.js')(module, processor, config[processor]));
+                files = yield (require('../../files.js')(module, 'page', processor, config[processor]));
                 scripts[processor] = yield processors[processor](files, language);
                 length++;
                 break;
 
             case 'html':
             case 'mustache':
-                files = yield (require('../../files.js')(module, processor, config[processor]));
+                files = yield (require('../../files.js')(module, 'page', processor, config[processor]));
                 scripts.mustache = yield processors.mustache(files);
                 length++;
                 break;
 
             case 'jsx':
-                files = yield (require('../../files.js')(module, processor, config[processor]));
+                files = yield (require('../../files.js')(module, 'page', processor, config[processor]));
                 scripts[processor] = yield processors[processor](files);
                 length++;
                 break;
 
             case 'js':
-                files = yield (require('../../files.js')(module, processor, config[processor]));
+                files = yield (require('../../files.js')(module, 'page', processor, config[processor]));
                 scripts[processor] = yield processors[processor](files);
                 length++;
                 break;

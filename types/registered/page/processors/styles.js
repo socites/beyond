@@ -3,14 +3,12 @@ module.exports = function (template) {
 
     let async = require('async');
 
-    return async(function *(resolve, reject, module, processors, processor, config) {
+    return async(function *(resolve, reject, module, processors, processor, config, finder, error) {
         "use strict";
-
-        let error = require('../../../error.js')(module);
 
         let files;
         files = (template && processor === 'less') ? yield template.getLessModules(module, error) : [];
-        files = files.concat(yield (require('../../files.js')(module, processor, config)));
+        files = files.concat(yield (finder(module, 'page', processor, config)));
 
         let styles = yield processors[processor](files, true);
 

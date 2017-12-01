@@ -1,7 +1,7 @@
 /**
  * Returns the script of a "code" type
  */
-module.exports = function (module, config, files, error) {
+module.exports = function (module, config, finder, error) {
     "use strict";
 
     let async = require('async');
@@ -60,7 +60,7 @@ module.exports = function (module, config, files, error) {
 
     this.process = async(function *(resolve, reject, language) {
 
-        let script = yield require('./processors')(module, config, language, files, error);
+        let script = yield require('./processors')(module, config, language, finder, error);
         script = scope(script, config.standalone);
         resolve(script);
 
