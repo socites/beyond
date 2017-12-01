@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Testing Beyond Build</title>
+    <meta charset="utf-8"/>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"/>
+
+    <!-- --------------------
+         beyond required head
+         -------------------- -->
+    
+    <!-- cordova dependency -->
+    <script defer type="application/javascript" src="cordova.js"></script>
+    
+    <!-- polymer dependencies -->
+    <script defer src="libraries/vendor/static/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="libraries/vendor/static/bower_components/polymer/polymer.html"/>
+    
+    <link rel="import" href="libraries/vendor/static/bower_components/paper-styles/default-theme.html"/>
+    
+    <link rel="import" href="libraries/vendor/static/bower_components/font-roboto/roboto.html"/>
+    
+    <!-- required libraries: jquery, require.js, hogan -->
+    <script defer src="libraries/vendor/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script defer src="libraries/vendor/static/require.js/requirejs.min.js"></script>
+    <script defer src="libraries/vendor/static/bower_components/hogan.js/web/builds/3.0.2/hogan-3.0.2.min.js"></script>
+    
+    <!-- application config must be before beyond -->
+    <script defer src="config.js"></script>
+    
+    <!-- beyond.js -->
+    <script defer src="libraries/beyond/main/code.js"></script>
+    
+    <script defer src="libraries/vendor/main/code.js"></script>
+    
+    <script defer src="libraries/ui/toast/code/eng.js"></script>
+    
+    <!-- application start requires beyond, so it must be after beyond -->
+    <script defer src="start.js"></script>
+    
+    <!-- iOS topbar and others -->
+    <script defer src="libraries/vendor/static/mobile/mobile.js"></script>
+    
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' https://*.facebook.com https://media.dev2.graphs.social https://auth.dev2.graphs.social https://maps-api-ssl.google.com data:" />
+    
+    <!-- ------------------
+         end of beyond head
+         ------------------ -->
+</head>
+
+
+<body>
+<div class="app-container">
+    <div class="loading-header">Testing Beyond Build</div>
+</div>
+</body>
+
+</html>

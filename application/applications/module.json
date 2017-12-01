@@ -1,0 +1,7 @@
+{
+  "page": {
+    "route": "/apps",
+    "html": "page.html",
+    "js": "page.js"
+  }
+}

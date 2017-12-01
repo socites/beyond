@@ -1,0 +1,25 @@
+<!--------------------
+LIBRARY NAME: library1
+MODULE: welcome
+---------------------->
+
+<dom-module id="library1-welcome">
+<script>
+
+  (function (params) {
+
+    var done = params[1];
+    var module = params[0];
+    var dependencies = module.dependencies.modules;
+    var react = module.react.items;
+
+    // Control dependencies 
+    module.dependencies.set({"require":{}});
+
+    
+    done('libraries/library1/welcome', 'code');
+
+  })(beyond.modules.get('libraries/library1/welcome'));
+
+</script>
+</dom-module>

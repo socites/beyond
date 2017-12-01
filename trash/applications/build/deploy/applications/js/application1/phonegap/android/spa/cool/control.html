@@ -1,0 +1,24 @@
+<!----------
+MODULE: cool
+------------>
+
+<dom-module id="cool-control">
+<script>
+
+  (function (params) {
+
+    var done = params[1];
+    var module = params[0];
+    var dependencies = module.dependencies.modules;
+    var react = module.react.items;
+
+    // Control dependencies 
+    module.dependencies.set({"require":{}});
+
+    
+    done('application/cool', 'code');
+
+  })(beyond.modules.get('application/cool'));
+
+</script>
+</dom-module>

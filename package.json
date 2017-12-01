@@ -28,7 +28,9 @@
   "files": [
     "lib/",
     "bin/",
-    "test/"
+    "test/",
+    "types/",
+    "application/"
   ],
   "scripts": {
     "test": "mocha test/*",

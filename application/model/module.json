@@ -1,0 +1,9 @@
+{
+  "code": {
+    "js": [
+      "applications.js",
+      "beyond.js"
+    ]
+  },
+  "server": "./server"
+}
