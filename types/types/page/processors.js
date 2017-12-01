@@ -37,6 +37,7 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
 
     let output = '';
     for (var processor of supports) {
+        processor = (processor === 'html') ? processor = 'mustache' : processor;
         output += (scripts[processor]) ? scripts[processor] + '\n\n' : '';
     }
 
