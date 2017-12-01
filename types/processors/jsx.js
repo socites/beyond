@@ -1,4 +1,4 @@
-module.exports = require('async')(function *(resolve, reject, module, files, minify, error) {
+module.exports = require('async')(function *(resolve, reject, config, minify, error) {
 
     let sep = require('path').sep;
 

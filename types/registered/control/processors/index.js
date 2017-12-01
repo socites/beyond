@@ -37,7 +37,7 @@ module.exports = require('async')(function *(resolve, reject, module, config, la
             case 'html':
             case 'mustache':
                 files = yield (finder(module, 'control', processor, config[processor]));
-                scripts.mustache = yield processors.mustache(files, pError);
+                scripts[processor] = yield processors.mustache(files, pError);
                 length++;
                 break;
 

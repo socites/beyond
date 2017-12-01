@@ -1,4 +1,6 @@
-module.exports = require('async')(function *(resolve, reject, module, files, minify, error) {
+module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error) {
+
+    let files = yield (finder(module, type, 'css', config));
 
     let fs = require('co-fs');
 
@@ -45,7 +47,21 @@ module.exports = require('async')(function *(resolve, reject, module, files, min
 
     // replace all ' to "
     output = output.replace(/\'/g, '"');
-    resolve(output);
+
+    let is = (typeof config.is === 'string') ? config.is : '';
+
+    // just insert the styles in the script
+    let script = '';
+    script += '/**********\n';
+    script += ' CSS STYLES\n';
+    script += ' **********/\n\n';
+    script += '(function() {\n';
+    script += '\tvar styles = \'' + output + '\';\n';
+    script += '\tvar is = \'' + is + '\';\n';
+    script += '\tmodule.styles.push(styles, is);\n';
+    script += '})();\n\n';
+
+    resolve(script);
 
 });
 

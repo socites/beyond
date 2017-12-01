@@ -12,19 +12,6 @@ module.exports = function (template) {
 
         let styles = yield process(module, files, true, error);
 
-        let is = (typeof config.is === 'string') ? config.is : '';
-
-        // just insert the styles in the script
-        let output = '';
-        output += '/**********\n';
-        output += ' CSS STYLES\n';
-        output += ' **********/\n\n';
-        output += '(function() {\n';
-        output += '\tvar styles = \'' + styles + '\';\n';
-        output += '\tvar is = \'' + is + '\';\n';
-        output += '\tmodule.styles.push(styles, is);\n';
-        output += '})();\n\n';
-
         resolve(output);
 
     });

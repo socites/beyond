@@ -1,4 +1,4 @@
-module.exports = require('async')(function *(resolve, reject, module, files, minify, error, language) {
+module.exports = require('async')(function *(resolve, reject, config, minify, error, language) {
 
     let fs = require('co-fs');
 
