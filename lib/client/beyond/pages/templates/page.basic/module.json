@@ -13,11 +13,11 @@
       }
     },
     "multilanguage": false,
-    "html": "page.html",
-    "less": "styles.less",
+    "html": "template.html",
+    "less": "template.less",
     "js": [
       "control.js",
-      "page.js"
+      "template.js"
     ]
   },
   "start": {
