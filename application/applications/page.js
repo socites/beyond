@@ -1,7 +1,13 @@
-function Page($container) {
+function Page($container, vdir, dependencies) {
     "use strict";
 
-    var $html = module.render('page');
-    $container.html($html);
+    var template = new dependencies.Template($container);
+
+    function initialise() {
+        console.log('control', template.control);
+    }
+
+    template.render({'control': ''})
+        .then(initialise);
 
 }

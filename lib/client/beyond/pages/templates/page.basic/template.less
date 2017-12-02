@@ -1,0 +1,27 @@
+.beyond-page-control.page-control-template {
+
+    > paper-toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 5px 10px -5px #333;
+        z-index: 1;
+    }
+
+    > .control {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        @media (max-width: 600px) {
+            top: 56px;
+        }
+    }
+
+}

@@ -1,0 +1,26 @@
+{
+  "code": {
+    "dependencies": {
+      "controls": [
+        "paper-toolbar",
+        "paper-button",
+        "iron-icons",
+        "graphs-icons",
+        "paper-spinner"
+      ],
+      "require": {
+        "libraries/beyond/pages/transitions/code": "transitions"
+      }
+    },
+    "multilanguage": false,
+    "html": "page.html",
+    "less": "styles.less",
+    "js": [
+      "control.js",
+      "page.js"
+    ]
+  },
+  "start": {
+    "js": "start.js"
+  }
+}

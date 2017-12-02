@@ -1,6 +1,14 @@
 module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error, language) {
 
-    let files = yield (finder(module, type, 'txt', config));
+    let files = [];
+
+    // Add the files of the module
+    files = files.concat(yield (finder(module, type, 'txt', config)));
+
+    if (type === 'custom' && module.application && module.application.template) {
+        let template = module.application.template;
+        files = files.concat(yield template.getCustomOverwrites(module, 'txt', error));
+    }
 
     let fs = require('co-fs');
 

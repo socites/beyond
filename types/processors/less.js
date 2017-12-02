@@ -3,10 +3,21 @@ module.exports = require('async')(function *(resolve, reject, module, type, conf
     // Always minify css styles
     minify = true;
 
-    let files;
-    let template = (module.application) ? module.application.template : undefined;
-    files = (template) ? yield template.getLessModules(module, error) : [];
+    let files = [];
+
+    // Add the less files that represent the application template
+    if (type === 'custom' && module.application && module.application.template) {
+        let template = module.application.template;
+        files = files.concat(yield template.getLessTemplate(error));
+    }
+
+    // Add the files of the module
     files = files.concat(yield (finder(module, type, 'less', config)));
+
+    if (type === 'custom' && module.application && module.application.template) {
+        let template = module.application.template;
+        files = files.concat(yield template.getCustomOverwrites(module, 'less', error));
+    }
 
     let fs = require('co-fs');
 

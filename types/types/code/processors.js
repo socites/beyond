@@ -1,8 +1,6 @@
 module.exports = require('async')(function *(resolve, reject, module, config, language, finder, error) {
     "use strict";
 
-    let async = require('async');
-
     let supports = ['less', 'css', 'txt', 'html', 'jsx', 'js'];
 
     let types = require('path').join(require('main.lib'), 'types');

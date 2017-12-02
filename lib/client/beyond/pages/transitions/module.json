@@ -1,0 +1,10 @@
+{
+  "code": {
+    "multilanguage": false,
+    "less": "transitions.less",
+    "js": [
+      "transitions.js",
+      "define.js"
+    ]
+  }
+}

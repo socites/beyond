@@ -1,0 +1,18 @@
+.beyond-page.transition-default {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0.0;
+    transform: scale(0.9) translate3d(0, 0, 0);
+    transition: transform 400ms ease, opacity 400ms ease;
+
+    &.show {
+        opacity: 1.0;
+        transform: none;
+    }
+
+}

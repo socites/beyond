@@ -1,7 +1,11 @@
 {
   "page": {
     "route": "/apps",
-    "html": "page.html",
+    "dependencies": {
+      "code": {
+        "page.control": "Template"
+      }
+    },
     "js": "page.js"
   }
 }
