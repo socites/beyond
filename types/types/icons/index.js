@@ -63,6 +63,7 @@ module.exports = function (module, config, error) {
         }
 
         let process = require('path').join(require('main.lib'), 'types/process');
+        process = require(process);
 
         let supports = ['html'];
         let script = yield process(module, 'control', config, supports, language);

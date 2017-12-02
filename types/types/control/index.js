@@ -79,6 +79,7 @@ module.exports = function (module, config, error) {
     this.process = async(function *(resolve, reject, language) {
 
         let process = require('path').join(require('main.lib'), 'types/process');
+        process = require(process);
 
         let supports = ['less', 'css', 'txt', 'html', 'jsx', 'js'];
         let script = yield process(module, 'control', config, supports, language);
