@@ -1,4 +1,4 @@
-module.exports = function (module, config) {
+module.exports = function (module, config, error) {
     "use strict";
 
     let async = require('async');
@@ -8,29 +8,24 @@ module.exports = function (module, config) {
         if (typeof config !== 'object' ||
             (config.route && (typeof config.route !== 'string' || config.route.indexOf(' ') !== -1))) {
 
-            console.log('WARNING: invalid page configuration on module "' + module.ID + '"');
-            resolve();
+            reject(error('Invalid page route configuration'));
             return;
 
         }
 
-        if (!config.dependencies) {
-            config.dependencies = {};
-        }
+        let dependencies = {};
 
-        if (!config.dependencies.require) {
-            config.dependencies.require = {};
-        }
+        dependencies.code = (config.dependencies.code) ? config.dependencies.code : undefined;
+        dependencies.code = (config.dependencies.require && !dependencies.code) ? config.dependencies.require : dependencies.code;
+        dependencies.controls = (config.dependencies.controls) ? config.dependencies.controls : undefined;
 
-        if (typeof config.dependencies.require !== 'object' || config.dependencies.require instanceof Array) {
-            console.log('WARNING: invalid page require dependencies (must be an object and not an array) on module "' + module.ID + '"');
-            resolve();
+        if (dependencies.code && typeof dependencies !== 'object') {
+            reject(error('Invalid page dependencies (code dependencies must be an object)'));
             return;
         }
 
-        if (config.dependencies.controls && !(config.dependencies.controls instanceof Array)) {
-            console.log('WARNING: invalid controls dependencies (must be an array) on module "' + module.ID + '"');
-            resolve();
+        if (dependencies.controls && !(dependencies.controls instanceof Array)) {
+            reject(error('Invalid page dependencies (controls dependencies must be an array)'));
             return;
         }
 
@@ -38,7 +33,7 @@ module.exports = function (module, config) {
 
         let output = {
             'route': config.route,
-            'dependencies': config.dependencies
+            'dependencies': dependencies
         };
 
         resolve('beyond.pages.register(' +

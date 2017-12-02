@@ -1,7 +1,7 @@
 /**
  * Returns the script of a "page" type
  */
-module.exports = function (module, config, finder, error) {
+module.exports = function (module, config, error) {
     "use strict";
 
     let async = require('async');
@@ -78,25 +78,17 @@ module.exports = function (module, config, finder, error) {
 
     this.process = async(function *(resolve, reject, language) {
 
-        let processError = error(module, 'control');
+        let process = require('path').join(require('main.lib'), 'types/process');
 
-        if (!config.id) {
-            reject(processError('Control resource requires to define its "id"'));
-            return;
-        }
+        let supports = ['less', 'css', 'txt', 'html', 'jsx', 'js'];
+        let script = yield process(module, 'control', config, supports, language);
 
-        if (config.id.indexOf('-') === -1) {
-            reject(processError('Control element id must have the "-" character'));
-            return;
-        }
-
-        let script = yield require('./processors.js')(module, config, language, finder, error);
         let output = scope(script);
         resolve(output);
 
     });
 
-    this.start = require('./start.js')(module, config);
+    this.start = require('./start.js')(module, config, error);
 
     this.setBuildConfig = async(function *(resolve, reject, json) {
 

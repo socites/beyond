@@ -1,4 +1,4 @@
-module.exports = function (module, config) {
+module.exports = function (module, config, error) {
     "use strict";
 
     let async = require('async');
@@ -6,7 +6,7 @@ module.exports = function (module, config) {
     return async(function *(resolve, reject) {
 
         if (!config.id || !config.name || (!config.files && !config.source)) {
-            resolve();
+            reject(error('Icons resource requires to define the id, name and files properties'));
             return;
         }
 

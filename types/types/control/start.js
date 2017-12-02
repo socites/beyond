@@ -1,12 +1,17 @@
-module.exports = function (module, config) {
+module.exports = function (module, config, error) {
     "use strict";
 
     let async = require('async');
 
-    return async(function *(resolve, reject, language, template) {
+    return async(function *(resolve, reject) {
 
         if (!config.id) {
-            resolve();
+            reject(error('Control resource requires to define its "id"'));
+            return;
+        }
+
+        if (config.id.indexOf('-') === -1) {
+            reject(error('Control element id must have the "-" character'));
             return;
         }
 

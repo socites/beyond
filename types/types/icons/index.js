@@ -1,7 +1,7 @@
 /**
  * Returns the script of a "page" type
  */
-module.exports = function (module, config, finder, error) {
+module.exports = function (module, config, error) {
     "use strict";
 
     let async = require('async');
@@ -53,22 +53,22 @@ module.exports = function (module, config, finder, error) {
 
     };
 
-    this.start = require('./start.js')(module, config);
+    this.start = require('./start.js')(module, config, error);
 
     this.process = async(function *(resolve, reject) {
 
-        let processError = error(module, 'control');
-
         if (!config.name || !config.id || !config.files) {
-            reject(processError('Icons must define an "id", a "name" and a "files" property'));
+            reject(error('Icons must define an "id", a "name" and a "files" property'));
             return;
         }
 
-        let files = yield (finder(module, 'icons', undefined, config));
-        let code = yield processors.html(files);
-        code = scope(code);
+        let process = require('path').join(require('main.lib'), 'types/process');
 
-        resolve(code);
+        let supports = ['html'];
+        let script = yield process(module, 'control', config, supports, language);
+
+        let output = scope(script);
+        resolve(output);
 
     });
 
