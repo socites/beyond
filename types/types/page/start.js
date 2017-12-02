@@ -15,11 +15,19 @@ module.exports = function (module, config, error) {
 
         let dependencies = {};
 
-        dependencies.code = (config.dependencies.code) ? config.dependencies.code : undefined;
-        dependencies.code = (config.dependencies.require && !dependencies.code) ? config.dependencies.require : dependencies.code;
+        if (!config.dependencies) {
+            config.dependencies = {};
+        }
+
+        dependencies.require = (config.dependencies.code) ? config.dependencies.code : undefined;
+        dependencies.require = (config.dependencies.require && !dependencies.require) ? config.dependencies.require : dependencies.require;
         dependencies.controls = (config.dependencies.controls) ? config.dependencies.controls : undefined;
 
-        if (dependencies.code && typeof dependencies !== 'object') {
+        if (!dependencies.require) {
+            dependencies.require = {};
+        }
+
+        if (dependencies.require && typeof dependencies.require !== 'object') {
             reject(error('Invalid page dependencies (code dependencies must be an object)'));
             return;
         }
@@ -29,7 +37,7 @@ module.exports = function (module, config, error) {
             return;
         }
 
-        config.dependencies.require[module.ID + '/page'] = 'Page';
+        dependencies.require[module.ID + '/page'] = 'Page';
 
         let output = {
             'route': config.route,
@@ -39,7 +47,7 @@ module.exports = function (module, config, error) {
         resolve('beyond.pages.register(' +
             'module, ' +
             JSON.stringify(output) +
-            ');');
+            ');\n');
 
     });
 
