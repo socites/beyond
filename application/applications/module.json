@@ -6,6 +6,10 @@
         "pages.templates.Basic": "Template"
       }
     },
+    "html": "page.html",
     "js": "page.js"
+  },
+  "control": {
+    "id": "beyond-applications"
   }
 }

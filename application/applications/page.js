@@ -4,10 +4,11 @@ function Page($container, vdir, dependencies) {
     var template = new dependencies.Template($container);
 
     function initialise() {
-        console.log('control', template.control);
     }
 
-    template.render({'control': ''})
+    var texts = {'title': 'Hello world'};
+
+    template.render({'control': '', 'texts': texts})
         .then(initialise);
 
 }

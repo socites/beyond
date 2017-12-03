@@ -1,4 +1,4 @@
-.beyond-page-control.page-control-template {
+.beyond-page.page-control-template {
 
     > paper-toolbar {
         position: absolute;
@@ -9,18 +9,25 @@
         z-index: 1;
     }
 
-    > .control {
+    > .content {
         position: absolute;
         top: 64px;
         left: 0;
         right: 0;
         bottom: 0;
+        margin: 15px;
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
 
         @media (max-width: 600px) {
             top: 56px;
+        }
+    }
+
+    &.no-control {
+        paper-icon-button.refresh {
+            display: none;
         }
     }
 

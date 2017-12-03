@@ -1,0 +1,4 @@
+function Control() {
+    "use strict";
+
+}
