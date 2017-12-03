@@ -65,7 +65,12 @@ module.exports = function (module, config, error) {
         let process = require('path').join(require('main.lib'), 'types/process');
         process = require(process);
 
-        let supports = ['less', 'css', 'txt', 'html', 'jsx', 'js'];
+        let supports = ['less', 'css', 'txt', 'mustache', 'jsx', 'js'];
+        if (config.html) {
+            config.mustache = config.html;
+            delete config.html;
+        }
+
         let script = yield process(module, 'control', config, supports, language);
 
         let output = scope(script);

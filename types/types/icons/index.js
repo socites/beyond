@@ -22,22 +22,10 @@ module.exports = function (module, config, error) {
         icons = icons.replace(/\n/g, '\n    ');
         icons = '    ' + icons + '\n';
 
-        let imports = [];
-        if (module.application) {
-            let host = module.application.hosts(false).libraries.vendor.js;
-            host += 'static/bower_components/';
-            imports.push(host + 'iron-icon/iron-icon.html');
-            imports.push(host + 'iron-iconset-svg/iron-iconset-svg.html');
-        }
-
         // add script inside its own function
         let output = '';
         let name = 'name="' + config.name + '" ';
         let size = 'size="' + ((config.size) ? config.size : '24') + '"';
-
-        for (let i in imports) {
-            output += '<link rel="import" href="' + imports[i] + '">\n';
-        }
 
         output += '<iron-iconset-svg ' + name + size + '>\n';
         output += '<svg><defs>\n\n';
@@ -64,7 +52,8 @@ module.exports = function (module, config, error) {
         process = require(process);
 
         let supports = ['html'];
-        let script = yield process(module, 'control', config, supports, language);
+        let cfg = {'html': {'files': config.files}};
+        let script = yield process(module, 'control', cfg, supports, language);
 
         let output = scope(script);
         resolve(output);

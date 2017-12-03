@@ -4,9 +4,11 @@
     "dependencies": {
       "controls": [
         "beyond-icons",
+        "iron-icons",
         "paper-toolbar",
         "paper-button",
-        "paper-spinner"
+        "paper-spinner",
+        "paper-icon-button"
       ],
       "code": {
         "pages.transitions": "transitions"
