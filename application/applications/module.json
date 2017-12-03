@@ -1,12 +1,7 @@
 {
   "page": {
     "route": "/apps",
-    "dependencies": {
-      "code": {
-        "pages.templates.Basic": "Template"
-      }
-    },
-    "html": "page.html",
+    "template": "pages.templates.Basic",
     "js": "page.js"
   },
   "control": {

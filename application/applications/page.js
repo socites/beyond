@@ -1,14 +1,12 @@
-function Page($container, vdir, dependencies) {
+function Page() {
     "use strict";
 
-    var template = new dependencies.Template($container);
+    var texts = {'title': 'Hello world'};
 
     function initialise() {
     }
 
-    var texts = {'title': 'Hello world'};
-
-    template.render({'control': '', 'texts': texts})
+    this.template.render({'control': '', 'texts': texts})
         .then(initialise);
 
 }

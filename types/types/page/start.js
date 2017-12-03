@@ -39,6 +39,10 @@ module.exports = function (module, config, error) {
 
         dependencies.require[module.ID + '/page'] = 'Page';
 
+        if (typeof config.template === 'string') {
+            dependencies.require[config.template] = 'Template';
+        }
+
         let output = {
             'route': config.route,
             'dependencies': dependencies
