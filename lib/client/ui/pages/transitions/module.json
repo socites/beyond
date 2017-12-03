@@ -1,5 +1,6 @@
 {
   "code": {
+    "id": "pages.transitions",
     "multilanguage": false,
     "less": "transitions.less",
     "js": [

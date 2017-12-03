@@ -3,7 +3,7 @@
     "route": "/apps",
     "dependencies": {
       "code": {
-        "page.basic": "Template"
+        "pages.templates.Basic": "Template"
       }
     },
     "js": "page.js"

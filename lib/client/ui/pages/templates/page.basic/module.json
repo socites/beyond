@@ -1,16 +1,15 @@
 {
   "code": {
-    "id": "page.basic",
+    "id": "pages.templates.Basic",
     "dependencies": {
       "controls": [
+        "beyond-icons",
         "paper-toolbar",
         "paper-button",
-        "iron-icons",
-        "graphs-icons",
         "paper-spinner"
       ],
-      "require": {
-        "libraries/beyond/pages/transitions/code": "transitions"
+      "code": {
+        "pages.transitions": "transitions"
       }
     },
     "multilanguage": false,
@@ -18,7 +17,8 @@
     "less": "template.less",
     "js": [
       "control.js",
-      "template.js"
+      "template.js",
+      "define.js"
     ]
   }
 }

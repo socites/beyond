@@ -4,10 +4,6 @@
 module.exports = function (module, config, error) {
     "use strict";
 
-    let async = require('async');
-    let processors = require('path').join(require('main.lib'), 'types/processors');
-    processors = require(processors)(module);
-
     Object.defineProperty(this, 'multilanguage', {
         'get': function () {
             return false;
@@ -55,7 +51,9 @@ module.exports = function (module, config, error) {
 
     this.start = require('./start.js')(module, config, error);
 
-    this.process = async(function *(resolve, reject) {
+    let async = require('async');
+
+    this.process = async(function *(resolve, reject, language) {
 
         if (!config.name || !config.id || !config.files) {
             reject(error('Icons must define an "id", a "name" and a "files" property'));
