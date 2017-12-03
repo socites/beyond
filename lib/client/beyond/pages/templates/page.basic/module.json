@@ -1,5 +1,6 @@
 {
   "code": {
+    "id": "page.basic",
     "dependencies": {
       "controls": [
         "paper-toolbar",
@@ -19,8 +20,5 @@
       "control.js",
       "template.js"
     ]
-  },
-  "start": {
-    "js": "start.js"
   }
 }

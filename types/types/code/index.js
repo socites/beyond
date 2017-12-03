@@ -71,4 +71,15 @@ module.exports = function (module, config, error) {
 
     });
 
+    this.start = require('./start.js')(module, config, error);
+
+    this.setBuildConfig = async(function *(resolve, reject, json) {
+
+        json.id = config.id;
+        json.dependencies = config.dependencies;
+
+        resolve();
+
+    });
+
 };
