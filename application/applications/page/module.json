@@ -1,0 +1,6 @@
+{
+  "type": "page",
+  "route": "/apps",
+  "template": "pages.templates.Basic",
+  "js": "page.js"
+}
