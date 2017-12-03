@@ -1,12 +1,10 @@
 function Page() {
     "use strict";
 
-    var texts = {'title': 'Hello world'};
-
     function initialise() {
     }
 
-    this.template.render({'control': '', 'texts': texts})
+    this.template.render({'control': '', 'texts': {'title': 'Hello world'}})
         .then(initialise);
 
 }

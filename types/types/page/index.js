@@ -84,6 +84,7 @@ module.exports = function (module, config, error) {
 
         json.route = config.route;
         json.dependencies = config.dependencies;
+        json.template = config.template;
 
         resolve();
 
