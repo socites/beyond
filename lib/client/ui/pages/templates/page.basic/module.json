@@ -1,26 +1,25 @@
 {
-  "code": {
-    "id": "pages.templates.Basic",
-    "dependencies": {
-      "controls": [
-        "beyond-icons",
-        "iron-icons",
-        "paper-toolbar",
-        "paper-button",
-        "paper-spinner",
-        "paper-icon-button"
-      ],
-      "code": {
-        "pages.transitions": "transitions"
-      }
-    },
-    "multilanguage": false,
-    "html": "template.html",
-    "less": "template.less",
-    "js": [
-      "control.js",
-      "template.js",
-      "define.js"
-    ]
-  }
+  "type": "code",
+  "id": "pages.templates.Basic",
+  "dependencies": {
+    "controls": [
+      "beyond-icons",
+      "iron-icons",
+      "paper-toolbar",
+      "paper-button",
+      "paper-spinner",
+      "paper-icon-button"
+    ],
+    "code": {
+      "pages.transitions": "transitions"
+    }
+  },
+  "multilanguage": false,
+  "html": "template.html",
+  "less": "template.less",
+  "js": [
+    "control.js",
+    "template.js",
+    "define.js"
+  ]
 }
