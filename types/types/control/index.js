@@ -50,7 +50,7 @@ module.exports = function (module, config, error) {
         if (dependencies.require && typeof dependencies.require !== 'object') {
             throw new Error('Dependencies code must be an Object');
         }
-        if (dependencies.controls && !(typeof dependencies.controls instanceof Array)) {
+        if (dependencies.controls && !(dependencies.controls instanceof Array)) {
             throw new Error('Dependencies controls must be an Array');
         }
 

@@ -3,7 +3,10 @@
   "dependencies": {
     "code": {
       "beyond.config": "beyond"
-    }
+    },
+    "controls": [
+      "paper-button"
+    ]
   },
   "id": "beyond-applications",
   "js": [
