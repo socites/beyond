@@ -1,4 +1,4 @@
-function ApplicationsFetcher(base) {
+function ApplicationsFetch(base) {
     "use strict";
 
     var events = base.events;

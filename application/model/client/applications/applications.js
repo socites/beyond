@@ -1,9 +1,9 @@
-function Applications() {
+function Applications(model) {
     "use strict";
 
-    var base = new ModelBase(this);
+    var base = new model.ModelBase(this);
 
-    new ApplicationsFetcher(base);
+    new ApplicationsFetch(base);
 
     var entries;
     Object.defineProperty(this, 'entries', {
