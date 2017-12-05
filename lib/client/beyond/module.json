@@ -11,6 +11,8 @@
         "system/hashCode.js",
         "system/coordinate.js",
         "system/camelcase.js",
+        "model/properties.js",
+        "model/model.js",
         "sockets/sockets.js",
         "sockets/exportSocket.js",
         "libraries/libraries.js",

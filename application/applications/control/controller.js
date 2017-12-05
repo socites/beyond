@@ -1,11 +1,17 @@
 function Controller(change, dependencies, properties, specs) {
     "use strict";
 
-    Object.defineProperty(this, 'beyond', {
+    var applications = dependencies.beyond.applications;
+    Object.defineProperty(this, 'applications', {
         'get': function () {
-            return dependencies.beyond;
+            return applications;
         }
     });
+
+    applications.bind('change', change);
+    if (!applications.loaded) {
+        applications.load();
+    }
 
     Object.defineProperty(this, 'ready', {
         'get': function () {
