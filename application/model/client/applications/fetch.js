@@ -12,9 +12,9 @@ function ApplicationsFetch(base) {
 
         return new Promise(function (resolve, reject) {
 
-            var action = new module.Action('/applications', params);
+            var action = new module.Action('applications', params);
             action.onResponse = function (response) {
-
+                console.log(response);
             };
             action.onError = function (response) {
 

@@ -9,8 +9,7 @@
   "js": [
     "controller.js",
     "actions.js",
-    "state.js",
-    "define.js"
+    "state.js"
   ],
   "jsx": "control.jsx"
 }

@@ -1,6 +1,6 @@
 module.exports = function () {
     "use strict";
 
-    this.applications = new (require('./applications.js'));
+    this.applications = require('./applications.js');
 
 };

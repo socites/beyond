@@ -4,7 +4,8 @@
     "js": {
       "path": "client",
       "files": [
-        "applications.js",
+        "applications/fetch.js",
+        "applications/applications.js",
         "beyond.js",
         "define.js"
       ]

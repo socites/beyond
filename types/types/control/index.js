@@ -38,6 +38,7 @@ module.exports = function (module, config, error) {
         output += '    var module = params[0];\n';
         output += '    var dependencies = module.dependencies.modules;\n';
         output += '    var react = module.react.items;\n\n';
+        output += '    var Controller, Actions, updateState, specs;\n\n';
 
         let dependencies = (config.dependencies) ? config.dependencies : {};
 
@@ -79,6 +80,8 @@ module.exports = function (module, config, error) {
         }
 
         output += script;
+
+        output += '    module.control.define(Controller, updateState, Actions);\n\n';
         output += '    done(\'' + module.ID + '\', \'code\');\n\n';
         output += '  })(beyond.modules.get(\'' + module.ID + '\'));\n\n';
         output += '</script>' + '\n';
