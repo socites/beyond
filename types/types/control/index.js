@@ -40,6 +40,19 @@ module.exports = function (module, config, error) {
         output += '    var react = module.react.items;\n\n';
 
         let dependencies = (config.dependencies) ? config.dependencies : {};
+
+        if (dependencies.code && !dependencies.require) {
+            dependencies.require = dependencies.code;
+            delete dependencies.code;
+        }
+
+        if (dependencies.require && typeof dependencies.require !== 'object') {
+            throw new Error('Dependencies code must be an Object');
+        }
+        if (dependencies.controls && !(typeof dependencies.controls instanceof Array)) {
+            throw new Error('Dependencies controls must be an Array');
+        }
+
         dependencies.require = (dependencies.require) ? dependencies.require : {};
         dependencies.require.react = 'React';
         dependencies.require['react-dom'] = 'ReactDOM';

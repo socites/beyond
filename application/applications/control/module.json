@@ -1,5 +1,10 @@
 {
   "type": "control",
+  "dependencies": {
+    "code": {
+      "beyond.config": "model"
+    }
+  },
   "id": "beyond-applications",
   "js": [
     "controller.js",

@@ -1,8 +1,10 @@
 {
   "code": {
+    "id": "beyond.config",
     "js": [
       "applications.js",
-      "beyond.js"
+      "beyond.js",
+      "define.js"
     ]
   },
   "server": "./server"
