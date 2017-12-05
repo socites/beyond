@@ -12,7 +12,12 @@ exports = module.react.createControl({
                 <div className="application" key="application">
                     <div className="name">{application.name}</div>
                     <div className="dirname">{application.dirname}</div>
-                    <paper-button>abrir</paper-button>
+
+                    <paper-button
+                        raised
+                        data-url={'/compile?application=' + application.name}
+                        onClick={actions.navigate}>compilar
+                    </paper-button>
                 </div>
             );
             console.log(application);

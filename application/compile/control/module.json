@@ -1,0 +1,18 @@
+{
+  "type": "control",
+  "dependencies": {
+    "code": {
+      "beyond.config": "beyond"
+    },
+    "controls": [
+      "paper-button"
+    ]
+  },
+  "id": "beyond-compile",
+  "js": [
+    "controller.js",
+    "actions.js",
+    "state.js"
+  ],
+  "jsx": "control.jsx"
+}
