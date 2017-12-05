@@ -1,4 +1,0 @@
-function Control() {
-    "use strict";
-
-}

@@ -1,4 +1,11 @@
 {
   "type": "control",
-  "id": "beyond-applications"
+  "id": "beyond-applications",
+  "js": [
+    "controller.js",
+    "actions.js",
+    "state.js",
+    "define.js"
+  ],
+  "jsx": "control.jsx"
 }
