@@ -2,7 +2,7 @@
   "type": "control",
   "dependencies": {
     "code": {
-      "beyond.config": "model"
+      "beyond.config": "beyond"
     }
   },
   "id": "beyond-applications",
