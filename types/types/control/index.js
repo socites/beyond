@@ -97,8 +97,13 @@ module.exports = function (module, config, error) {
         let process = require('path').join(require('main.lib'), 'types/process');
         process = require(process);
 
-        let supports = ['less', 'css', 'txt', 'jsx', 'js'];
-        let script = yield process(module, 'control', config, supports, language);
+        let script = yield process({
+            'module': module,
+            'type': 'control',
+            'config': config,
+            'supports': ['less', 'css', 'txt', 'jsx', 'js'],
+            'language': language
+        });
 
         let output = scope(script);
         resolve(output);
