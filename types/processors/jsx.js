@@ -47,7 +47,7 @@ module.exports = require('async')(function *(resolve, reject, specs) {
     let output = '';
     output += '/****************\n';
     output += ' REACT COMPONENTS\n';
-    output += ' ****************\n\n/';
+    output += ' ****************/\n\n';
     output += 'var create;\n\n';
 
     for (let key in files) {

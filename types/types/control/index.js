@@ -76,7 +76,7 @@ module.exports = function (module, config, error) {
         }
 
         if (config.methods instanceof Array) {
-            output += '    module.control.methods = ' + JSON.stringify(config.methods) + '\n\n';
+            output += '    module.control.methods = ' + JSON.stringify(config.methods) + ';\n\n';
         }
 
         output += script;
