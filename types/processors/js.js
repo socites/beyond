@@ -1,4 +1,11 @@
-module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error) {
+module.exports = require('async')(function *(resolve, reject, specs) {
+
+    let module = specs.module;
+    let type = specs.type;
+    let config = specs.config;
+    let finder = specs.finder;
+    let minify = specs.minify;
+    let error = specs.error;
 
     let files = yield (finder(module, type, 'js', config));
 

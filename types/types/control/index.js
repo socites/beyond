@@ -38,8 +38,22 @@ module.exports = function (module, config, error) {
         output += '    var module = params[0];\n';
         output += '    var dependencies = module.dependencies.modules;\n';
         output += '    var react = module.react.items;\n\n';
+        output += '    var Controller, Actions, updateState, specs;\n\n';
 
         let dependencies = (config.dependencies) ? config.dependencies : {};
+
+        if (dependencies.code && !dependencies.require) {
+            dependencies.require = dependencies.code;
+            delete dependencies.code;
+        }
+
+        if (dependencies.require && typeof dependencies.require !== 'object') {
+            throw new Error('Dependencies code must be an Object');
+        }
+        if (dependencies.controls && !(dependencies.controls instanceof Array)) {
+            throw new Error('Dependencies controls must be an Array');
+        }
+
         dependencies.require = (dependencies.require) ? dependencies.require : {};
         dependencies.require.react = 'React';
         dependencies.require['react-dom'] = 'ReactDOM';
@@ -66,6 +80,8 @@ module.exports = function (module, config, error) {
         }
 
         output += script;
+
+        output += '    module.control.define(Controller, updateState, Actions);\n\n';
         output += '    done(\'' + module.ID + '\', \'code\');\n\n';
         output += '  })(beyond.modules.get(\'' + module.ID + '\'));\n\n';
         output += '</script>' + '\n';
@@ -81,8 +97,13 @@ module.exports = function (module, config, error) {
         let process = require('path').join(require('main.lib'), 'types/process');
         process = require(process);
 
-        let supports = ['less', 'css', 'txt', 'jsx', 'js'];
-        let script = yield process(module, 'control', config, supports, language);
+        let script = yield process({
+            'module': module,
+            'type': 'control',
+            'config': config,
+            'supports': ['less', 'css', 'txt', 'jsx', 'js'],
+            'language': language
+        });
 
         let output = scope(script);
         resolve(output);

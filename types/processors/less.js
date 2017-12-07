@@ -1,21 +1,24 @@
-module.exports = require('async')(function *(resolve, reject, module, type, config, finder, minify, error) {
+module.exports = require('async')(function *(resolve, reject, specs) {
 
-    // Always minify css styles
-    minify = true;
+    let module = specs.module;
+    let type = specs.type;
+    let config = specs.config;
+    let finder = specs.finder;
+    let minify = true; // Always minify css styles
+    let error = specs.error;
+    let template = (module.application) ? module.application.template : specs.template;
 
     let files = [];
 
     // Add the less files that represent the application template
-    if (type === 'custom' && module.application && module.application.template) {
-        let template = module.application.template;
+    if (template) {
         files = files.concat(yield template.getLessTemplate(error));
     }
 
     // Add the files of the module
     files = files.concat(yield (finder(module, type, 'less', config)));
 
-    if (type === 'custom' && module.application && module.application.template) {
-        let template = module.application.template;
+    if (template) {
         files = files.concat(yield template.getCustomOverwrites(module, 'less', error));
     }
 

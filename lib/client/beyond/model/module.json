@@ -1,0 +1,10 @@
+{
+  "type": "code",
+  "id": "beyond.model",
+  "multilanguage": false,
+  "js": [
+    "properties.js",
+    "model.js",
+    "define.js"
+  ]
+}

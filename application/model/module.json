@@ -1,9 +1,15 @@
 {
   "code": {
-    "js": [
-      "applications.js",
-      "beyond.js"
-    ]
+    "id": "beyond.config",
+    "js": {
+      "path": "client",
+      "files": [
+        "applications/fetch.js",
+        "applications/applications.js",
+        "beyond.js",
+        "define.js"
+      ]
+    }
   },
   "server": "./server"
 }

@@ -1,0 +1,7 @@
+{
+  "type": "page",
+  "route": "/compile",
+  "template": "pages.templates.Basic",
+  "js": "page.js",
+  "txt": "texts.json"
+}

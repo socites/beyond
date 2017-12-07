@@ -51,9 +51,13 @@ module.exports = function (module, config, error) {
         let process = require('path').join(require('main.lib'), 'types/process');
         process = require(process);
 
-        let supports = ['html'];
-        let cfg = {'html': {'files': config.files}};
-        let script = yield process(module, 'control', cfg, supports, language);
+        let script = yield process({
+            'module': module,
+            'type': 'icons',
+            'config': {'html': {'files': config.files}},
+            'supports': ['html'],
+            'language': language
+        });
 
         let output = scope(script);
         resolve(output);

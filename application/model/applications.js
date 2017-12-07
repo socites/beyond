@@ -1,4 +1,0 @@
-function Applications() {
-    "use strict";
-
-}
