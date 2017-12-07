@@ -1,0 +1,6 @@
+{
+  "type": "page",
+  "route": "/libraries",
+  "template": "pages.templates.Basic",
+  "js": "page.js"
+}

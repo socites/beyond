@@ -1,0 +1,4 @@
+function Library() {
+    "use strict";
+
+}

@@ -1,0 +1,21 @@
+{
+  "type": "control",
+  "dependencies": {
+    "code": {
+      "beyond.config": "beyond"
+    },
+    "controls": [
+      "paper-button"
+    ]
+  },
+  "id": "beyond-applications",
+  "methods": [
+    "refresh"
+  ],
+  "js": [
+    "controller.js",
+    "actions.js",
+    "state.js"
+  ],
+  "jsx": "control.jsx"
+}

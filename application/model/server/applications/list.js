@@ -13,10 +13,7 @@ module.exports = require('async')(function *(resolve, reject, params, context) {
             continue;
         }
 
-        output.push({
-            'name': application.name,
-            'dirname': application.dirname
-        });
+        output.push(application.name);
 
     }
 

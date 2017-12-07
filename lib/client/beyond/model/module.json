@@ -3,8 +3,12 @@
   "id": "beyond.model",
   "multilanguage": false,
   "js": [
+    "factories/item.js",
+    "factories/factories.js",
     "properties.js",
     "model.js",
+    "collection/fetch.js",
+    "collection/collection.js",
     "define.js"
   ]
 }
