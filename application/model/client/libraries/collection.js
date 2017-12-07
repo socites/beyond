@@ -1,7 +1,7 @@
-function Libraries(model) {
+function Libraries() {
     "use strict";
 
-    new model.Collection(this, {
+    new module.model.Collection(this, {
         'server': {
             'module': module,
             'path': 'libraries/list'

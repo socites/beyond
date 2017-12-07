@@ -1,18 +1,19 @@
-function Beyond(model) {
+function Beyond() {
     "use strict";
 
-    model.factories.register('applications', Application);
+    var model = module.model;
 
-    var applications = new Applications(model);
+    model.factories.register('applications', Application);
+    model.factories.register('libraries', Library);
+
+    var applications = new Applications();
     Object.defineProperty(this, 'applications', {
         'get': function () {
             return applications;
         }
     });
 
-    model.factories.register('libraries', Library);
-
-    var libraries = new Libraries(model);
+    var libraries = new Libraries();
     Object.defineProperty(this, 'libraries', {
         'get': function () {
             return libraries;

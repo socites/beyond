@@ -1,7 +1,7 @@
-function Applications(model) {
+function Applications() {
     "use strict";
 
-    new model.Collection(this, {
+    new module.model.Collection(this, {
         'server': {
             'module': module,
             'path': 'applications/list'
