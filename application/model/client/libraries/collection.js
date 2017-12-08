@@ -6,7 +6,7 @@ function Libraries() {
             'module': module,
             'path': 'libraries/list'
         },
-        'factory': 'library'
+        'factory': 'libraries'
     });
 
 }

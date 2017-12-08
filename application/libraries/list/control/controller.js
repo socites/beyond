@@ -1,16 +1,16 @@
 function Controller(change, dependencies, properties, specs) {
     "use strict";
 
-    var applications = dependencies.beyond.applications;
-    Object.defineProperty(this, 'applications', {
+    var libraries = dependencies.beyond.libraries;
+    Object.defineProperty(this, 'libraries', {
         'get': function () {
-            return applications;
+            return libraries;
         }
     });
 
-    applications.bind('change', change);
-    if (!applications.loaded) {
-        applications.load();
+    libraries.bind('change', change);
+    if (!libraries.loaded) {
+        libraries.load({'items': true});
     }
 
     Object.defineProperty(this, 'ready', {

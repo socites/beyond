@@ -4,7 +4,7 @@ function ApplicationCompile(application, item) {
     var events = item.events;
 
     var properties = item.properties;
-    properties.expose('compiling');
+    properties.expose(['compiling']);
 
     var promise;
 

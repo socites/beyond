@@ -9,13 +9,13 @@ exports = module.react.createControl({
 
             let application = applications[index];
             output.push(
-                <div className="application" key="application">
+                <div className="application" key={application.id}>
                     <div className="name">{application.name}</div>
                     <div className="dirname">{application.dirname}</div>
 
                     <paper-button
                         raised
-                        data-url={'/compile?application=' + application.name}
+                        data-url={'/applications/compile?application=' + application.name}
                         onClick={actions.navigate}>compilar
                     </paper-button>
                 </div>

@@ -2,20 +2,20 @@ exports = module.react.createControl({
     'render': function (state, actions) {
         "use strict";
 
-        let applications = state.applications;
+        let libraries = state.libraries;
         let output = [];
 
-        for (let index in applications) {
+        for (let index in libraries) {
 
-            let application = applications[index];
+            let library = libraries[index];
             output.push(
-                <div className="application" key="application">
-                    <div className="name">{application.name}</div>
-                    <div className="dirname">{application.dirname}</div>
+                <div className="library" key={library.id}>
+                    <div className="name">{library.name}</div>
+                    <div className="dirname">{library.dirname}</div>
 
                     <paper-button
                         raised
-                        data-url={'/compile?application=' + application.name}
+                        data-url={'/libraries/compile?library=' + library.name}
                         onClick={actions.navigate}>compilar
                     </paper-button>
                 </div>

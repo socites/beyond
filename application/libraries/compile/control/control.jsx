@@ -2,6 +2,10 @@ exports = module.react.createControl({
     'render': function (state, actions) {
         "use strict";
 
+        if (!state.ready) {
+            return null;
+        }
+
         var disabled = {};
         disabled.disabled = (state.compiling) ? true : undefined;
 
