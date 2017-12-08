@@ -5,5 +5,6 @@ function updateState(controller, state) {
 
     state.name = application.name;
     state.dirname = application.dirname;
+    state.compiling = application.compiling;
 
 }

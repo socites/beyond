@@ -4,8 +4,10 @@
     "js": {
       "path": "client",
       "files": [
+        "applications/compile.js",
         "applications/item.js",
         "applications/collection.js",
+        "libraries/compile.js",
         "libraries/item.js",
         "libraries/collection.js",
         "beyond.js",
