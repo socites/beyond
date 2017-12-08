@@ -8,7 +8,7 @@ function ApplicationCompile(application, item) {
 
     var promise;
 
-    application.compile = function () {
+    application.compile = function (params) {
 
         if (properties.compiling) {
             return promise;
@@ -17,9 +17,17 @@ function ApplicationCompile(application, item) {
         properties.compiling = true;
         events.trigger('change');
 
-        console.log('compiling application');
-
         promise = new Promise(function (resolve, reject) {
+
+            var action = new module.Action('applications/compile', params);
+            action.onResponse = function (response) {
+                console.log(response);
+            };
+            action.onError = function (response) {
+
+            };
+
+            return action.execute({'promise': true});
 
         });
 

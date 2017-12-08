@@ -1,6 +1,6 @@
 {
   "type": "page",
-  "route": "/compile",
+  "route": "/apps/compile",
   "template": "pages.templates.Basic",
   "js": "page.js",
   "txt": "texts.json"
