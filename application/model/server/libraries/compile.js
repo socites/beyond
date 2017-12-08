@@ -24,6 +24,10 @@ module.exports = require('async')(function *(resolve, reject, params, context) {
 
     let runtime = 'development';
 
+    builder.on('message', function (message) {
+        console.log('message from builder', message);
+    });
+
     yield builder.build('./build', context.modules, specs, runtime);
     resolve();
 
