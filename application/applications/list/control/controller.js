@@ -10,7 +10,7 @@ function Controller(change, dependencies, properties, specs) {
 
     applications.bind('change', change);
     if (!applications.loaded) {
-        applications.load();
+        applications.load({'items': true});
     }
 
     Object.defineProperty(this, 'ready', {

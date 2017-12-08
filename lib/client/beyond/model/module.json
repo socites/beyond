@@ -7,6 +7,9 @@
     "factories/factories.js",
     "properties.js",
     "model.js",
+    "item/fetch/batch.js",
+    "item/fetch/fetch.js",
+    "item/item.js",
     "collection/fetch.js",
     "collection/collection.js",
     "define.js"
