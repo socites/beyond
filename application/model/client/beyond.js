@@ -3,8 +3,18 @@ function Beyond() {
 
     var model = module.model;
 
-    model.factories.register('applications', Application);
-    model.factories.register('libraries', Library);
+    model.factories.register('applications', Application(model.Item({
+        'server': {
+            'module': module,
+            'path': '/applications'
+        }
+    })));
+    model.factories.register('libraries', Library(model.Item({
+        'server': {
+            'module': module,
+            'path': '/libraries'
+        }
+    })));
 
     var applications = new Applications();
     Object.defineProperty(this, 'applications', {
