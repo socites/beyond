@@ -1,11 +1,16 @@
 function Library() {
     "use strict";
 
-    var item = new module.model.Item(this, id);
+    var Item = new module.model.Item({
+        'server': {
+            'module': module,
+            'path': '/libraries'
+        }
+    });
 
     return function (id) {
-        "use strict";
 
+        var item = new Item(this, id);
         var properties = item.properties;
         properties.expose(['name', 'dirname']);
 
