@@ -6,6 +6,12 @@ function Beyond() {
     model.factories.register('applications', Application());
     model.factories.register('libraries', Library());
 
+    Object.defineProperty(this, 'factories', {
+        'get': function () {
+            return model.factories;
+        }
+    });
+
     var applications = new Applications();
     Object.defineProperty(this, 'applications', {
         'get': function () {
