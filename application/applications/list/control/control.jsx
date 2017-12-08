@@ -20,7 +20,6 @@ exports = module.react.createControl({
                     </paper-button>
                 </div>
             );
-            console.log(application);
 
         }
 
