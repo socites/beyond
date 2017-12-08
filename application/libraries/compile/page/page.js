@@ -7,7 +7,7 @@ function Page() {
 
     this.prepare = function (done) {
 
-        var control = 'beyond-compile-application';
+        var control = 'beyond-compile-library';
 
         template.render({
             'control': control,

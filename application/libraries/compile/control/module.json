@@ -8,9 +8,9 @@
       "paper-button"
     ]
   },
-  "id": "beyond-compile-application",
+  "id": "beyond-compile-library",
   "properties": {
-    "application": "String"
+    "library": "String"
   },
   "js": [
     "controller.js",
