@@ -1,12 +1,16 @@
 module.exports = require('async')(function *(resolve, reject, params, context) {
     "use strict";
 
+    if (!params.library) {
+        throw new Error('Invalid parameter "library"');
+    }
+
     let builder = require('path').join(require('main.lib'), 'builder/');
     builder = require(builder);
 
     let specs = {
         'libraries': {
-            'beyond': {
+            [params.library]: {
                 'client': false,
                 'server': true,
                 'mode': 'beyond',
@@ -24,11 +28,19 @@ module.exports = require('async')(function *(resolve, reject, params, context) {
 
     let runtime = 'development';
 
+    let socket = context.socket;
+
     builder.on('message', function (message) {
-        console.log('message from builder', message);
+        socket.emit('build.libraries.' + params.library, {
+            'type': 'message',
+            'message': message
+        });
     });
     builder.on('error', function (message) {
-        console.log('error from builder', message);
+        socket.emit('build.libraries.' + params.library, {
+            'type': 'error',
+            'message': message
+        });
     });
 
     yield builder.build('./build', context.modules, specs, runtime);
