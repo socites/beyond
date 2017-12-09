@@ -7,4 +7,7 @@ function updateState(controller, state) {
     state.dirname = library.dirname;
     state.compiling = library.compiling;
 
+    state.messages = library.compiler.messages;
+    state.lastMessage = state.messages[state.messages.length - 1];
+
 }

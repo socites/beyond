@@ -13,9 +13,16 @@
     "library": "String"
   },
   "js": [
-    "controller.js",
-    "actions.js",
-    "state.js"
+    "js/controller.js",
+    "js/actions.js",
+    "js/state.js"
   ],
-  "jsx": "control.jsx"
+  "less": {
+    "path": "css",
+    "files": "*"
+  },
+  "jsx": {
+    "path": "jsx",
+    "files": "*"
+  }
 }

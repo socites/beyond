@@ -1,4 +1,4 @@
-function LibraryCompile(library, item) {
+function LibraryCompiler(library, item) {
     "use strict";
 
     var events = item.events;
@@ -6,9 +6,23 @@ function LibraryCompile(library, item) {
     var properties = item.properties;
     properties.expose(['compiling']);
 
+    var messages = [];
+    Object.defineProperty(this, 'messages', {
+        'get': function () {
+            return messages;
+        }
+    });
+
+    var compiler = this;
+    Object.defineProperty(library, 'compiler', {
+        'get': function () {
+            return compiler;
+        }
+    });
+
     var promise;
 
-    function compile() {
+    function onReadyToCompile() {
 
         return new Promise(function (resolve, reject) {
 
@@ -16,9 +30,15 @@ function LibraryCompile(library, item) {
 
             var action = new module.Action('libraries/compile', params);
             action.onResponse = function (response) {
-                console.log(response);
+
+                properties.compiling = false;
+                events.trigger('change');
+
             };
             action.onError = function (response) {
+
+                properties.compiling = false;
+                events.trigger('change');
 
             };
 
@@ -28,17 +48,19 @@ function LibraryCompile(library, item) {
 
     }
 
-    library.compile = function () {
+    function compile() {
 
         if (properties.compiling) {
             return promise;
         }
 
+        messages = [];
         properties.compiling = true;
         events.trigger('change');
 
         function onBuildMessage(data) {
-            console.log(data);
+            messages.push(data);
+            events.trigger('change');
         }
 
         promise = new Promise(function (resolve, reject) {
@@ -51,7 +73,7 @@ function LibraryCompile(library, item) {
                     socket.on(message, onBuildMessage);
                     return socket;
                 })
-                .then(compile)
+                .then(onReadyToCompile)
                 .then(function () {
                     socket.off(message, onBuildMessage);
                 })
@@ -60,6 +82,9 @@ function LibraryCompile(library, item) {
 
         return promise;
 
-    };
+    }
+
+    this.compile = compile;
+    library.compile = compile;
 
 }

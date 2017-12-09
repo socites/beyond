@@ -8,6 +8,8 @@ module.exports = require('async')(function *(resolve, reject, params, context) {
     let builder = require('path').join(require('main.lib'), 'builder/');
     builder = require(builder);
 
+    let messageId = 0;
+
     let specs = {
         'libraries': {
             [params.library]: {
@@ -32,12 +34,14 @@ module.exports = require('async')(function *(resolve, reject, params, context) {
 
     builder.on('message', function (message) {
         socket.emit('build.libraries.' + params.library, {
+            'id': ++messageId,
             'type': 'message',
             'message': message
         });
     });
     builder.on('error', function (message) {
         socket.emit('build.libraries.' + params.library, {
+            'id': ++messageId,
             'type': 'error',
             'message': message
         });

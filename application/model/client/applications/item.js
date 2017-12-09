@@ -19,7 +19,7 @@ function Application() {
             properties.dirname = data.dirname;
         };
 
-        new ApplicationCompile(this, item);
+        new ApplicationCompiler(this, item);
 
     }
 

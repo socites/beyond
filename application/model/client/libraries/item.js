@@ -19,7 +19,7 @@ function Library() {
             properties.dirname = data.dirname;
         };
 
-        new LibraryCompile(this, item);
+        new LibraryCompiler(this, item);
 
     };
 

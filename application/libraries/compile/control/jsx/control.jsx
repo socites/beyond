@@ -22,6 +22,8 @@ exports = module.react.createControl({
             </paper-button>
         );
 
+        output.push(<react.messages key="messages" state={state.messages}/>);
+
         return <div className="library">{output}</div>;
 
     }
