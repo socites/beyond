@@ -27,6 +27,9 @@ module.exports = require('async')(function *(resolve, reject, params, context) {
     builder.on('message', function (message) {
         console.log('message from builder', message);
     });
+    builder.on('error', function (message) {
+        console.log('error from builder', message);
+    });
 
     yield builder.build('./build', context.modules, specs, runtime);
     resolve();
