@@ -1,0 +1,9 @@
+{
+  "server": "./server",
+  "code": {
+    "js": {
+      "path": "client",
+      "files": "script.js"
+    }
+  }
+}

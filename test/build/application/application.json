@@ -1,0 +1,7 @@
+{
+  "name": "application",
+  "version": "v1",
+  "static": [
+    "index.html"
+  ]
+}

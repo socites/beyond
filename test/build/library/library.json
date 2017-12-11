@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "v1": {
+      "path": "./",
+      "build": {
+        "hosts": {
+          "js": "http://test.beyondjs.com",
+          "ws": "wss://test.beyondjs.com"
+        }
+      }
+    }
+  }
+}

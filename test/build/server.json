@@ -1,0 +1,20 @@
+{
+  "ports": {
+    "http": "3000",
+    "rpc": "3001"
+  },
+  "paths": {
+    "code": "./"
+  },
+  "applications": {
+    "beyond": "../../application/application.json",
+    "application": "./application/application.json"
+  },
+  "libraries": {
+    "library": "./library/library.json"
+  },
+  "defaults": {
+    "application": "beyond",
+    "language": "spa"
+  }
+}
