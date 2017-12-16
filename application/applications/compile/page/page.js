@@ -17,9 +17,7 @@ function Page() {
     };
 
     this.show = function () {
-
         template.content.application = this.querystring.application;
-
     };
 
 }

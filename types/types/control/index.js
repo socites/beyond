@@ -81,7 +81,10 @@ module.exports = function (module, config, error) {
 
         output += script;
 
-        output += '    module.control.define(Controller, updateState, Actions);\n\n';
+        output += '    if (!module.control.defined && Controller && updateState) {\n';
+        output += '        module.control.define(Controller, updateState, Actions);\n';
+        output += '    }\n\n';
+
         output += '    done(\'' + module.ID + '\', \'code\');\n\n';
         output += '  })(beyond.modules.get(\'' + module.ID + '\'));\n\n';
         output += '</script>' + '\n';
