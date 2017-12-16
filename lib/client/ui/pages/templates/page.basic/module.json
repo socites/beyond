@@ -18,6 +18,7 @@
   "html": "template.html",
   "less": "template.less",
   "js": [
+    "toolbar.js",
     "control.js",
     "template.js",
     "define.js"
