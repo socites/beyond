@@ -18,6 +18,9 @@
         'defaults': {
             'application': 'beyond',
             'language': 'eng'
+        },
+        'services': {
+            'common': {'hello': 'world'}
         }
     };
 

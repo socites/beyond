@@ -1,6 +1,6 @@
 {
   "name": "beyond",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "description": "Integrated state-of-the-art technologies with boosted performance. BeyondJS is a framework for building scalable, modular, single page web applications. BeyondJS integrates out-of-the-box, react, mustache, require.js, polymer, less, socket.io, and more.",
   "main": "./lib",
   "bin": {
@@ -37,6 +37,7 @@
     "postinstall": "beyond postinstall"
   },
   "dependencies": {
+    "beyond-builder": "^0.1.1",
     "archiver": "^1.0.0",
     "async": "https://github.com/socites/async.git",
     "babel-core": "^6.5.2",
@@ -53,7 +54,7 @@
     "socket.io": "^1.5.0",
     "url-join": "^0.0.1",
     "connect-phonegap": "^0.24.9",
-    "beyond-builder": "^0.1.1"
+    "mysql": "^2.15.0"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
