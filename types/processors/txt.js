@@ -7,14 +7,14 @@ module.exports = require('async')(function *(resolve, reject, specs) {
     let minify = specs.minify;
     let error = specs.error;
     let language = specs.language;
+    let template = specs.template;
 
     let files = [];
 
     // Add the files of the module
     files = files.concat(yield (finder(module, type, 'txt', config)));
 
-    if (type === 'custom' && module.application && module.application.template) {
-        let template = module.application.template;
+    if (template) {
         files = files.concat(yield template.getCustomOverwrites(module, 'txt', error));
     }
 
