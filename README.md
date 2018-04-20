@@ -142,4 +142,3 @@ mocha test/**
 
 ## License
 [BeyondJS](https://socites.github.io/beyond/) [MIT](https://opensource.org/licenses/MIT) © [Socites](http://socites.com/).
-The GreenBox SA
