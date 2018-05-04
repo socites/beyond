@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
+    "polymer": "Polymer/polymer#1.11.0",
     "paper-button": "PolymerElements/paper-button#1.0.14",
     "paper-drawer-panel": "PolymerElements/paper-drawer-panel#1.0.10",
     "paper-scroll-header-panel": "PolymerElements/paper-scroll-header-panel#1.0.16",
