@@ -1,0 +1,11 @@
+{
+  "type": "page",
+  "route": "/sockets",
+  "dependencies": {
+    "code": {
+      "libraries/beyond/connect/code": "connect"
+    }
+  },
+  "template": "pages.templates.Basic",
+  "js": "page.js"
+}

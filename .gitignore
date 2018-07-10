@@ -25,3 +25,5 @@ node_modules
 
 applications/build/deploy
 applications/screens/application/phonegap
+
+lib/client/vendor/bower_components
