@@ -1,0 +1,6 @@
+{
+  "type": "page",
+  "route": "/test",
+  "template": "pages.templates.Basic",
+  "js": "page.js"
+}

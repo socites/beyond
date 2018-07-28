@@ -6,6 +6,7 @@
     "pages/page.js",
     "pages/pages.js",
     "pathname.js",
-    "navigation.js"
+    "navigation.js",
+    "beyond.js"
   ]
 }
