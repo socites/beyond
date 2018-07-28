@@ -37,24 +37,25 @@
     "postinstall": "beyond postinstall"
   },
   "dependencies": {
-    "beyond-builder": "^0.1.1",
     "archiver": "^1.0.0",
     "async": "https://github.com/socites/async.git",
     "babel-core": "^6.5.2",
     "babel-plugin-transform-react-jsx": "^6.5.2",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
+    "beyond-builder": "^0.1.1",
     "clean-css": "^3.4.8",
     "co": "^4.6.0",
     "co-fs": "^1.2.0",
     "colors": "^1.1.2",
+    "connect-phonegap": "^0.24.9",
     "finder": "https://github.com/socites/finder.git",
     "hogan.js": "^3.0.2",
     "less": "^2.6.0",
     "main.lib": "https://github.com/socites/main.lib.git",
+    "mysql": "^2.15.0",
     "socket.io": "^1.5.0",
-    "url-join": "^0.0.1",
-    "connect-phonegap": "^0.24.9",
-    "mysql": "^2.15.0"
+    "url-join": "^0.0.1"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
