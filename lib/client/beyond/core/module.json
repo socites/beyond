@@ -1,0 +1,23 @@
+{
+  "type": "code",
+  "multilanguage": false,
+  "standalone": true,
+  "js": {
+    "files": [
+      "application/application.js",
+      "libraries/libraries.js",
+      "libraries/library.js",
+      "modules/plugins.js",
+      "modules/dependencies.js",
+      "modules/module.js",
+      "modules/modules.js",
+      "require-config/error.js",
+      "require-config/config.js",
+      "toast/messages.js",
+      "toast/toast.js",
+      "logs.js",
+      "ready.js",
+      "beyond.js"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "code",
+  "multilanguage": false,
+  "standalone": true,
+  "js": {
+    "files": [
+      "phonegap.js",
+      "push.js",
+      "analytics.js",
+      "badge.js",
+      "links.js"
+    ]
+  }
+}

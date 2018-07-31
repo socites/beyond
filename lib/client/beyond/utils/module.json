@@ -1,0 +1,16 @@
+{
+  "type": "code",
+  "multilanguage": false,
+  "standalone": true,
+  "js": {
+    "files": [
+      "events.js",
+      "delegate.js",
+      "browser.js",
+      "time.js",
+      "hashCode.js",
+      "coordinate.js",
+      "camelcase.js"
+    ]
+  }
+}
