@@ -1,10 +1,9 @@
-var Resources = function (module) {
-    "use strict";
+function Resources(module) {
 
-    var getResource = function (hostType, resource) {
+    function getResource(hostType, resource) {
 
-        var host;
-        var modulePath, filePath;
+        let host, library;
+        let modulePath, filePath;
 
         if (resource.substr(0, 1) === '/') {
             resource = resource.substr(1);
@@ -33,12 +32,11 @@ var Resources = function (module) {
         }
         else {
 
-            var library = hostType;
+            let library = hostType;
             host = beyond.hosts.libraries[library];
 
             if (!host) {
-                console.warn('invalid css host on module "' + module.ID + '", resource "' + resource + '"' +
-                    ', library "' + library + '" is not defined');
+                console.warn(`Invalid css host on module "${module.ID}", resource "${resource}", library "${library}" is not defined`);
                 return;
             }
 
@@ -47,15 +45,15 @@ var Resources = function (module) {
                 filePath = resource.substr(7);
             }
             else {
-                var overwrite = resource.split('/static/');
+                let overwrite = resource.split('/static/');
                 modulePath = overwrite[0];
                 filePath = overwrite[1];
             }
 
         }
 
-        var overwrites = beyond.overwrites;
-        var overwrited;
+        let overwrites = beyond.overwrites;
+        let overwrited;
         if (library) {
             overwrited = overwrites[library];
         }
@@ -63,34 +61,32 @@ var Resources = function (module) {
         if (!overwrited || !overwrited[modulePath] ||
             overwrited[modulePath].indexOf(filePath) === -1) {
 
-            return host + modulePath + '/static/' + filePath;
+            return `${host + modulePath}/static/${filePath}`;
         }
 
-        return beyond.hosts.application.js +
-            'custom/' + library + '/' +
-            modulePath + '/static/' + filePath;
+        return `${beyond.hosts.application.js}custom/${library}/${modulePath}/static/${filePath}`;
 
-    };
+    }
 
-    var setHosts = function (styles) {
+    function setHosts(styles) {
 
         // find variables
-        var variable;
+        let variable;
 
-        var replace = {};
+        let replace = {};
 
-        var regexp = /#host\.(.*?)#(.*?)[\)\s]/g;
+        let regexp = /#host\.(.*?)#(.*?)[\)\s]/g;
         variable = regexp.exec(styles);
 
-        var resource;
+        let resource;
         while (variable) {
 
             // hostType can be 'application', 'module', libraryName
-            var hostType = variable[1];
+            let hostType = variable[1];
             resource = variable[2];
             resource = getResource(hostType, resource);
 
-            var original = variable[0];
+            let original = variable[0];
             if (original.substr(original.length - 1) === ')')
                 original = original.substr(0, original.length - 1);
 
@@ -100,8 +96,9 @@ var Resources = function (module) {
         }
 
         // replace #host.* variables with their values
-        for (var original in replace) {
+        for (let original in replace) {
 
+            if (!replace.hasOwnProperty(original)) continue;
             resource = replace[original];
 
             while (styles.indexOf(original) !== -1)
@@ -111,7 +108,7 @@ var Resources = function (module) {
 
         return styles;
 
-    };
+    }
 
     this.process = function (styles) {
 
@@ -121,4 +118,4 @@ var Resources = function (module) {
 
     };
 
-};
+}

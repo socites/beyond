@@ -1,8 +1,14 @@
+/**
+ * This module stores the React elements.
+ * This is done this way because React.createElement cannot be called until
+ * React is loaded by requirejs.
+ *
+ * @param module
+ * @param events
+ * @constructor
+ */
 function ReactRegister(module, events) {
 
-    // jsx register functions that creates the React elements
-    // this is done this way because React.createElement cannot be called until
-    // React is loaded by requirejs
     let registeredFunctions = {};
 
     let React, ReactDOM;

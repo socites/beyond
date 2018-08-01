@@ -1,4 +1,4 @@
-let Texts = function (module) {
+let ModuleTexts = function (module) {
 
     this.copy = function () {
 

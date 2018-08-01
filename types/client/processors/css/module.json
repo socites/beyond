@@ -1,0 +1,9 @@
+{
+  "type": "js",
+  "files": [
+    "values.js",
+    "resources.js",
+    "styles.js",
+    "module.js"
+  ]
+}
