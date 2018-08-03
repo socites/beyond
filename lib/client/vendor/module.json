@@ -1,12 +1,8 @@
 {
-  "code": {
-    "multilanguage": false,
-    "js": {
-      "files": [
-        "require.config.js"
-      ]
-    }
-  },
+  "type": "js",
+  "files": [
+    "amd-config.js"
+  ],
   "static": [
     "modules/socket.io/socket.io.min.js",
     "modules/require.js/requirejs.min.js",

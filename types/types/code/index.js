@@ -2,25 +2,17 @@
  * Returns the script of a "code" type
  */
 module.exports = function (module, config, error) {
-    "use strict";
+    'use strict';
 
     let async = require('async');
 
-    let multilanguage = (typeof config.multilanguage === 'undefined') ? true : config.multilanguage;
-    config.multilanguage = multilanguage;
-    Object.defineProperty(this, 'multilanguage', {
-        'get': function () {
-            return multilanguage;
-        }
-    });
-
-    Object.defineProperty(this, 'extname', {
-        'get': function () {
-            return '.js';
-        }
-    });
+    config.multilanguage = (config.multilanguage === undefined) ? true : config.multilanguage;
+    Object.defineProperty(this, 'multilanguage', {'get': () => config.multilanguage});
+    Object.defineProperty(this, 'extname', {'get': () => '.js'});
 
     let scope = function (code, standalone) {
+
+        let bundle = `${module.ID}/code`;
 
         // add an extra tab in all lines
         code = code.replace(/\n/g, '\n    ');
@@ -29,36 +21,23 @@ module.exports = function (module, config, error) {
         // add script inside its own function
         let output = '';
 
-        if (standalone) {
-            output += '(function () {\n\n';
-        }
-        else {
-            output += '(function (params) {\n\n';
-            output += '    var done = params[1];\n';
-            output += '    var module = params[0];\n';
-            output += '    var react = module.react.items;\n\n';
+        output += '(function (module, done, extended) {\n\n';
+        output += '    let react = module.react.items;\n\n';
 
-            if (config.dependencies) {
-                output += '    var dependencies = module.dependencies;\n';
-                output += '    module.dependencies.set(' + JSON.stringify(config.dependencies) + ');\n\n';
-            }
+        if (config.dependencies) {
+            output += '    var dependencies = module.dependencies;\n';
+            output += `    module.dependencies.set(${JSON.stringify(config.dependencies)});\n\n`;
         }
 
         output += code;
-
-        if (standalone) {
-            output += '})();';
-        }
-        else {
-            output += '    done(\'' + module.ID + '\', \'code\');\n\n';
-            output += '})(beyond.modules.get(\'' + module.ID + '\'));';
-        }
+        output += `    done();\n\n`;
+        output += `})(beyond.modules.get('${bundle}'));`;
 
         return output;
 
     };
 
-    this.process = async(function *(resolve, reject, language) {
+    this.process = async(function* (resolve, reject, language) {
 
         let process = require('path').join(require('main.lib'), 'types/process');
         process = require(process);
@@ -83,13 +62,10 @@ module.exports = function (module, config, error) {
 
     this.start = require('./start.js')(module, config, error);
 
-    this.setBuildConfig = async(function *(resolve, reject, json) {
-
+    this.setBuildConfig = async(function* (resolve, reject, json) {
         json.id = config.id;
         json.dependencies = config.dependencies;
-
         resolve();
-
     });
 
 };
