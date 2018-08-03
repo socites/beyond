@@ -1,12 +1,13 @@
 let Values = function (module) {
 
-    // find a css value
+    // Find a css value
     let retrieve = function (value) {
 
         let process = value.split('-');
-        value = beyond.css.values;
+        value = (beyond.config.css) ? beyond.config.css.values : {};
         for (let i in process) {
 
+            if (!process.hasOwnProperty(i)) continue;
             value = value[process[i]];
             if (typeof value === 'undefined') return;
 

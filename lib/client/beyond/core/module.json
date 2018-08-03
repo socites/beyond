@@ -4,19 +4,26 @@
   "standalone": true,
   "js": {
     "files": [
+      "hosts/container.js",
+      "hosts/hosts.js",
+      "amd/config.js",
+      "extensions/handler.js",
+      "extensions/extensions.js",
       "application/application.js",
-      "libraries/libraries.js",
       "libraries/library.js",
-      "modules/plugins.js",
+      "libraries/libraries.js",
+      "modules/path.js",
+      "modules/loader.js",
       "modules/dependencies.js",
+      "modules/plugins.js",
       "modules/module.js",
       "modules/modules.js",
-      "require-config/error.js",
-      "require-config/config.js",
+      "controls/ready.js",
+      "controls/control.js",
+      "controls/controls.js",
       "toast/messages.js",
       "toast/toast.js",
       "logs.js",
-      "ready.js",
       "beyond.js"
     ]
   }
