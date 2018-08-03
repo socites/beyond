@@ -24,23 +24,21 @@ module.exports = function (module, config, error) {
         // Add script inside its own function
         let output = '';
 
-        let required = config.dependencies;
-        required = (required && required.code instanceof Array) ? required.code : [];
-        required = JSON.stringify(required);
-
+        let dependencies = new (require('./dependencies.js'))(config);
+        let required = JSON.stringify(dependencies.required);
         output += `let required = ${required};\n`;
         output += 'define(required, function() {\n\n';
+
+        output += (dependencies.script) ? `${dependencies.script}\n` : '';
+
         output += `    let module = beyond.modules.get('${bundle}');\n`;
         output += '    let done = module.done;\n';
-        output += '    module = module.module;\n';
-        output += '    let react = module.react.items;\n\n';
+        output += '    module = module.module;\n\n';
 
-        if (config.dependencies) {
-            output += '    var dependencies = module.dependencies;\n';
-            output += `    module.dependencies.set(${JSON.stringify(config.dependencies)});\n\n`;
-        }
+        output += (config.jsx) ? '    let react = module.react.items;\n\n' : '';
 
         output += code;
+        output += '    // Inform that the module is done\n';
         output += `    done();\n\n`;
         output += `})(beyond.modules.get('${bundle}'));`;
 
