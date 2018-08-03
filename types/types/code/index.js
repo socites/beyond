@@ -26,12 +26,6 @@ module.exports = function (module, config, error) {
 
         let required = config.dependencies;
         required = (required && required.code instanceof Array) ? required.code : [];
-        if (config.less || config.css) required.push('bundles/processors/css/js');
-        if (config.html) required.push('bundles/static/hogan.js/hogan-3.0.2.min.amd');
-        if (config.html) required.push('bundles/processors/html/js');
-        if (config.jsx) required.push('bundles/processors/jsx/js');
-        if (config.txt) required.push('bundles/processors/txt/js');
-
         required = JSON.stringify(required);
 
         output += `let required = ${required};\n`;
