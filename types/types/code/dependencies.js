@@ -25,8 +25,8 @@ module.exports = function (config) {
     }
 
     if (config.less || config.css) add('bundles/processors/css/js', 'css');
-    if (config.html) add('bundles/static/hogan.js/hogan-3.0.2.min.amd', 'hogan');
-    if (config.html) add('bundles/processors/html/js', 'html');
+    if (config.html || config.mustache) add('bundles/static/hogan.js/hogan-3.0.2.min.amd', 'hogan');
+    if (config.html || config.mustache) add('bundles/processors/html/js', 'html');
     if (config.jsx) add('bundles/processors/jsx/js', 'jsx');
     if (config.txt) add('bundles/processors/txt/js', 'txt');
 
