@@ -14,15 +14,11 @@ function ReactRegister(module, events) {
     let React, ReactDOM;
 
     let items = {};
-    Object.defineProperty(this, 'items', {
-        'get': () => items
-    });
+    Object.defineProperty(this, 'items', {'get': () => items});
 
     let ready;
     let loading;
-    Object.defineProperty(this, 'loading', {
-        'get': () => loading
-    });
+    Object.defineProperty(this, 'loading', {'get': () => loading});
 
     let loadDependencies = function () {
 

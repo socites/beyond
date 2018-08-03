@@ -13,7 +13,6 @@
     "mobile/fastclick.js",
     "mobile/mobile.js",
     "modules/jquery/jquery.js",
-    "modules/jquery/jquery.min.js",
-    "modules/hogan.js/hogan-3.0.2.min.js"
+    "modules/jquery/jquery.min.js"
   ]
 }

@@ -10,18 +10,35 @@ module.exports = function (module, config, error) {
     Object.defineProperty(this, 'multilanguage', {'get': () => config.multilanguage});
     Object.defineProperty(this, 'extname', {'get': () => '.js'});
 
-    let scope = function (code, standalone) {
+    // Processors supported by this bundle
+    let supports = ['less', 'css', 'txt', 'mustache', 'jsx', 'js'];
+
+    let scope = function (code) {
 
         let bundle = `${module.ID}/code`;
 
-        // add an extra tab in all lines
+        // Add an extra tab in all lines
         code = code.replace(/\n/g, '\n    ');
         code = '    ' + code + '\n';
 
-        // add script inside its own function
+        // Add script inside its own function
         let output = '';
 
-        output += '(function (module, done, extended) {\n\n';
+        let required = config.dependencies;
+        required = (required && required.code instanceof Array) ? required.code : [];
+        if (config.less || config.css) required.push('bundles/processors/css/js');
+        if (config.html) required.push('bundles/static/hogan.js/hogan-3.0.2.min.amd');
+        if (config.html) required.push('bundles/processors/html/js');
+        if (config.jsx) required.push('bundles/processors/jsx/js');
+        if (config.txt) required.push('bundles/processors/txt/js');
+
+        required = JSON.stringify(required);
+
+        output += `let required = ${required};\n`;
+        output += 'define(required, function() {\n\n';
+        output += `    let module = beyond.modules.get('${bundle}');\n`;
+        output += '    let done = module.done;\n';
+        output += '    module = module.module;\n';
         output += '    let react = module.react.items;\n\n';
 
         if (config.dependencies) {
@@ -51,12 +68,11 @@ module.exports = function (module, config, error) {
             'module': module,
             'type': 'code',
             'config': config,
-            'supports': ['less', 'css', 'txt', 'mustache', 'jsx', 'js'],
+            'supports': supports,
             'language': language
         });
 
-        script = scope(script, config.standalone);
-        resolve(script);
+        resolve(scope(script));
 
     });
 
