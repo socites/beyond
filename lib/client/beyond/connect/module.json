@@ -1,10 +1,7 @@
 {
-  "code": {
-    "js": {
-      "files": [
-        "socket.js",
-        "define.js"
-      ]
-    }
-  }
+  "type": "js",
+  "files": [
+    "socket.js",
+    "define.js"
+  ]
 }

@@ -1,30 +1,26 @@
 {
-  "type": "code",
-  "multilanguage": false,
-  "standalone": true,
-  "js": {
-    "files": [
-      "hosts/container.js",
-      "hosts/hosts.js",
-      "amd/config.js",
-      "extensions/handler.js",
-      "extensions/extensions.js",
-      "application/application.js",
-      "libraries/library.js",
-      "libraries/libraries.js",
-      "modules/path.js",
-      "modules/loader.js",
-      "modules/dependencies.js",
-      "modules/plugins.js",
-      "modules/module.js",
-      "modules/modules.js",
-      "controls/ready.js",
-      "controls/control.js",
-      "controls/controls.js",
-      "toast/messages.js",
-      "toast/toast.js",
-      "logs.js",
-      "beyond.js"
-    ]
-  }
+  "type": "js",
+  "files": [
+    "hosts/container.js",
+    "hosts/hosts.js",
+    "amd/config.js",
+    "extensions/handler.js",
+    "extensions/extensions.js",
+    "application/application.js",
+    "libraries/library.js",
+    "libraries/libraries.js",
+    "modules/path.js",
+    "modules/loader.js",
+    "modules/dependencies.js",
+    "modules/plugins.js",
+    "modules/module.js",
+    "modules/modules.js",
+    "controls/ready.js",
+    "controls/control.js",
+    "controls/controls.js",
+    "toast/messages.js",
+    "toast/toast.js",
+    "logs.js",
+    "beyond.js"
+  ]
 }
