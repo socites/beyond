@@ -5,6 +5,7 @@
     "push.js",
     "analytics.js",
     "badge.js",
-    "links.js"
+    "links.js",
+    "splash.js"
   ]
 }
