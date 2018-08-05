@@ -1,9 +1,12 @@
 module.exports = function (module, config, error) {
-    "use strict";
+    'use strict';
 
     let async = require('async');
 
-    return async(function *(resolve, reject) {
+    return async(function* (resolve, reject) {
+
+        resolve('// controls');
+        return;
 
         if (!config.id) {
             reject(error('Control resource requires to define its "id"'));

@@ -1,9 +1,12 @@
 module.exports = function (module, config, error) {
-    "use strict";
+    'use strict';
 
     let async = require('async');
 
-    return async(function *(resolve, reject) {
+    return async(function* (resolve, reject) {
+
+        resolve('// code');
+        return;
 
         if (!config.id) {
             resolve('');

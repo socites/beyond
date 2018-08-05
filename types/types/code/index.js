@@ -40,7 +40,7 @@ module.exports = function (module, config, error) {
         output += code;
         output += '    // Inform that the module is done\n';
         output += `    done();\n\n`;
-        output += `})(beyond.modules.get('${bundle}'));`;
+        output += `});`;
 
         return output;
 

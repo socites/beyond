@@ -5,6 +5,9 @@ module.exports = function (module, config, error) {
 
     return async(function *(resolve, reject) {
 
+        resolve('// icons');
+        return;
+
         if (!config.id || !config.name || (!config.files && !config.source)) {
             reject(error('Icons resource requires to define the id, name and files properties'));
             return;
