@@ -2,7 +2,7 @@
  * Native BeyondJS types
  */
 module.exports = function () {
-    "use strict";
+    'use strict';
 
     let types = new Map();
     Object.defineProperty(this, 'types', {
@@ -22,10 +22,13 @@ module.exports = function () {
     types.set('page', require('./types/page'));
     types.set('control', require('./types/control'));
     types.set('icons', require('./types/icons'));
+    types.set('ts', require('./types/ts'));
+    types.set('js', require('./types/js'));
 
     processors.set('css', require('./processors/css.js'));
     processors.set('html', require('./processors/html.js'));
     processors.set('js', require('./processors/js.js'));
+    processors.set('ts', require('./processors/ts.js'));
     processors.set('jsx', require('./processors/jsx.js'));
     processors.set('less', require('./processors/less.js'));
     processors.set('mustache', require('./processors/mustache.js'));

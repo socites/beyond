@@ -1,0 +1,7 @@
+{
+  "type": "js",
+  "files": [
+    "templates.js",
+    "module.js"
+  ]
+}

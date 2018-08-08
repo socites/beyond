@@ -1,4 +1,4 @@
-module.exports = require('async')(function *(resolve, reject, specs) {
+module.exports = require('async')(function* (resolve, reject, specs) {
 
     let module = specs.module;
     let type = specs.type;
@@ -16,7 +16,7 @@ module.exports = require('async')(function *(resolve, reject, specs) {
     for (let file of files) {
 
         if (file.extname !== '.html') {
-            reject(error('invalid file extension "' + file.relative.file + '"'));
+            reject(error(`Invalid file extension "${file.relative.file}"`));
             return;
         }
 

@@ -1,0 +1,7 @@
+{
+  "type": "js",
+  "files": [
+    "socket.js",
+    "define.js"
+  ]
+}

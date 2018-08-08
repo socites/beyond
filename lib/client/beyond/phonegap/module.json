@@ -1,0 +1,11 @@
+{
+  "type": "js",
+  "files": [
+    "phonegap.js",
+    "push.js",
+    "analytics.js",
+    "badge.js",
+    "links.js",
+    "splash.js"
+  ]
+}

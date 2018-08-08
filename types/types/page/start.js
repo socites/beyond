@@ -1,9 +1,12 @@
 module.exports = function (module, config, error) {
-    "use strict";
+    'use strict';
 
     let async = require('async');
 
-    return async(function *(resolve, reject) {
+    return async(function* (resolve, reject) {
+
+        resolve('// pages');
+        return;
 
         if (typeof config !== 'object' ||
             (config.route && (typeof config.route !== 'string' || config.route.indexOf(' ') !== -1))) {

@@ -1,0 +1,12 @@
+{
+  "type": "js",
+  "files": [
+    "pages/base.js",
+    "pages/querystring.js",
+    "pages/page.js",
+    "pages/pages.js",
+    "pathname.js",
+    "navigation.js",
+    "beyond.js"
+  ]
+}

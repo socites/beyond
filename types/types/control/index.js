@@ -2,25 +2,17 @@
  * Returns the script of a "page" type
  */
 module.exports = function (module, config, error) {
-    "use strict";
+    'use strict';
 
     let async = require('async');
 
-    let multilanguage = (typeof config.multilanguage === 'undefined') ? true : config.multilanguage;
-    config.multilanguage = multilanguage;
-    Object.defineProperty(this, 'multilanguage', {
-        'get': function () {
-            return multilanguage;
-        }
-    });
-
-    Object.defineProperty(this, 'extname', {
-        'get': function () {
-            return '.html';
-        }
-    });
+    config.multilanguage = (config.multilanguage === undefined) ? true : config.multilanguage;
+    Object.defineProperty(this, 'multilanguage', {'get': () => config.multilanguage});
+    Object.defineProperty(this, 'extname', {'get': () => '.html'});
 
     let scope = function (script) {
+
+        let bundle = `${module.ID}/code`;
 
         // add an extra tab in all lines
         script = script.replace(/\n/g, '\n    ');
@@ -28,17 +20,14 @@ module.exports = function (module, config, error) {
 
         // add script inside its own function
         let output = '';
-        let id = 'id="' + config.id + '"';
-        let is = (config.is) ? ' is="' + config.is + '"' : '';
-        output += '<dom-module ' + id + is + '>\n';
+        let is = `${(config.is) ? ' is="' + config.is + '"' : ''}`;
+        output += `<dom-module id="${config.id}"${is}>\n`;
 
         output += '<script>\n\n';
-        output += '  (function (params) {\n\n';
-        output += '    var done = params[1];\n';
-        output += '    var module = params[0];\n';
-        output += '    var dependencies = module.dependencies.modules;\n';
-        output += '    var react = module.react.items;\n\n';
-        output += '    var Controller, Actions, updateState, specs;\n\n';
+        output += '  (function (module, done, extended) {\n\n';
+        output += '    let dependencies = module.dependencies.modules;\n';
+        output += '    let react = module.react.items;\n\n';
+        output += '    let Controller, Actions, updateState, specs;\n\n';
 
         let dependencies = (config.dependencies) ? config.dependencies : {};
 
@@ -62,21 +51,19 @@ module.exports = function (module, config, error) {
             if (!module.library) {
                 throw new Error('"Custom" processors only apply to modules that resides in a library');
             }
-            let custom = 'application/custom/' + module.library.name + '/' + module.path;
+            let custom = `application/custom/${module.library.name}/${module.path}`;
             dependencies.require[custom] = 'custom';
         }
 
         if (dependencies) {
             output += '    // Control dependencies \n';
-            output += '    module.dependencies.set(' + JSON.stringify(dependencies) + ');\n\n';
+            output += `    module.dependencies.set(${JSON.stringify(dependencies)});\n\n`;
         }
-
         if (typeof config.properties === 'object') {
-            output += '    module.control.properties = ' + JSON.stringify(config.properties) + ';\n\n';
+            output += `    module.control.properties = ${JSON.stringify(config.properties)};\n\n`;
         }
-
         if (config.methods instanceof Array) {
-            output += '    module.control.methods = ' + JSON.stringify(config.methods) + ';\n\n';
+            output += `    module.control.methods = ${JSON.stringify(config.methods)};\n\n`;
         }
 
         output += script;
@@ -85,17 +72,17 @@ module.exports = function (module, config, error) {
         output += '        module.control.define(Controller, updateState, Actions);\n';
         output += '    }\n\n';
 
-        output += '    done(\'' + module.ID + '\', \'code\');\n\n';
-        output += '  })(beyond.modules.get(\'' + module.ID + '\'));\n\n';
-        output += '</script>' + '\n';
+        output += `    done();\n\n`;
+        output += `  })(beyond.modules.get('${bundle}'));\n\n`;
 
+        output += '</script>\n';
         output += '</dom-module>';
 
         return output;
 
     };
 
-    this.process = async(function *(resolve, reject, language) {
+    this.process = async(function* (resolve, reject, language) {
 
         let process = require('path').join(require('main.lib'), 'types/process');
         process = require(process);
@@ -115,7 +102,7 @@ module.exports = function (module, config, error) {
 
     this.start = require('./start.js')(module, config, error);
 
-    this.setBuildConfig = async(function *(resolve, reject, json) {
+    this.setBuildConfig = async(function* (resolve, reject, json) {
 
         json.id = config.id;
         json.dependencies = config.dependencies;

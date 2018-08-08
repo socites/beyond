@@ -1,0 +1,12 @@
+{
+  "type": "js",
+  "files": [
+    "state.js",
+    "properties.js",
+    "controller.js",
+    "sna.js",
+    "behavior.js",
+    "control.js",
+    "module.js"
+  ]
+}
