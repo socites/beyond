@@ -1,5 +1,4 @@
 function Page() {
-    "use strict";
 
     function initialise() {
         console.log('page initialised');
