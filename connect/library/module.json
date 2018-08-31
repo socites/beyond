@@ -1,0 +1,9 @@
+{
+  "type": "page",
+  "route": "/connect",
+  "js": {
+    "files": [
+      "page.js"
+    ]
+  }
+}
