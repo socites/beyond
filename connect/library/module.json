@@ -1,4 +1,5 @@
 {
+  "server": "./server",
   "type": "page",
   "route": "/connect",
   "js": {
