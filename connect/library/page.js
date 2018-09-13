@@ -12,7 +12,14 @@ function Page() {
             console.error(error);
         };
 
-        action.execute();
+        setTimeout(function () {
+
+            console.log('executing action');
+            action.execute()
+                .then(response => console.log(response))
+                .catch(error => console.error(error));
+
+        }, 5000);
 
     };
 
