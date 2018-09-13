@@ -5,21 +5,16 @@ function Page() {
         let action = new module.Action('/hello');
 
         action.onResponse = function (response) {
-            console.log(response);
+            console.log('on response', response);
         };
 
         action.onError = function (error) {
-            console.error(error);
+            console.error('on error', error);
         };
 
-        setTimeout(function () {
-
-            console.log('executing action');
-            action.execute()
-                .then(response => console.log(response))
-                .catch(error => console.error(error));
-
-        }, 5000);
+        action.execute()
+            .then(response => console.log('promise response', response))
+            .catch(error => console.error('promise error', error));
 
     };
 
