@@ -4,6 +4,7 @@
   "standalone": true,
   "js": {
     "files": [
+      "system/pending.js",
       "system/events.js",
       "system/delegate.js",
       "system/browser.js",
