@@ -25,6 +25,8 @@ node_modules
 
 package-lock.json
 
+lib/client/vendor/bower_components
+
 applications/build/deploy
 applications/screens/application/phonegap
 
