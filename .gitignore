@@ -27,3 +27,5 @@ package-lock.json
 
 applications/build/deploy
 applications/screens/application/phonegap
+
+package-lock.json
