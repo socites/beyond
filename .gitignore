@@ -27,3 +27,4 @@ applications/build/deploy
 applications/screens/application/phonegap
 
 package-lock.json
+lib/client/vendor/bower_components
