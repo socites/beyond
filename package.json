@@ -50,7 +50,7 @@
     "connect-phonegap": "^0.24.9",
     "finder": "git+https://github.com/socites/finder.git",
     "hogan.js": "^3.0.2",
-    "less": "^2.6.0",
+    "less": "~3.8.1",
     "main.lib": "git+https://github.com/socites/main.lib.git",
     "mysql": "^2.16.0",
     "socket.io": "^1.5.0",
