@@ -1,7 +1,8 @@
 module.exports = function () {
 
-    this.hello = async function (params, context) {
-        return 'hello world';
+    this.hello = () => {
+        console.log('executing hello');
+        return new Promise(resolve => setTimeout(resolve, 20000));
     };
 
 };
