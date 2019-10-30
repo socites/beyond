@@ -1,8 +1,5 @@
 module.exports = function () {
 
-    this.hello = () => {
-        console.log('executing hello');
-        return new Promise(resolve => setTimeout(resolve, 20000));
-    };
+    this.hello = () => new Promise(resolve => setTimeout(resolve('hello world'), 10000));
 
 };
