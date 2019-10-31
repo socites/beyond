@@ -1,16 +1,16 @@
 {
   "eng": {
     "errors": {
-      "connection": "Connection Error."
+      "connection": "buscando servidor..."
     },
-    "retry": "Retry",
-    "close": "Close"
+    "retry": "reintentar",
+    "close": "cerrar"
   },
   "spa": {
     "errors": {
-      "connection": "Error de conexión."
+      "connection": "buscando servidor..."
     },
-    "retry": "Reintentar",
-    "close": "Cerrar"
+    "retry": "reintentar",
+    "close": "cerrar"
   }
 }

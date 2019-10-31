@@ -1,3 +1,17 @@
 #global-toast {
     z-index: 2000 !important;
+    --paper-toast-background-color: #777;
+}
+
+#global-toast.connection-error {
+    --paper-toast-background-color: rgba(112, 16, 1, 0.55);
+    --paper-toast-color: white;
+}
+
+#global-toast paper-button {
+    float: right;
+    padding: 0;
+    text-transform: none!important;
+    min-width: 0!important;
+    margin: 0!important;
 }
